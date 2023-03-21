@@ -1,0 +1,82 @@
+.Nav{
+    /* background-color: lightcoral; */
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 2;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding: 0.5em 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-a{
+    opacity: 0.5;
+}
+
+.Header-a:hover{
+    opacity: 0.75;
+}
+
+.Nav-ul{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.Nav-a{
+    /* background-color: brown; */
+    padding: 0.75em 1em;
+    border: 2pt solid transparent;
+    opacity: 0.5;
+    border-radius: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in;
+}
+
+.Nav-a.active{
+    background-color: #fff;
+    color: #000;
+    opacity: 1;
+    box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, 0.5);
+}
+
+.Nav-a:hover,
+.Nav-a:focus{
+    opacity: 1;
+}
+
+.Header-a{
+    margin-right: 1em;
+}
+
+.Header-icon{
+    max-width: 100%;
+    height: 1em;
+    margin-right: 0.5em;
+}
+
+.Nav-avatar{
+    background-color: aquamarine;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, 0.5);
+    transition: all ease-in;
+}
+
+.Nav-avatar:hover{
+    transform: scale(1.025);
+}

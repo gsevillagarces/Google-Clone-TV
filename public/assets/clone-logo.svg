@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="455" height="110" viewBox="0 0 455 110">
+  <g id="Google_TV_logo" transform="translate(0 19.781)">
+    <path id="Path_9" data-name="Path 9" d="M172.347,0H115.284A9,9,0,0,0,106.3,8.984v8.984h69.56a9,9,0,0,1,8.984,8.984V12.5A12.479,12.479,0,0,0,172.347,0Z" transform="translate(-88.349)" fill="#4285f4"/>
+    <path id="Path_10" data-name="Path 10" d="M12.5,0A12.534,12.534,0,0,0,0,12.5V43.469a9,9,0,0,0,8.984,8.984h8.984V8.984A9,9,0,0,1,26.953,0Z" fill="#34a853"/>
+    <path id="Path_11" data-name="Path 11" d="M12.5,284.336H69.56a9,9,0,0,0,8.984-8.984v-8.984H8.984A8.977,8.977,0,0,1,0,257.4v14.523a12.462,12.462,0,0,0,12.5,12.412Z" transform="translate(0 -213.931)" fill="#fbbc04"/>
+    <path id="Path_12" data-name="Path 12" d="M426.256,158.753a12.534,12.534,0,0,0,12.5-12.5V115.284a9,9,0,0,0-8.984-8.984h-8.984v43.469a8.991,8.991,0,0,1-8.984,8.984Z" transform="translate(-342.257 -88.349)" fill="#ea4335"/>
+    <text id="Clone_TV" data-name="Clone TV" transform="translate(123 64.219)" fill="#fff" font-size="85" font-family="DMSans-Medium, DM Sans" font-weight="500" letter-spacing="-0.05em"><tspan x="0" y="0">Clone TV</tspan></text>
+  </g>
+</svg>

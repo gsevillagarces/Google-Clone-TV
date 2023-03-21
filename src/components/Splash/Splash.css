@@ -1,0 +1,84 @@
+.Splash{
+    background-color: #000;
+    
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    opacity: 100%;
+    transform: scale(1);
+    animation: loadedSplash 3000ms ease-in 2000ms 1 forwards;
+}
+
+.Splash-main{
+    display: flex;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loading-bar{
+    background-color: #ffffff50;
+    width: 12em;
+    height: 0.35em;
+    border-radius: 1em;
+    margin-top: 5vh;
+    position: relative;
+}
+
+.Loaded{
+    background-color: #fff;
+    width: 0%;
+    height: 0.35em;
+    border-radius: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loadingBar 1000ms ease-in-out 500ms 1 forwards;
+}
+
+.Splash-footer{
+    width: 100%;
+    padding: 2em 0;
+    border-top: 1px solid #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h4-splassh-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff95;
+    font-weight: 300;
+}
+
+@keyframes loadingBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+     }
+}
+
+@keyframes loadedSplash {
+    0%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    90%{
+        opacity: 100%;
+        transform: scale(1)
+    }
+    100%{
+        opacity: 0;
+        transform: scale(3);
+    }
+}
