@@ -3,7 +3,7 @@
     height: 80vh;
     padding: 0.5em 4em;
     position: relative;
-    background: url(/public/assets/bgMandalorian.jpg) center center no-repeat;
+    background: center center no-repeat;
     background-size: cover;
     display: flex;
     flex-flow: row nowrap;

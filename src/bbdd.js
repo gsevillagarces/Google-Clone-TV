@@ -19,5 +19,33 @@ export const googleClone = {
             alt : 'Avatar',
             href : '#link'
         }
+    },
+    main : {
+        slides : [
+            {   id   : 0 ,
+                bg   : '/assets/bgSlide.jpg' ,
+                href : '#' ,
+                h1   : 'Mandalorian' ,
+                h2   : 'The Mandalorian in Amazon Prime Video' ,
+                p    : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the fall of the Galactic Empire and before the emergence of the First Order. It follows the travails of a lone gunfighter in the outer reaches of the galaxy far from the authority of the New Republic.' },
+            {   id   : 1 ,
+                bg   : '/assets/bgSlide2.jpg' ,
+                href : '#' ,
+                h1   : 'Mandalorian 2' ,
+                h2   : 'The Mandalorian in HBO' ,
+                p    : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the fall of the Galactic Empire and before the emergence of the First Order. It follows the travails of a lone gunfighter in the outer reaches of the galaxy far from the authority of the New Republic.' },
+            {   id   : 2 ,
+                bg   : '/assets/bgSlide3.jpg' ,
+                href : '#' ,
+                h1   : 'Mandalorian 3' ,
+                h2   : 'The Mandalorian in HBO' ,
+                p    : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the fall of the Galactic Empire and before the emergence of the First Order. It follows the travails of a lone gunfighter in the outer reaches of the galaxy far from the authority of the New Republic.' },
+            {   id   : 3 ,
+                bg   : '/assets/bgSlide4.jpg' ,
+                href : '#' ,
+                h1   : 'Mandalorian 4' ,
+                h2   : 'The Mandalorian in HBO' ,
+                p    : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the fall of the Galactic Empire and before the emergence of the First Order. It follows the travails of a lone gunfighter in the outer reaches of the galaxy far from the authority of the New Republic.' }
+        ]
     }
 }

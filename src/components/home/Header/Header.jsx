@@ -21,7 +21,6 @@ export const Header = () => {
             {menu.map( eachMenu =>
                 <li key={ eachMenu.id }
                     className ='Nav-li' >
-                
                     <a href="" className='Nav-a'>
                         { eachMenu.icono && <img
                         src= { eachMenu.icono }
