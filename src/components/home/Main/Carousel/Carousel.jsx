@@ -1,0 +1,63 @@
+import './Carousel.css'
+import { googleClone } from '../../../../bbdd'
+
+const { main } = googleClone
+const { slides } = main
+
+export const Carousel = () => {
+    return(
+        <div className='Carousel'>
+            <div className='Main-container'>
+                <div className='Slider-container'>
+                    {slides.map( eachSlide =>
+                        <div className='Slide'
+                             key={eachSlide.id}
+                             style = {{ backgroundImage: `url(${ eachSlide.bg })`}}>
+                        </div>
+                    )}
+                </div>
+
+                <div className="Slider-content">
+                    <div className='Slider-left'>
+                    {slides.map(eachSlide =>
+                                <div className="Slider-info"
+                                key={eachSlide.id}>
+                                <h1 className='Slider-h1'>{eachSlide.h1}</h1>
+                                <h2 className='Slider-h2'>{eachSlide.h2}</h2>
+                            </div>
+                    )}
+                        </div>
+                    <div className="Slider-right">
+                        <div className='Slider-indicators'>
+                            <div className='Slider-indicators--ellipse'></div>
+                            <div className='Slider-indicators--ellipse'></div>
+                            <div className='Slider-indicators--ellipse'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        // <div className='Main'>
+        //     <div className="Main-left">
+        //         <h1 className='Main-h1'>Mandalorian</h1>
+        //         <h2 className='Main-h2'>
+        //             <span className='Main-span'>Google TV Staff Pick</span>
+        //             A lone gunfighter makes his way through the outer reaches of the galaxy.
+        //         </h2>
+        //         <p className='Main-p'>
+        //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aut alias quam nesciunt id doloremque laudantium, error voluptatum incidunt aliquid. Natus culpa dolorum provident error iusto quo, dolorem cumque perferendis?
+        //         </p>
+        //     </div>
+        //     <div className="Main-right">
+        //         <ul className='Main-indicators'>
+        //             <li className='Main-indicators--ellipse'></li>
+        //             <li className='Main-indicators--ellipse'></li>
+        //             <li className='Main-indicators--ellipse'></li>
+        //             <li className='Main-indicators--ellipse'></li>
+        //             <li className='Main-indicators--ellipse'></li>
+        //         </ul>
+        //     </div>
+        // </div>
+    )
+}

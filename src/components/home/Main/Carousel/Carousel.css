@@ -1,0 +1,88 @@
+.Carousel{
+    height: 80vh;
+    min-height: 45rem;
+    position: relative;
+}
+
+.Main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow-x: scroll;
+}
+
+.Slider-container{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    z-index: -1;
+}
+
+.Slide{
+    width: calc(100% / 4);
+    padding: 0.5em 4em;
+    background: center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -2;
+}
+
+.Slide::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+}
+
+.Slider-content{
+    width: 100%;
+    padding: 0.5em 4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 20%;
+}
+
+.Slider-left{
+    display: flex;
+}
+
+.Slider-info{
+    position: absolute;
+    bottom: 0;
+}
+
+.Slider-h1{
+    font-size: 4em;
+    line-height: 1;
+    color: #fff;
+}
+
+.Slider-right{
+}
+
+.Slider-indicators{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75em;
+}
+
+.Slider-indicators--ellipse{
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
