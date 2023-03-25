@@ -23,7 +23,11 @@ export const Carousel = () => {
                                 <div className="Slider-info"
                                 key={eachSlide.id}>
                                 <h1 className='Slider-h1'>{eachSlide.h1}</h1>
-                                <h2 className='Slider-h2'>{eachSlide.h2}</h2>
+                                <span className='Slider-meta'>
+                                    <h2 className='Slider-h2'>{eachSlide.provider}</h2>
+                                    <span className='Slider-meta-divider'></span>
+                                    <h2 className='Slider-p'>{eachSlide.description}</h2>
+                                </span>
                             </div>
                     )}
                         </div>

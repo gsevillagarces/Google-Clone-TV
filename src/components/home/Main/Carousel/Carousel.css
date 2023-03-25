@@ -56,18 +56,44 @@
 }
 
 .Slider-left{
-    display: flex;
+    max-width: 75%;
+    position: relative;
 }
 
+
 .Slider-info{
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
     position: absolute;
     bottom: 0;
+    left: 0;
+    text-overflow: ellipsis;
+}
+
+.Slider-info:first-child{
+    position: initial;
+}
+
+.Slider-meta{
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
 }
 
 .Slider-h1{
     font-size: 4em;
     line-height: 1;
-    color: #fff;
+}
+
+.Slider-h2{
+}
+
+.Slider-meta-divider{
+    width: 2px;
+    height: 1.2rem;
+    background-color: #fff;
 }
 
 .Slider-right{
