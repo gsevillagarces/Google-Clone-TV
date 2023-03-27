@@ -1,3 +1,50 @@
+.YourApps-cards::-webkit-scrollbar{
+    display: none;
+}
+
 .YourApps{
-    background-color: beige;
+    padding: 0.5em 4em;
+}
+
+.YourApps-h3{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.YourApps-cards{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    padding: 2em 0;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.YourApps-cards-movie{
+    background-color: #fff;
+    background: center center no-repeat;
+    background-size: cover;
+    width: 13em;
+    height: 7.25em;
+    border-radius: 1em;
+    flex: 0 0 auto;
+}
+
+.YourApps-cards-movie{
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.YourApps-cards-movie:hover{
+    transform: scale(1.15);
+    z-index: 3;
+    border: 2.5pt solid #fff;
+    -webkit-box-shadow: 0px 10px 1.125rem 0px rgba(0,0,0,0.75);
+    -moz-box-shadow:    0px 10px 1.125rem 0px rgba(0,0,0,0.75);
+    box-shadow:         0px 10px 1.125rem 0px rgba(0,0,0,0.75);
+}
+
+.YourApps-cards-movie:hover .TopPicks-h3{
+    color: red;
 }

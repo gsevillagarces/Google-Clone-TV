@@ -12,11 +12,13 @@ function App() {
       {/* <div className='Splash'>
         < Splash />
       </div> */}
-      <div className='Clone-TV'>
+      <div className='CloneTV'>
         < Header />
         < Carousel />
         < TopPicks />
         < YourApps />
+        < TopPicks />
+        < TopPicks />
       </div>
     </>
   )

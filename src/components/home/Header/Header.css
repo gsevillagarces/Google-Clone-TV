@@ -1,5 +1,5 @@
 .Nav{
-    /* background-color: lightcoral; */
+    background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
     width: 100%;
     margin: auto;
     position: fixed;
