@@ -4,10 +4,10 @@
 }
 
 body{
-    background-color: #000;
+    background-color: #333;
 }
 
-.CloneTV{
+/* .CloneTV{
     opacity: 0;
     animation: fadeInAnimation 500ms ease-in 5000ms 1 forwards;
     padding-bottom: 10em;
@@ -20,4 +20,4 @@ body{
     100% {
         opacity: 1;
      }
-}
+} */

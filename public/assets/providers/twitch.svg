@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="530" height="220" viewBox="0 0 530 220">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_47" data-name="Rectangle 47" width="530" height="220" transform="translate(835 415)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="twitch" transform="translate(-835 -415)" clip-path="url(#clip-path)">
+    <g id="twitch-purple" transform="translate(1011.667 432)">
+      <path id="Path_48" data-name="Path 48" d="M135.016,161.762H98.88l-24.07,24.314H50.739V161.762H6.6V32.377L18.6,0H183.156V113.258Zm32.135-56.567V16.189H34.672v117.29H70.808V157.73l24.07-24.252h44.139l28.133-28.284Z" transform="translate(-6.6)" fill="#fff" fill-rule="evenodd"/>
+      <path id="Path_49" data-name="Path 49" d="M168.039,78.3v48.566h16.067V78.3ZM123.9,126.8h16.067V78.3H123.9v48.5Z" transform="translate(-51.689 -29.734)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
