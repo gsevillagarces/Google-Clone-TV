@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <div className='Splash'>
+      <div className='Splash'>
         < Splash />
-      </div> */}
+      </div>
       <div className='CloneTV'>
         < Header />
         < Carousel />
