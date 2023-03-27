@@ -1,6 +1,5 @@
 .Splash{
     background-color: #000;
-    
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -11,9 +10,7 @@
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
-    opacity: 100%;
-    transform: scale(1);
-    animation: loadedSplash 3000ms ease-in 2000ms 1 forwards;
+    animation: loadedSplash 5250ms ease-in 1 forwards;
 }
 
 .Splash-main{
@@ -41,7 +38,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: loadingBar 1000ms ease-in-out 500ms 1 forwards;
+    animation: loadingBar 800ms ease-in-out 2500ms 1 forwards;
 }
 
 .Splash-footer{
@@ -70,6 +67,10 @@
 
 @keyframes loadedSplash {
     0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    10%{
         opacity: 100%;
         transform: scale(1);
     }
@@ -77,8 +78,12 @@
         opacity: 100%;
         transform: scale(1)
     }
+    95%{
+        opacity: 0%;
+        transform: scale(3)
+    }
     100%{
-        opacity: 0;
+        opacity: 0%;
         transform: scale(3);
     }
 }

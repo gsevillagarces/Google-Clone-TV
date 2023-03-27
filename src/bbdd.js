@@ -163,6 +163,135 @@ export const googleClone = {
                 href        : '#' ,
                 provider    : 'Star+'
             }
+        ],
+        continueWatching : [
+            {   id          : 0 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 1 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },{   id        : 2 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 3 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 4 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 5 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 6 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            }
+        ],
+        recommended : [
+            {   id          : 0 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 1 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },{   id        : 2 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 3 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 4 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 5 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 6 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            }
+        ],
+        watchlisted : [
+            {   id          : 0 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 1 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },{   id        : 2 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 3 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 4 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 5 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            },
+            {   id          : 6 ,
+                movieTitle  : 'The Mandalorian' ,
+                movieBg     : '/assets/bgSlide.jpg' ,
+                href        : '#' ,
+                provider    : 'Prime Video'
+            }
         ]
     }
 }

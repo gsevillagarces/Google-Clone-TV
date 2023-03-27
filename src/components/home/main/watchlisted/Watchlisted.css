@@ -1,0 +1,49 @@
+.Watchlisted-cards::-webkit-scrollbar{
+    display: none;
+}
+
+.Watchlisted{
+    padding: 0.5em 6em;
+}
+
+.Watchlisted-h3{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.Watchlisted-cards{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    padding: 2em 0;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.Watchlisted-cards-movie{
+    background-color: #fff;
+    background: center center no-repeat;
+    background-size: cover;
+    width: 25em;
+    height: 14em;
+    border-radius: 1em;
+    flex: 0 0 auto;
+}
+
+.Watchlisted-cards-movie{
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.Watchlisted-cards-movie:hover{
+    transform: scale(1.085);
+    z-index: 3;
+    -webkit-box-shadow: 0 10px 1.8em 0 rgba(0,0,0,0.75);
+    -moz-box-shadow:    0 10px 1.8em 0 rgba(0,0,0,0.75);
+    box-shadow:         0 10px 1.8em 0 rgba(0,0,0,0.75);
+}
+
+.Watchlisted-cards-movie:hover .Watchlisted-h3{
+    color: red;
+}

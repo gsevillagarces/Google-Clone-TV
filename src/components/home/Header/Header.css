@@ -3,7 +3,8 @@
     width: 100%;
     margin: auto;
     position: fixed;
-    z-index: 2;
+    transform: unset;
+    z-index: 10;
     color: #fff;
     font-size: 2em;
     font-weight: 500;
@@ -24,7 +25,6 @@
 }
 
 .Nav-ul{
-    /* background-color: blueviolet; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -33,7 +33,6 @@
 }
 
 .Nav-a{
-    /* background-color: brown; */
     padding: 0.75em 1em;
     border: 2pt solid transparent;
     opacity: 0.5;
