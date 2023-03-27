@@ -3,12 +3,13 @@
 }
 
 .YourApps{
-    padding: 0.5em 4em;
+    padding: 0.5em 6em;
 }
 
 .YourApps-h3{
     font-size: 1.5rem;
     color: #fff;
+    font-weight: 400;
 }
 
 .YourApps-cards{
@@ -19,32 +20,48 @@
     flex-flow: row nowrap;
     align-items: center;
     overflow-x: scroll;
+    
 }
 
 .YourApps-cards-movie{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.YourApps-cards-app{
     background-color: #fff;
     background: center center no-repeat;
     background-size: cover;
     width: 13em;
     height: 7.25em;
-    border-radius: 1em;
+    border-radius: 1.5em;
     flex: 0 0 auto;
 }
 
-.YourApps-cards-movie{
+.YourApps-cards-app{
     cursor: pointer;
     transition: all 200ms;
 }
 
-.YourApps-cards-movie:hover{
+.YourApps-cards-app:hover{
     transform: scale(1.15);
     z-index: 3;
     border: 2.5pt solid #fff;
-    -webkit-box-shadow: 0px 10px 1.125rem 0px rgba(0,0,0,0.75);
-    -moz-box-shadow:    0px 10px 1.125rem 0px rgba(0,0,0,0.75);
-    box-shadow:         0px 10px 1.125rem 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 10px 1.125rem 0 rgba(0,0,0,0.75);
+    -moz-box-shadow:    0 10px 1.125rem 0 rgba(0,0,0,0.75);
+    box-shadow:         0 10px 1.125rem 0 rgba(0,0,0,0.75);
 }
 
-.YourApps-cards-movie:hover .TopPicks-h3{
-    color: red;
+.YourApps-cards-h4{
+    transform: translateY(0.25em);
+    opacity: 0;
+    transition: all 250ms;
+    z-index: 4;
+}
+
+.YourApps-cards-movie:hover .YourApps-cards-h4{
+    transform: translateY(0.15em);
+    opacity: 1;
 }

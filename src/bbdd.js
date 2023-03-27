@@ -131,7 +131,7 @@ export const googleClone = {
                 appImg      : '/assets/bgSlide.jpg' ,
                 appColor    : '#E50914',
                 href        : '#' ,
-                provider    : 'Netlfix'
+                provider    : 'Netflix'
             },
             {   id          : 5 ,
                 appImg      : '/assets/bgSlide.jpg' ,

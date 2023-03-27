@@ -11,7 +11,7 @@ const blurBackground = () => {
 export const TopPicks = () => {
     return( 
         <div className='TopPicks'>
-            <h3 className='TopPicks-h3'>Top picks</h3>
+            <h3 className='TopPicks-h3'>Top picks for you</h3>
             <div className='TopPicks-cards'>
                 {topPicks.map(eachTopPick =>               
                     <div className='TopPicks-cards-movie' key={eachTopPick.id}
