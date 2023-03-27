@@ -1,0 +1,18 @@
+.Slider{
+    background-color: #000;
+    height: 80vh;
+    min-height: 45rem;
+    position: relative;
+}
+
+.Slider-container{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+}
+
+.Slide{
+    width: calc(100% / 4);
+}

@@ -1,4 +1,4 @@
-import './Carousel.css'
+import './CarouselApps.css'
 import { AppCard } from '../home/main/appCard/AppCard'
 import { googleClone } from '../../bbdd'
 
@@ -9,9 +9,9 @@ const {apps} = main
 //     console.log("Listo para abrir app...")
 // }
 
-export const Carousel = () => {
+export const CarouselApps = () => {
     return(
-        <div className='Carousel'>
+        <div className='CarouselApps'>
             { apps.map( eachApp => 
                 < AppCard key = { eachApp.id} {...eachApp} />
             )}
