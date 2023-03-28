@@ -14,17 +14,10 @@ function App() {
       </div> */}
 
       <div className='CloneTV'>
-
-        {/* < Header /> */}
-
-        <Slider />
-
-        <h2>Top picks</h2>
-        < CarouselMovies />
-
-        <h2>Your apps</h2>
+        < Header />
+        < Slider />
+        {/* < CarouselMovies /> */}
         < CarouselApps />
-        
       </div>
 
     </>

@@ -11,10 +11,13 @@ const {apps} = main
 
 export const CarouselApps = () => {
     return(
-        <div className='CarouselApps'>
-            { apps.map( eachApp => 
-                < AppCard key = { eachApp.id} {...eachApp} />
-            )}
+        <div className='CarouselApps-container'>
+                <h2 className='CarouselApps-h2'>Your apps</h2>
+            <div className='CarouselApps'>
+                { apps.map( eachApp => 
+                    < AppCard key = { eachApp.id} {...eachApp} />
+                )}
+            </div>
         </div>
     )
 }
