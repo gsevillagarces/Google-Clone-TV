@@ -1,0 +1,28 @@
+.OkBtn-button{
+    border: 1pt solid transparent;
+    padding: 0 0 0 1em;
+    border-radius: 2em;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.Button-span{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.8em;
+}
+
+.Button-span-img{
+    width: 1.5em;
+}
+
+.OkBtn-button:hover{
+    transform: scale(1.025);
+}
