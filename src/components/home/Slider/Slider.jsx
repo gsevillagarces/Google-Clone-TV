@@ -1,6 +1,6 @@
 import './Slider.css'
 import { useState } from 'react'
-import { googleClone } from '../../bbdd'
+import { googleClone } from '../../../bbdd'
 
 const {main}   = googleClone
 const {movies} = main
@@ -19,7 +19,7 @@ export const Slider = () => {
                     <div className='Slide'
                          key={eachMovie.id}
                          style = {{ backgroundImage: `url(${ eachMovie.bgSlide })`,
-                                    transform: `translateX(-${ 1 * 100}%)`}}
+                                    transform: `translateX(-${ 0 * 100}%)`}}
                     >
                     </div>
                     )}

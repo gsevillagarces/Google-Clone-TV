@@ -1,3 +1,29 @@
+.CarouselMovies-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .CarouselMovies{
-    background-color: orange;
+    width: 100%;
+    padding: 0.65em 6em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1.2em;
+    cursor: pointer;
+    overflow-x: scroll;
+}
+
+.CarouselMovies:hover .MovieCard-h4{
+    transform: translateY(0);
+    opacity: 0.5;
+}
+
+.CarouselMovies:hover .MovieCard{
+    opacity: 1;
+}
+
+.CarouselMovies::-webkit-scrollbar{
+    display: none;
 }

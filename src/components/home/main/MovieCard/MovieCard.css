@@ -1,3 +1,50 @@
 .MovieCard{
-    background-color: red;
+    background-color: #fff;
+    background: center center no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    width: 25em;
+    height: 14em;
+    border-radius: 1em;
+    flex: 0 0 auto;
+    transition: all 200ms;
+}
+
+.MovieCard-h4{
+    color: #fff;
+    font-size: 1.35em;
+    opacity: 0;
+    margin-top: 1em;
+    transform: translateY(0.15em);
+    transition: all 250ms;
+}
+
+.MovieCard-h3{
+    color: #fff;
+    font-size: 1.35em;
+    opacity: 0;
+    margin-top: 0.25em;
+    transform: translateY(0.10em);
+    transition: all 150ms;
+}
+
+.MovieCard-h3-rating{
+    margin-left: 0.5em;
+}
+
+.MovieCard-container:hover .MovieCard{
+    transform: scale(1.1);
+    z-index: 1;
+    -webkit-box-shadow: 0 10px 1.8em 0 rgba(0,0,0,0.75);
+    -moz-box-shadow:    0 10px 1.8em 0 rgba(0,0,0,0.75);
+    box-shadow:         0 10px 1.8em 0 rgba(0,0,0,0.75);
+}
+
+.MovieCard-container:hover .MovieCard-h4{
+    opacity: 1;
+}
+
+.MovieCard-container:hover .MovieCard-h3{
+    transform: translateY(0);
+    opacity: 0.5;
 }

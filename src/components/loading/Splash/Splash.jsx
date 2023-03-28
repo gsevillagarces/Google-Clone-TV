@@ -10,7 +10,7 @@ export const Splash = () => {
         </div>
       </div>
       <div className='Splash-footer'>
-        <h4 className='h4-splassh-footer'>
+        <h4 className='Slash-footer-h4'>
           A Google Home TV Clone App made in React
         </h4>
       </div>
