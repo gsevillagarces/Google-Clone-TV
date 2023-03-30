@@ -1,9 +1,25 @@
 import './ForYou.css'
 
+import { CarouselApps } from '../../components/CarouselApps/CarouselApps'
+import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
+import { Slider } from '../../components/home/Slider/Slider'
+
 export const ForYou = () => {
     return(
         <div className='ForYou'>
-            <h2 className='ForYou-h2'>For you</h2>
+
+          < Slider />
+          <h2 className='CloneTV-h2'>Top picks</h2>
+          < CarouselMovies />
+          <h2 className='CloneTV-h2'>Your apps</h2>
+          < CarouselApps />
+          <h2 className='CloneTV-h2'>Keep watching</h2>
+          < CarouselMovies />
+          <h2 className='CloneTV-h2'>On your watchlist</h2>
+          < CarouselMovies />
+          <h2 className='CloneTV-h2'>Suggested</h2>
+          < CarouselMovies />
+
         </div>
     )
 }

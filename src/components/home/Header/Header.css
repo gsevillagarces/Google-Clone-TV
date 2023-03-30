@@ -16,14 +16,6 @@
     align-items: center;
 }
 
-.Header-a{
-    opacity: 0.5;
-}
-
-.Header-a:hover{
-    opacity: 0.75;
-}
-
 .Nav-ul{
     display: flex;
     flex-flow: row nowrap;
@@ -49,6 +41,10 @@
     color: #000;
     opacity: 1;
     box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, 0.5);
+}
+
+.Nav-a.active .Header-icon{
+    filter: invert(1);
 }
 
 .Nav-a:hover,

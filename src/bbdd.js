@@ -3,15 +3,14 @@ export const googleClone = {
         h1 : { 
             src : '/assets/clone-logo-header.svg', 
             alt : 'Clone TV',
-            href : '#'
         },
         menu : [
-            { id : 0, icono : '/assets/search.svg', alt : 'Search',  texto : 'Search',  href : '#'},
-            { id : 1, icono : '',                   alt : 'For you', texto : 'For you', href : '#'},
-            { id : 2, icono : '',                   alt : 'Movies',  texto : 'Movies',  href : '#'},
-            { id : 3, icono : '',                   alt : 'Shows',   texto : 'Shows',   href : '#'},
-            { id : 4, icono : '',                   alt : 'Apps',    texto : 'Apps',    href : '#'},
-            { id : 5, icono : '',                   alt : 'Library', texto : 'Library', href : '#'}
+            { id : 0, icono : '/assets/search.svg', alt : 'Search',  texto : 'Search',  href : 'Search'},
+            { id : 1, icono : '',                   alt : 'For you', texto : 'For you', href : 'ForYou'},
+            { id : 2, icono : '',                   alt : 'Movies',  texto : 'Movies',  href : 'Movies'},
+            { id : 3, icono : '',                   alt : 'Shows',   texto : 'Shows',   href : 'Shows'},
+            { id : 4, icono : '',                   alt : 'Apps',    texto : 'Apps',    href : 'Apps'},
+            { id : 5, icono : '',                   alt : 'Library', texto : 'Library', href : 'Library'}
         ],
         avatar : {
             id : 0,
