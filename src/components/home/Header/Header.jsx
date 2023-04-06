@@ -1,14 +1,6 @@
 import './Header.css'
-import { BrowserRouter, Routes, Route, NavLink  } from 'react-router-dom'
-
-import { googleClone }    from '../../../bbdd'
-import { Library }        from '../../../pages/Library/Library'
-import { Search }         from '../../../pages/Search/Search'
-import { ForYou }         from '../../../pages/ForYou/ForYou'
-import { Movies }         from '../../../pages/Movies/Movies'
-import { Shows }          from '../../../pages/Shows/Shows'
-import { Apps }           from '../../../pages/Apps/Apps'
-import { Profile }        from '../../../pages/Profile/Profile'
+import { NavLink  }     from 'react-router-dom'
+import { googleClone }  from '../../../bbdd'
 
 
 const { header } = googleClone
@@ -16,9 +8,6 @@ const { h1, menu, avatar } = header
 
 export const Header = () => {
     return(
-
-    <BrowserRouter>
-
     <div className='Header'>
 
         <nav className='Nav'>
@@ -60,22 +49,7 @@ export const Header = () => {
 
         </nav>
 
-        <Routes>
-
-            <Route path='/Search'  element={ < Search /> }  />
-            <Route path='/ForYou'  element={ < ForYou /> }  />
-            <Route path='/Movies'  element={ < Movies /> }  />
-            <Route path='/Shows'   element={ < Shows /> }   />
-            <Route path='/Apps'    element={ < Apps/> }     />
-            <Route path='/Library' element={ < Library /> }  />
-            <Route path='/Profile' element={ < Profile /> } />
-
-          </Routes>
-
     </div>
-
-    
-    </BrowserRouter>
 
     )
 }

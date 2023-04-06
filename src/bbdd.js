@@ -6,7 +6,7 @@ export const googleClone = {
         },
         menu : [
             { id : 0, icono : '/assets/search.svg', alt : 'Search',  texto : 'Search',  href : 'Search'},
-            { id : 1, icono : '',                   alt : 'For you', texto : 'For you', href : 'ForYou'},
+            { id : 1, icono : '',                   alt : 'For you', texto : 'For you', href : ''},
             { id : 2, icono : '',                   alt : 'Movies',  texto : 'Movies',  href : 'Movies'},
             { id : 3, icono : '',                   alt : 'Shows',   texto : 'Shows',   href : 'Shows'},
             { id : 4, icono : '',                   alt : 'Apps',    texto : 'Apps',    href : 'Apps'},
@@ -32,7 +32,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 1,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -44,7 +45,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#' },
+                href        : 'MovieDetails' 
+            },
             {   id          : 2,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -56,7 +58,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 90%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 3,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -68,7 +71,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 92%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 4,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -80,7 +84,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 90%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 5,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -92,7 +97,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 6,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -104,7 +110,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 7,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -116,7 +123,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 8,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -128,7 +136,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'},
+                href        : 'MovieDetails'
+            },
             {   id          : 9,
                 provider    : 'HBO',
                 alt         : 'HBO',
@@ -140,68 +149,68 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
                 watchlisted : 'y',
-                href        : '#'}
+                href        : 'MovieDetails'}
         ],
         apps : [
             {   id          : 0,
                 appName     : 'YouTube',
                 logoApp     : '/assets/providers/youtube.svg',
                 appColor    : '#FF0000',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 1,
                 appName     : 'Spotify',
                 logoApp     : '/assets/providers/spotify.svg',
                 appColor    : '#2EBD59',
-                href        : '#'
+                href        : 'AppDetails'
             },
             { id            : 2,
                 appName     : 'Prime Video',
                 logoApp     : '/assets/providers/primevideo.svg',
                 appColor    : '#00A8E1',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 3,
                 appName     : 'Plex',
                 logoApp     : '/assets/providers/plex.svg',
                 appColor    : '#272A2D',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 4,
                 appName     : 'Netflix',
                 logoApp     : '/assets/providers/netflix.svg',
                 appColor    : '#E50914',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 5,
                 appName     : 'Twitch',
                 logoApp     : '/assets/providers/twitch.svg',
                 appColor    : '#65459B',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 6,
                 appName     : 'Hulu',
                 logoApp     : '/assets/providers/hulu.svg',
                 appColor    : '#1CE783',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 7,
                 appName     : 'HBO max',
                 logoApp     : '/assets/providers/hbomax.svg',
                 appColor    : '#991EEB',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 8,
                 appName     : 'Disney+',
                 logoApp     : '/assets/providers/disneyplus.svg',
                 appColor    : '#1A1D29',
-                href        : '#'
+                href        : 'AppDetails'
             },
             {   id          : 9,
                 appName     : 'Star+',
                 logoApp     : '/assets/providers/starplus.svg',
                 appColor    : '#271F44',
-                href        : '#'
+                href        : 'AppDetails'
             }
         ],
     }
