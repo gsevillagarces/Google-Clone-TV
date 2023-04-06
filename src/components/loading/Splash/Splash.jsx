@@ -1,7 +1,7 @@
 import './Splash.css'
 
 export const Splash = () => {
-    return(
+  return(
     <div className="Splash">
       <div className="Splash-main">
         <img src="assets/clone-logo.svg" alt="Logo Clone TV" />
@@ -15,5 +15,5 @@ export const Splash = () => {
         </h4>
       </div>
     </div>
-    )
+  )
 }

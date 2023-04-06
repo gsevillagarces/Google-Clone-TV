@@ -5,18 +5,15 @@ export const googleClone = {
             alt : 'Clone TV',
         },
         menu : [
-            { id : 0, icono : '/assets/search.svg', alt : 'Search',  texto : 'Search',  href : 'Search'},
-            { id : 1, icono : '',                   alt : 'For you', texto : 'For you', href : ''},
-            { id : 2, icono : '',                   alt : 'Movies',  texto : 'Movies',  href : 'Movies'},
-            { id : 3, icono : '',                   alt : 'Shows',   texto : 'Shows',   href : 'Shows'},
-            { id : 4, icono : '',                   alt : 'Apps',    texto : 'Apps',    href : 'Apps'},
-            { id : 5, icono : '',                   alt : 'Library', texto : 'Library', href : 'Library'}
+            { id : 0, icono : '/assets/search.svg', alt: 'icon', title : 'Go to Search',  texto : 'Search',  href : 'search'},
+            { id : 1, icono : '',                   alt: 'icon', title : 'Go to For you', texto : 'For you', href : ''},
+            { id : 2, icono : '',                   alt: 'icon', title : 'Go to Movies',  texto : 'Movies',  href : 'movies'},
+            { id : 3, icono : '',                   alt: 'icon', title : 'Go to Shows',   texto : 'Shows',   href : 'shows'},
+            { id : 4, icono : '',                   alt: 'icon', title : 'Go to Apps',    texto : 'Apps',    href : 'apps'},
+            { id : 5, icono : '',                   alt: 'icon', title : 'Go to Library', texto : 'Library', href : 'library'}
         ],
         avatar : {
-            id : 0,
-            img : '/assets/avatar.jpg',
-            alt : 'Avatar',
-            href : '#link'
+            id : 0, img : '/assets/avatar.jpg', alt : 'Avatar', title : 'Go to Profile', href : 'profile'
         }
     },
     main : {
@@ -31,8 +28,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 1,
                 provider    : 'HBO',
@@ -44,8 +45,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails' 
+                watched     : 'y',
+                href        : 'movie-details' 
             },
             {   id          : 2,
                 provider    : 'HBO',
@@ -58,7 +63,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 90%',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 3,
                 provider    : 'HBO',
@@ -71,7 +77,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 92%',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 4,
                 provider    : 'HBO',
@@ -84,7 +91,8 @@ export const googleClone = {
                 btnText     : 'Watch on',
                 rating      : '🍅 90%',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 5,
                 provider    : 'HBO',
@@ -96,8 +104,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 6,
                 provider    : 'HBO',
@@ -109,8 +121,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 7,
                 provider    : 'HBO',
@@ -122,8 +138,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 8,
                 provider    : 'HBO',
@@ -135,8 +155,12 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'
+                watched     : 'y',
+                href        : 'movie-details'
             },
             {   id          : 9,
                 provider    : 'HBO',
@@ -148,8 +172,13 @@ export const googleClone = {
                 summary     : 'The Mandalorian is an American space Western web television series created by Jon Favreau. The series is set after the...',
                 btnText     : 'Watch on',
                 rating      : '🍅 98%',
+                restriction : '16',
+                category    : 'Comedy-drama series',
+                years       : '2019 - Present',
                 watchlisted : 'y',
-                href        : 'MovieDetails'}
+                watched     : 'y',
+                href        : 'movie-details'
+            }
         ],
         apps : [
             {   id          : 0,

@@ -1,7 +1,6 @@
 import './Header.css'
-import { NavLink  }     from 'react-router-dom'
+import { NavLink }     from 'react-router-dom'
 import { googleClone }  from '../../../bbdd'
-
 
 const { header } = googleClone
 const { h1, menu, avatar } = header
@@ -9,8 +8,8 @@ const { h1, menu, avatar } = header
 export const Header = () => {
     return(
     <div className='Header'>
-
         <nav className='Nav'>
+
             <ul className='Nav-ul'>
                 <h1 className="Header-h1">
                     <div className="Header-a">
@@ -24,7 +23,9 @@ export const Header = () => {
             {menu.map( eachMenu =>
                 <li key={ eachMenu.id }
                     className ='Nav-li' >
-                    < NavLink to={`/${eachMenu.href}`} className='Nav-a'>
+                    < NavLink to={ `/${eachMenu.href}` }
+                              className='Nav-a'
+                              title={eachMenu.title} >
                     
                         { eachMenu.icono && <img
                             src= { eachMenu.icono }
@@ -37,19 +38,16 @@ export const Header = () => {
                     </NavLink>
                 </li>
             )}
-
             </ul>
             
-            <NavLink to={ '/Profile' } className="Nav-avatar">
+            <NavLink to={ `/${avatar.href}` } className="Nav-avatar">
                 <img
                 src={ avatar.img }
-                alt={ avatar.alt }
+                title={ avatar.title }
                 className= "Nav-avatar--img" />
             </NavLink>
 
         </nav>
-
     </div>
-
     )
 }
