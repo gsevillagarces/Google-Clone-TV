@@ -1,4 +1,4 @@
-.ProfileSelector{
+.SelectProfile{
     width: 100%;
     height: 100vh;
     padding: 5.5rem 6rem 2rem;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.ProfileSelector-profiles{
+.SelectProfile-profiles{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -17,8 +17,8 @@
     gap: 2em;
 }
 
-.ProfileSelector-profile{
-    background-color: red;
+.SelectProfile-profile{
+    background-color: royalblue;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
@@ -27,13 +27,13 @@
     transition: all 200ms;
 }
 
-.ProfileSelector-profile:hover,
-.ProfileSelector-profile:active{
+.SelectProfile-profile:hover,
+.SelectProfile-profile:active{
     border: 3pt solid #fff;
     transform: scale(1.025);
 }
 
-.ProfileSelector-footer{
+.SelectProfile-footer{
     position: absolute;
     bottom: 2rem;
     left: 6rem;

@@ -6,7 +6,7 @@ import { Splash } from './components/loading/Splash/Splash'
 import { Header } from './components/home/Header/Header'
 
 import { LoginForm } from './components/login/LoginForm/LoginForm'
-import { ProfileSelector } from './components/login/profileSelector/profileSelector'
+import { SelectProfile } from './components/login/SelectProfile/SelectProfile'
 
 import { Search } from './pages/Search/Search'
 import { ForYou } from './pages/ForYou/ForYou'
@@ -20,6 +20,7 @@ import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
 
 import { Template } from './components/Template/Template'
+import { AppCard } from './components/home/main/appCard/AppCard'
 
 function App() {
   return (
@@ -35,8 +36,7 @@ function App() {
           {/* < Header /> */}
 
           {/* < LoginForm /> */}
-
-          < ProfileSelector />
+          < SelectProfile />
 
           {/* < Search /> */}
           {/* < ForYou /> */}
