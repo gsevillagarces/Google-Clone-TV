@@ -6,6 +6,7 @@ import { Splash } from './components/loading/Splash/Splash'
 import { Header } from './components/home/Header/Header'
 
 import { LoginForm } from './components/login/LoginForm/LoginForm'
+import { ProfileSelector } from './components/login/profileSelector/profileSelector'
 
 import { Search } from './pages/Search/Search'
 import { ForYou } from './pages/ForYou/ForYou'
@@ -35,7 +36,7 @@ function App() {
 
           {/* < LoginForm /> */}
 
-          
+          < ProfileSelector />
 
           {/* < Search /> */}
           {/* < ForYou /> */}
