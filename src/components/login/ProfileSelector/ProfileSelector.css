@@ -1,0 +1,40 @@
+.ProfileSelector{
+    width: 100%;
+    height: 100vh;
+    padding: 5.5rem 6rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ProfileSelector-profiles{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.ProfileSelector-profile{
+    background-color: bisque;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3pt solid #ffffff00;
+    transition: all 200ms;
+}
+
+.ProfileSelector-profile:hover,
+.ProfileSelector-profile:active{
+    border: 3pt solid #fff;
+    transform: scale(1.025);
+}
+
+.ProfileSelector-footer{
+    position: absolute;
+    bottom: 2rem;
+    left: 6rem;
+}

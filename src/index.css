@@ -11,10 +11,10 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-.CloneTV{
-    /* opacity: 0; */
-    /* animation: fadeInAnimation 500ms ease-in 5000ms 1 forwards; */
-}
+/* .CloneTV{
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 5000ms 1 forwards;
+} */
 
 .CloneTV-h2{
     padding: 0.65em 4em;

@@ -2,7 +2,7 @@ export const googleClone = {
     header : {
         h1 : { 
             src : '/assets/clone-logo-header.svg', 
-            alt : 'Clone TV',
+            alt : 'Clone TV'
         },
         menu : [
             { id : 0, icono : '/assets/search.svg', alt: 'icon', title : 'Go to Search',  texto : 'Search',  href : 'search'},

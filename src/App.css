@@ -110,9 +110,9 @@ blockquote:before, blockquote:after, q:before, q:after {
 form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
-  -webkit-hyphens: auto;
+  /* -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
+          hyphens: auto; */
   background-color: transparent;
   color: inherit;
   display: block;
@@ -149,9 +149,9 @@ body {
   /* opcional */
   line-height: 1.4em;
   /* opcional */
-  -webkit-hyphens: auto;
+  /* -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
+          hyphens: auto; */
   /* opcional */
   font-smooth: always;
   /* opcional */
