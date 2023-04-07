@@ -1,3 +1,4 @@
+import { CancelBtn } from '../../../components/CancelBtn/CancelBtn'
 import './MovieDetails.css'
 
 export const MovieDetails = () => {
@@ -45,10 +46,7 @@ export const MovieDetails = () => {
                 </div>
                 
                 <div className='MovieDetails-footer'>
-                    <button className='MovieDetails-footer-button'>
-                        <span className='Button-span'>
-                            <img className='Button-span-img' src="/assets/icons/arrow_back.svg" alt="Arrow back" />
-                        </span> Regresar </button>
+                    < CancelBtn />
                 </div>
             </div>
         </div>

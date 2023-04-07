@@ -1,6 +1,5 @@
 .OkBtn-button{
     border: 1pt solid transparent;
-    padding: 0 0 0 1em;
     border-radius: 2em;
     font-size: 1.5em;
     font-weight: 600;
@@ -19,7 +18,7 @@
     padding: 0.8em;
 }
 
-.Button-span-img{
+.Button-span-img-arrow{
     width: 1.5em;
 }
 

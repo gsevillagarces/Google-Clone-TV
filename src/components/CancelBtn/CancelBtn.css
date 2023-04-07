@@ -1,6 +1,5 @@
-.OkBtn-button{
+.CancelBtn-button{
     border: 1pt solid transparent;
-    padding: 0 0 0 1em;
     border-radius: 2em;
     font-size: 1.5em;
     font-weight: 600;
@@ -23,6 +22,6 @@
     width: 1.5em;
 }
 
-.OkBtn-button:hover{
+.CancelBtn-button:hover{
     transform: scale(1.025);
 }

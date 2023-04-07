@@ -12,6 +12,7 @@ import { Library } from './pages/Library/Library'
 import { Profile } from './pages/Profile/Profile'
 import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { Template } from './components/Template/Template'
+import { AppDetails } from './pages/details/AppDetails/AppDetails'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
                   </ Route >
                 </ Route >
                 < Route path='/movie-details' element={ < MovieDetails /> } />
+                < Route path='/app-details'   element={ < AppDetails />   } />
             </ Routes >
           
           </div>
