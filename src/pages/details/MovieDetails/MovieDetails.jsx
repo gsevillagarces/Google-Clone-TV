@@ -19,17 +19,35 @@ export const MovieDetails = () => {
                 </div>
                 
                 <div className='MovieDetails-buttons'>
-                    <button className='MovieDetails-buton'> Prime Video </button>
-                    <button className='MovieDetails-buton'> Seasons </button>
-                    <button className='MovieDetails-buton'> <span> ICON </span> Watchlisted </button>
-                    <button className='MovieDetails-buton'> <span> ICON </span> Watched </button>
-                    <button className='MovieDetails-buton'> <span> ICON </span> </button>
+                    <button className='MovieDetails-buton'>
+                        <span> 
+                            <img className='Button-span-img Button-span-provider' src="/assets/providers/primevideo.svg" alt="Provider" />
+                        </span>
+                    </button>
+                    <button className='MovieDetails-buton'>
+                        Seasons
+                    </button>
+                    <button className='MovieDetails-buton'>
+                        <span> 
+                            <img className='Button-span-img' src="/assets/icons/bookmark_border.svg" alt="Watchlisted" />
+                        </span> Watchlisted
+                    </button>
+                    <button className='MovieDetails-buton'>
+                        <span>
+                            <img className='Button-span-img' src="/assets/icons/radio_button_uncheck.svg" alt="Watched" />
+                        </span> Watched
+                    </button>
+                    <button className='MovieDetails-buton'>
+                        <span>
+                            <img className='Button-span-img' src="/assets/icons/thumbs_up_down.svg" alt="Thumbs" />
+                        </span>
+                    </button>
                 </div>
                 
                 <div className='MovieDetails-footer'>
                     <button className='MovieDetails-footer-button'>
                         <span className='Button-span'>
-                            <img className='Button-span-img' src="/assets/icons/arrow-right.svg" alt="" />
+                            <img className='Button-span-img' src="/assets/icons/arrow_back.svg" alt="Arrow back" />
                         </span> Regresar </button>
                 </div>
             </div>

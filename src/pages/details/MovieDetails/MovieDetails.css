@@ -72,16 +72,33 @@
     background-color: #8C8C8C75;
     padding: 1.0625rem 2.625rem;
     border-radius: 2.5rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.5em;
     transition: all 500ms;
+}
+
+.Button-span-img {
+    width: 2.5rem;
+    transition: all 500ms;
+}
+
+.Button-span-provider{
+    width: 3em;
 }
 
 .MovieDetails-buton:hover{
     background-color: #fff;
     color: #000;
     transform: scale(1.025);
+}
+
+.MovieDetails-buton:hover .Button-span-img{
+    filter: invert();
 }
 
 .MovieDetails-footer-button{
@@ -107,7 +124,6 @@
 
 .MovieDetails-footer-button span img{
     width: 1.5em;
-    transform: rotate(180deg);
 }
 
 .MovieDetails-footer-button:hover{
