@@ -1,4 +1,4 @@
-.AppCard-container{
+.AppCardLG-container{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -6,11 +6,11 @@
     cursor: pointer;
 }
 
-.AppCard{
-    width: 14rem;
-    height: 7.75rem;
+.AppCardLG{
+    width: 54rem;
+    height: 26rem;
     border-radius: 1em;
-    padding: 2em 1.5em;
+    padding: 6em 1.5em;
     display: flex;
     opacity: 0.9;
     justify-content: center;
@@ -20,27 +20,12 @@
     transition: all 200ms;
 }
 
-.AppCard-container:hover .AppCard{
+.AppCardLG-container:hover .AppCardLG{
     border: 2.5pt solid #fff;
     opacity: 1;
     z-index: 1;
-    transform: scale(1.15);
+    transform: scale(1.10);
     -webkit-box-shadow: 0 10px 1.125rem 0 rgba(0,0,0,0.75);
     -moz-box-shadow:    0 10px 1.125rem 0 rgba(0,0,0,0.75);
     box-shadow:         0 10px 1.125rem 0 rgba(0,0,0,0.75);
-}
-
-.AppCard-h4{
-    color: #fff;
-    opacity: 0;
-    font-size: 1.2em;
-    line-height: 1;
-    z-index: 1;
-    transform: translateY(0.25em);
-    transition: all 250ms;
-}
-
-.AppCard-container:hover .AppCard-h4{
-    transform: translateY(0.15em);
-    opacity: 1;
 }

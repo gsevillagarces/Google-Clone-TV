@@ -13,7 +13,7 @@ export const googleClone = {
             { id : 5, icono : '',                   alt: 'icon', title : 'Go to Library', texto : 'Library', href : 'library'}
         ],
         avatar : {
-            id : 0, img : '/assets/avatar.jpg', alt : 'Avatar', title : 'Go to Profile', href : 'profile'
+            id : 0, img : '/assets/imgs/user@1x.jpg', alt : 'Avatar', title : 'Go to Profile', href : 'profile'
         }
     },
     main : {

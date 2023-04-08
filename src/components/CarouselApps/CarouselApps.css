@@ -10,7 +10,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 1em;
+    gap: 2.5em;
     cursor: pointer;
     overflow-x: scroll;
 }

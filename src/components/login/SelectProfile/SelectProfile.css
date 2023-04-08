@@ -1,12 +1,23 @@
 .SelectProfile{
     width: 100%;
     height: 100vh;
-    padding: 0 6rem 6rem;
+    padding: 12em 6rem 6rem;
     display: flex;
+    gap: 0.5em;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
+}
+
+.SelectProfile-logo{
+    width: 6em;
+}
+
+.SelectProfile-h2{
+    font-size: 2.5em;
+    line-height: 1.2;
+    text-align: center;
 }
 
 .SelectProfile-container{
@@ -15,6 +26,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    padding-top: 3em;
     gap: 3em;
 }
 
@@ -31,22 +43,47 @@
 .SelectProfile-profile{
     width: 10rem;
     height: 10rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
     flex: 0 0 auto;
-    border-radius: 50%;
     cursor: pointer;
-    border: 3pt solid transparent;
     transition: all 200ms;
+}
+
+.SelectProfile-profile-img{
+    border-radius: 50%;
+    border: 3pt solid transparent;
+}
+
+.SelectProfile-profile-name{
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.SelectProfile-profile-name{
+    color: #fff;
 }
 
 .SelectProfile-addProfile{
     background-color: #fff;
     border: 3pt solid #000;
+    border-radius: 50%;
+}
+
+.SelectProfile-addProfile-img{
     padding: 2em;
+}
+
+.SelectProfile-profile:hover .SelectProfile-profile-img,
+.SelectProfile-profile:active .SelectProfile-profile-img{
+    border: 3pt solid #ffffff;
 }
 
 .SelectProfile-profile:hover,
 .SelectProfile-profile:active{
-    border: 3pt solid #ffffff;
     transform: scale(1.025);
 }
 

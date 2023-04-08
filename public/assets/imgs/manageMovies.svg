@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="448" height="164" viewBox="0 0 448 164">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_99" data-name="Rectangle 99" width="448" height="164" transform="translate(-18993 6528)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#22252a"/>
+      <stop offset="1" stop-color="#0f131a" stop-opacity="0.502"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" x2="1" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Mask_Group_26" data-name="Mask Group 26" transform="translate(18993 -6528)" clip-path="url(#clip-path)">
+    <rect id="Rectangle_96" data-name="Rectangle 96" width="270" height="162" rx="20" transform="translate(-18904 6529)" fill="#22252a"/>
+    <path id="Rectangle_97" data-name="Rectangle 97" d="M0,0H59A20,20,0,0,1,79,20v94a20,20,0,0,1-20,20H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(-18993 6543)" fill="url(#linear-gradient)"/>
+    <path id="Rectangle_98" data-name="Rectangle 98" d="M20,0H79a0,0,0,0,1,0,0V134a0,0,0,0,1,0,0H20A20,20,0,0,1,0,114V20A20,20,0,0,1,20,0Z" transform="translate(-18624 6543)" fill="url(#linear-gradient-2)"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="34" cy="34" r="34" transform="translate(-18803 6576)"/>
+    <g id="movie_creation_black_24dp" transform="translate(-18789 6590)">
+      <path id="Path_86" data-name="Path 86" d="M0,0H40V40H0Z" fill="none"/>
+      <path id="Path_87" data-name="Path 87" d="M8.288,14.083H32.1V27.528H5.344V8.151M35.444,4H28.756L32.1,10.722H27.083L23.739,4H20.394l3.344,6.722H18.722L15.378,4H12.033l3.344,6.722H10.361L7.017,4H5.344A3.363,3.363,0,0,0,2,7.361V27.528a3.363,3.363,0,0,0,3.344,3.361H32.1a3.363,3.363,0,0,0,3.344-3.361Z" transform="translate(1.278 2.556)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

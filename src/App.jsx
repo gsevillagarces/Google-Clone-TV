@@ -20,7 +20,7 @@ import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
 
 import { Template } from './components/Template/Template'
-import { AppCard } from './components/home/main/appCard/AppCard'
+import { AppCard } from './components/home/main/AppCard/AppCard'
 
 function App() {
   return (
@@ -36,13 +36,13 @@ function App() {
           {/* < Header /> */}
 
           {/* < LoginForm /> */}
-          < SelectProfile />
+          {/* < SelectProfile /> */}
 
           {/* < Search /> */}
           {/* < ForYou /> */}
           {/* < Movies /> */}
           {/* < Shows /> */}
-          {/* < Apps /> */}
+          < Apps />
           {/* < Library /> */}
           {/* < Profile /> */}
 
