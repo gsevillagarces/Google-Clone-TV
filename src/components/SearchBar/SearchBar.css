@@ -5,18 +5,13 @@
 .SearchBar-input{
     background-color: #2F2F2F;
     width: 100%;
-    padding: 1em 1.5em;
+    padding: 0.5em 1.5em;
     color: #fff;
     opacity: 50%;
     border: 3pt solid transparent;
     border-radius: 2em;
     font-size: 3em;
     line-height: 0.65em 1em;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75em;
     transition: all 500ms;
 }
 
@@ -28,4 +23,20 @@
 
 .SearchBar-img{
     width: 3rem;
+}
+
+#Search::-webkit-search-cancel-button{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: #fff url(/assets/icons/close.svg) no-repeat 50% 50%;
+    background-size: 50%;
+    position:relative;
+    -webkit-appearance: none;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+#Search::-webkit-search-cancel-button:hover{
+    transform: scale(1.2);
 }

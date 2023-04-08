@@ -1,4 +1,4 @@
 .Search{
-    background-color: aquamarine;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 8vh;
 }

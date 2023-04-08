@@ -21,6 +21,8 @@ import { AppDetails } from './pages/details/AppDetails/AppDetails'
 
 import { Template } from './components/Template/Template'
 import { AppCard } from './components/home/main/AppCard/AppCard'
+import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
+import { SearchSuggestions } from './components/home/main/SearchSuggestions/SearchSuggestions'
 
 function App() {
   return (
@@ -38,15 +40,17 @@ function App() {
             {/* < LoginForm /> */}
             {/* < SelectProfile /> */}
 
-          {/* < Search /> */}
+          < SearchSuggestions />
+          < Search />
             {/* < ForYou /> */}
             {/* < Movies /> */}
-          < Shows />
+            {/* < Shows /> */}
             {/* < Apps /> */}
             {/* < Library /> */}
-          < Profile />
+          {/* < Profile /> */}
 
             {/* < MovieDetails /> */}
+            {/* < SerieDetails /> */}
             {/* < AppDetails /> */}
 
             {/* < Routes >

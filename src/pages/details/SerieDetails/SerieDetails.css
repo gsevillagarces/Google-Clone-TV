@@ -1,5 +1,5 @@
-.MovieDetails{
-    background: url(/public/assets/movies/slider/bgSlide.jpg) center top no-repeat;
+.SerieDetails{
+    background: url(/public/assets/series/slider/bgSlide.jpg) center top no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.MovieDetails::after{
+.SerieDetails::after{
     content: '';
     height: 100%;
     width: 100%;
@@ -19,7 +19,7 @@
     background: linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.25) 100%);
 }
 
-.MovieDetails-container{
+.SerieDetails-container{
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -28,12 +28,12 @@
     gap: 2.5rem;
 }
 
-.MovieDetails-h1{
+.SerieDetails-h1{
     font-size: 9rem;
     line-height: 1.2;
 }
 
-.MovieDetails-rating{
+.SerieDetails-rating{
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
@@ -42,7 +42,7 @@
     color: #fff;
 }
 
-.MovieDetails-Restriction span{
+.SerieDetails-Restriction span{
     padding: .1rem .6rem;
     border: 2pt solid #fff;
     border-radius: .625rem;
@@ -50,24 +50,24 @@
     line-height: 1;
 }
 
-.MovieDetails-description{
+.SerieDetails-description{
     max-width: 60%;
 }
 
-.MovieDetails-description-p{
+.SerieDetails-description-p{
     font-size: 1.5rem;
     line-height: 1.5;
     color: #ffffff50;
 }
 
-.MovieDetails-buttons{
+.SerieDetails-buttons{
     display: flex;
     flex-flow: row nowrap;
     gap: 1.5rem;
     padding: 2.2em 0;
 }
 
-.MovieDetails-buton{
+.SerieDetails-buton{
     background-color: #8C8C8C75;
     padding: 1.0625rem 2.625rem;
     border-radius: 2.5rem;
@@ -81,29 +81,25 @@
     transition: all 500ms;
 }
 
-.Button-span-img{
+.Button-span-img {
     width: 2.5rem;
     transition: all 500ms;
-}
-
-.Inverted-icon .Button-span-img{
-    filter: invert();
 }
 
 .Button-span-provider{
     width: 3em;
 }
 
-.MovieDetails-buton:hover{
+.SerieDetails-buton:hover{
     background-color: #fff;
     color: #000;
     transform: scale(1.025);
 }
 
-.MovieDetails-buton:hover .Button-span-img{
+.SerieDetails-buton:hover .Button-span-img{
     filter: invert();
 }
 
-.MovieDetails-buton:hover .Inverted-icon .Button-span-img{
+.SerieDetails-buton:hover .Inverted-icon .Button-span-img{
     filter: none;
 }
