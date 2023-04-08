@@ -29,6 +29,7 @@
 }
 
 .SerieDetails-h1{
+    color: #fff;
     font-size: 9rem;
     line-height: 1.2;
 }
@@ -71,6 +72,7 @@
     background-color: #8C8C8C75;
     padding: 1.0625rem 2.625rem;
     border-radius: 2.5rem;
+    color: #fff;
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;

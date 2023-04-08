@@ -30,6 +30,7 @@ body::-webkit-scrollbar{
 
 .input{
     background-color: #2F2F2F;
+    color: #fff;
     padding: 1em 1.25em;
     border-radius: 5em;
     min-width: 20em;

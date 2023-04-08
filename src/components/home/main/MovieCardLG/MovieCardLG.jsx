@@ -12,12 +12,12 @@ export const MovieCardLG = ({id, provider, alt, logoProvider, bgSlide, bgSmall, 
                             src={`${logoProvider}`}
                             alt={`${alt}`} />
                         <div className='MovieCardLG-movie-title'>
-                            <h4 className='MovieCardLG-h3'>
+                            <h3 className='MovieCardLG-h3'>
                                 {title}
-                            </h4>
-                            <h3 className='MovieCardLG-h4'>
-                                {summary}
                             </h3>
+                            <h4 className='MovieCardLG-h4'>
+                                {summary}
+                            </h4>
                         </div>
                     </div>
                 </div>

@@ -34,18 +34,18 @@ function App() {
 
           <div className='CloneTV'>
 
-            {/* < Header /> */}
+            < Header />
 
             {/* < LoginForm /> */}
             {/* < SelectProfile /> */}
 
-          < Search />
+            {/* < Search /> */}
             {/* < ForYou /> */}
             {/* < Movies /> */}
             {/* < Shows /> */}
             {/* < Apps /> */}
             {/* < Library /> */}
-          {/* < Profile /> */}
+          < Profile />
 
             {/* < MovieDetails /> */}
             {/* < SerieDetails /> */}

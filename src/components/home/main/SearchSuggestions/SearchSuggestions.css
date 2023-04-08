@@ -19,6 +19,10 @@
     width: 50%;
 }
 
+.SearchSuggestions-h4{
+    color: #fff;
+}
+
 .SearchSuggestions-rightContent{
     width: 50%;
     padding: 1em;
