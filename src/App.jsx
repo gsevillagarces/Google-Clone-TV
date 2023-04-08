@@ -20,8 +20,8 @@ import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
 
 import { Template } from './components/Template/Template'
-import { AppCard } from './components/home/main/AppCard/AppCard'
 import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
+
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
             {/* < SelectProfile /> */}
 
             {/* < Search /> */}
-            {/* < ForYou /> */}
+            < ForYou />
             {/* < Movies /> */}
             {/* < Shows /> */}
             {/* < Apps /> */}

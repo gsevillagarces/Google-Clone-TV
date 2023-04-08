@@ -1,13 +1,16 @@
 .Header{
     width: 100%;
+    background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 0.5em 5vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
     z-index: 2;
     position: fixed;
 }
 
 .Nav{
-    padding: 0.5em 3em;
-    background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
-    margin: auto;
     color: #fff;
     font-size: 2em;
     font-weight: 500;
@@ -23,7 +26,7 @@
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    gap: 0.35em;
+    gap: 0.35vw;
 }
 
 .Nav-a{
@@ -54,6 +57,10 @@
     opacity: 1;
 }
 
+.Header-h1{
+    line-height: 1;
+}
+
 .Header-a{
     margin-right: 1em;
 }
@@ -65,14 +72,103 @@
 }
 
 .Nav-avatar{
-    height: 2em;
-    width: 2em;
+    height: 4rem;
+    width: 4rem;
+    margin: 0.65em 0;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 .75rem 1.25rem rgba(0, 0, 0, 0.5);
-    transition: all ease-in;
+    transition: all 200ms;
 }
 
 .Nav-avatar:hover{
     transform: scale(1.025);
+}
+
+.Nav-responsive{
+    display: none;
+}
+
+.Nav-responsive-button{
+    border: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+
+.Nav-responsive-button-close{
+    border: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.Nav-responsive-button .Nav-responsive-img-close{
+    display: none;
+}
+
+.Nav-responsive-img{
+    filter: invert();
+}
+
+.Nav-responsive-button:hover .Nav-responsive-img{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1480px){
+    .Nav{
+        padding: 0.5em 1em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Header-a{
+        display: none;
+    }
+
+    .Nav-responsive-button-close {
+        z-index: 3;
+        filter: invert();
+    }
+
+    .Nav-responsive-button-close .Nav-responsive-img{
+        display: none;
+    }
+
+    .Nav-responsive-button-close .Nav-responsive-img-close{
+        display: block;
+    }
+
+    .Nav-ul{
+        background-color: rgba(0, 0, 0, 0.98);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .Nav-ul.expanded{
+        opacity: 1;
+        pointer-events: all;
+        transition: all 200ms;
+    }
+
+    .Nav-responsive{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
 }

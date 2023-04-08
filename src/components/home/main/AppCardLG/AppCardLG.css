@@ -20,12 +20,27 @@
     transition: all 200ms;
 }
 
+.AppCardLG-img{
+    width: 50%;
+}
+
 .AppCardLG-container:hover .AppCardLG{
     border: 2.5pt solid #fff;
     opacity: 1;
     z-index: 1;
-    transform: scale(1.10);
+    transform: scale(1.05);
     -webkit-box-shadow: 0 10px 1.125rem 0 rgba(0,0,0,0.75);
     -moz-box-shadow:    0 10px 1.125rem 0 rgba(0,0,0,0.75);
     box-shadow:         0 10px 1.125rem 0 rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 1480px){
+    .AppCardLG{
+        width: 30em;
+        height: 18rem;
+        padding: 4em 1.5em;
+    }
+    .AppCardLG-img{
+        width: 80%;
+    }
 }

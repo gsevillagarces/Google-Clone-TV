@@ -17,8 +17,9 @@ body::-webkit-scrollbar{
 } */
 
 .CloneTV-h2{
-    padding: 0.65em 4em;
+    padding: 2vh 5vw;
     font-size: 1.5rem;
+    line-height: 1;
     color: #fff;
 }
 

@@ -36,7 +36,7 @@ export const Slider = () => {
                             <span className='Slider-meta'>
                                 <h2 className='Slider-h2'>{eachMovie.provider}</h2>
                                 <span className='Slider-meta-divider'></span>
-                                <h2 className='Slider-p'>{eachMovie.summary}</h2>
+                                <p className='Slider-p'>{eachMovie.summary}</p>
                             </span>
                             <button className='Slider-button'>
                                 Play on {eachMovie.provider}

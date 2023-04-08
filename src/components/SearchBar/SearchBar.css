@@ -1,5 +1,5 @@
 .SearchBar{
-    padding: 1.65em 6em;
+    padding: 1.65em 5vw;
 }
 
 .SearchBar-input{
@@ -10,7 +10,7 @@
     opacity: 50%;
     border: 3pt solid transparent;
     border-radius: 2em;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 0.65em 1em;
     transition: all 500ms;
 }
@@ -39,4 +39,11 @@
 
 .SearchBar-input::-webkit-search-cancel-button:hover{
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 1480px){
+    .SearchBar-input{
+        padding: 0.5em 5vw;
+        font-size: 1.5em;
+    }
 }
