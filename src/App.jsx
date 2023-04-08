@@ -33,21 +33,21 @@ function App() {
 
           <div className='CloneTV'>
 
-          {/* < Header /> */}
+            {/* < Header /> */}
 
-          {/* < LoginForm /> */}
-          {/* < SelectProfile /> */}
+            {/* < LoginForm /> */}
+            {/* < SelectProfile /> */}
 
           {/* < Search /> */}
-          {/* < ForYou /> */}
-          {/* < Movies /> */}
-          {/* < Shows /> */}
-          < Apps />
-          {/* < Library /> */}
-          {/* < Profile /> */}
+            {/* < ForYou /> */}
+            {/* < Movies /> */}
+          < Shows />
+            {/* < Apps /> */}
+            {/* < Library /> */}
+          < Profile />
 
-          {/* < MovieDetails /> */}
-          {/* < AppDetails /> */}
+            {/* < MovieDetails /> */}
+            {/* < AppDetails /> */}
 
             {/* < Routes >
               < Route path='/' element={ < ForYou /> } >

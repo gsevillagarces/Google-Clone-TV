@@ -1,12 +1,12 @@
-.CarouselMovies-container{
+.CarouselMoviesLG-container{
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
 
-.CarouselMovies{
+.CarouselMoviesLG{
     width: 100%;
-    padding: 1em 6em;
+    padding: 0.65em 6em;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -15,15 +15,15 @@
     overflow-x: scroll;
 }
 
-.CarouselMovies:hover .MovieCard-h4{
+.CarouselMoviesLG:hover .MovieCardLG-h4{
     transform: translateY(0);
-    opacity: 0.5;
-}
-
-.CarouselMovies:hover .MovieCard{
     opacity: 1;
 }
 
-.CarouselMovies::-webkit-scrollbar{
+.CarouselMoviesLG:hover .MovieCardLG{
+    opacity: 1;
+}
+
+.CarouselMoviesLG::-webkit-scrollbar{
     display: none;
 }

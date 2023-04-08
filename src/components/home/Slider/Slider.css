@@ -90,6 +90,7 @@
 .Slider-img-provider{
     width: 5em;
     max-width: 100%;
+    filter: brightness(0) invert(1);
 }
 
 .Slider-meta{

@@ -1,7 +1,6 @@
 .MovieDetails{
     background: url(/public/assets/movies/slider/bgSlide.jpg) center top no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     align-items: flex-end;

@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './MovieCard.css'
 
-export const MovieCard = ({id, provider, alt, logoProvider, bgSlide, bgSmall, title, summary, btnText, rating, href}) => {
-
+export const MovieCard = ({id, provider, alt, logoProvider, bgSlide, bgSmall, title, summary, btnText, rating, restriction, category, years, watchlisted, watched, href}) => {
     return (
         <div className='MovieCard-container'>
             < NavLink to={ `movie-details/${id}` } className='MovieCard-a'>
