@@ -1,15 +1,21 @@
 import './SearchSuggestions.css'
 
-export const SearchSuggestions = () => {
+export const SearchSuggestions = ({id, txt, image, alt, href }) => {
     return(
-        <div className='SearchSuggestions'>
-            <div className='SearchSuggestions-leftContent'>
-                <h4 className='SearchSuggestions-h4'>Show me movies by Spike Lee</h4>
+        <div className='SearchSuggestions-container'>
+            <div className='SearchSuggestions'>
+                <div className='SearchSuggestions-leftContent'>
+                    <h4 className='SearchSuggestions-h4'>
+                        {txt}
+                    </h4>
+                </div>
+                <div className='SearchSuggestions-rightContent'>
+                    <img
+                        src={ image }
+                        alt={ alt }
+                        className="SearchSuggestions-img" />
+                </div>
             </div>
-            <div className='SearchSuggestions-rightContent'>
-                <img src="assets/icons/add.svg" alt="Search suggestions image" />
-            </div>
-
         </div>
     )
 }

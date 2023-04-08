@@ -407,35 +407,53 @@ export const googleClone = {
         ],
         searchSuggestions : [
             {   id          : 0,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'Show me meat recipes',
+                image       : '/assets/suggestions/meat.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
             {   id          : 1,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'How to play poker?',
+                image       : '/assets/suggestions/poker.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
             {   id          : 2,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'Who won best acress last year?',
+                image       : '/assets/suggestions/trophy.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
             {   id          : 3,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'Directions to work',
+                image       : '/assets/suggestions/directions.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
             {   id          : 4,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'Tell me a random number',
+                image       : '/assets/suggestions/random.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
             {   id          : 5,
-                txt         : 'Show me movies by Spike Lee',
-                image       : '/assets/suggestions/starplus.svg',
+                txt         : 'Have I got new mails?',
+                image       : '/assets/suggestions/mail.svg',
+                alt         : 'Search suggestions img',
                 href        : ''
             },
+            {   id          : 6,
+                txt         : 'Open YouTube',
+                image       : '/assets/suggestions/youtube.svg',
+                alt         : 'Search suggestions img',
+                href        : ''
+            },
+            {   id          : 7,
+                txt         : 'Show me yoga exercises',
+                image       : '/assets/suggestions/yoga.svg',
+                alt         : 'Search suggestions img',
+                href        : ''
+            }
         ]
     }
 }

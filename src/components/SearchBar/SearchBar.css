@@ -25,7 +25,7 @@
     width: 3rem;
 }
 
-#Search::-webkit-search-cancel-button{
+.SearchBar-input::-webkit-search-cancel-button{
     width: 1em;
     height: 1em;
     border-radius: 50%;
@@ -37,6 +37,6 @@
     transition: all 200ms;
 }
 
-#Search::-webkit-search-cancel-button:hover{
+.SearchBar-input::-webkit-search-cancel-button:hover{
     transform: scale(1.2);
 }

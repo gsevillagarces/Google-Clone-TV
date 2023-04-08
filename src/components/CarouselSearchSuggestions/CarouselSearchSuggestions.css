@@ -1,22 +1,18 @@
-.CarouselAppsLG-container{
+.CarouselSearchSuggestions-container{
     width: 100%;
 }
 
-.CarouselAppsLG{
+.CarouselSearchSuggestions{
     width: 100%;
-    padding: 1.65em 6em;
+    padding: 1em 6em;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 2.5em;
+    gap: 1.75em;
     cursor: pointer;
     overflow-x: scroll;
 }
 
-.CarouselAppsLG:hover .AppCard{
-    opacity: 1;
-}
-
-.CarouselAppsLG::-webkit-scrollbar{
+.CarouselSearchSuggestions::-webkit-scrollbar{
     display: none;
 }
