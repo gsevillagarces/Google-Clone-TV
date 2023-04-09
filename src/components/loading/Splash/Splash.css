@@ -15,8 +15,9 @@
 }
 
 .Splash-main{
-    display: flex;
     height: 100%;
+    padding: 0 20vw;
+    display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
@@ -86,5 +87,11 @@
     100%{
         opacity: 0%;
         transform: scale(3);
+    }
+}
+
+@media screen and (max-width: 920px){
+    .Splash-footer{
+        padding: 1em 0;
     }
 }
