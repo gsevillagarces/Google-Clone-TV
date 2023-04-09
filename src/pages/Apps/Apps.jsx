@@ -1,14 +1,42 @@
+import './Apps.css'
+
+import { useEffect, useState } from 'react'
 import { CarouselApps } from '../../components/CarouselApps/CarouselApps'
 import { CarouselAppsLG } from '../../components/CarouselAppsLG/CarouselAppsLG'
 import { SearchBar } from '../../components/SearchBar/SearchBar'
-import './Apps.css'
 
-export const Apps = () => {
+export const Apps = ( filter ) => {
+
+    const [ apps, setApps ] = useState([])
+
+    useEffect ( () => {
+
+        let controller = new AbortController()
+        console.log( controller )
+
+        let options = {
+            method: "get",
+            signal : controller.signal,
+            headers : {
+                "Content-type" : "application/json"
+            } 
+        }
+
+        fetch( 'http://localhost:4002/apps', options )
+        .then( res => res.json() )
+        .then( data => setApps(data) )
+        .catch( err => setApps(err) )
+        .finally( () => controller.abort() )
+
+        console.log(apps)
+        
+    }, [])
+
     return(
         <div className='Apps'>
-            < CarouselAppsLG />
+            < CarouselAppsLG apps = { apps } filter = "Featured" />
             <h2 className='CloneTV-h2'>Your apps</h2>
-            < CarouselApps />
+            < CarouselApps apps = { apps } filter ="Installed" />
             < SearchBar />
         </div>
     )

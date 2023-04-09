@@ -24,7 +24,8 @@ import { Template } from './components/Template/Template'
 
 function App() {
   return (
-      < BrowserRouter >
+    < BrowserRouter >
+
       <div className='App'>
 
         {/* <div className='Splash'>
@@ -33,39 +34,21 @@ function App() {
 
           <div className='CloneTV'>
 
-            < Header />
-
-            {/* < LoginForm /> */}
-            {/* < SelectProfile />   */}
-
-            {/* < Search /> */}
-            {/* < ForYou /> */}
-            {/* < Movies /> */}
-            {/* < Shows /> */}
-            {/* < Apps /> */}
-            {/* < Library /> */}
-          < Profile />
-
-            {/* < MovieDetails /> */}
-            {/* < AppDetails /> */}
-            {/* < SerieDetails /> */}
-
-            {/* < Routes >
-              < Route path='/' element={ < ForYou /> } >
-                < Route path='Template' element={ < Template /> } >
-                      < Route path='foryou'  element={ < ForYou />  } />
-                      < Route path='search'  element={ < Search />  } />
-                      < Route path='movies'  element={ < Movies />  } />
-                      < Route path='shows'   element={ < Shows />   } />
-                      < Route path='apps'    element={ < Apps />    } />
-                      < Route path='library' element={ < Library /> } />
-                      < Route path='profile' element={ < Profile /> } />
-                  </ Route >
+            < Routes >
+              < Route path='/' element={ < LoginForm /> } />
+                < Route path='/template' element={ < Template /> } >
+                    < Route path='foryou'  element={ < ForYou /> } />
+                    < Route path='search'  element={ < Search />  } />
+                    < Route path='movies'  element={ < Movies />  } />
+                    < Route path='shows'   element={ < Shows />   } />
+                    < Route path='apps'    element={ < Apps />    } />
+                    < Route path='library' element={ < Library /> } />
+                    < Route path='profile' element={ < Profile /> } />
                 </ Route >
-                < Route path='/movie-details' element={ < MovieDetails /> } />
-                < Route path='/app-details'   element={ < AppDetails />   } />
-            </ Routes > */}
-          
+              < Route path='/app-details'   element={ < AppDetails />   } />
+              < Route path='/movie-details' element={ < MovieDetails /> } />
+            </ Routes >
+            
           </div>
       </div>
       </ BrowserRouter >

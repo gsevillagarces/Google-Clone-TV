@@ -1,6 +1,6 @@
 import './AppCardLG.css'
 
-export const AppCardLG = ({id, appName, logoApp, appColor, href}) => {
+export const AppCardLG = ({id, appName, logoApp, appColor, type, href}) => {
     return (
         <div className='AppCardLG-container' key={id}>
             <div className='AppCardLG'

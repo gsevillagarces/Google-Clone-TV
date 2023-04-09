@@ -1,5 +1,5 @@
 import './Slider.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { googleClone } from '../../../bbdd'
 
 const {main}   = googleClone

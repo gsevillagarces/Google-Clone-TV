@@ -1,15 +1,25 @@
 import './CarouselAppsLG.css'
 import { AppCardLG } from '../home/main/AppCardLG/AppCardLG'
-import { googleClone } from '../../bbdd'
+import { useEffect, useState } from 'react'
+// import { googleClone } from '../../bbdd'
 
-const {main} = googleClone
-const {apps} = main
+// const {main} = googleClone
+// const {apps} = main
 
-export const CarouselAppsLG = () => {
+export const CarouselAppsLG = ( { apps, filter } ) => {
+
+    const [ filtrar, setFiltrar ] = useState( [] )
+
+    useEffect (() => {
+        const filterType = apps.filter (eachApp => eachApp.type === filter)
+        setFiltrar(filterType)
+    }, [apps] )
+
+    console.log(filtrar)
     return(
         <div className='CarouselAppsLG-container'>
             <div className='CarouselAppsLG'>
-                { apps.map( eachApp =>
+                { filtrar && filtrar.map( eachApp =>
                     < AppCardLG key = {eachApp.id} {...eachApp} />    
                 )}
             </div>

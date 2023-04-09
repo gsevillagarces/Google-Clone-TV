@@ -5,12 +5,12 @@ export const googleClone = {
             alt : 'Clone TV'
         },
         menu : [
-            { id : 0, icono : '/assets/search.svg', alt: 'icon', title : 'Go to Search',  texto : 'Search',  href : 'search'},
-            { id : 1, icono : '',                   alt: 'icon', title : 'Go to For you', texto : 'For you', href : ''},
-            { id : 2, icono : '',                   alt: 'icon', title : 'Go to Movies',  texto : 'Movies',  href : 'movies'},
-            { id : 3, icono : '',                   alt: 'icon', title : 'Go to Shows',   texto : 'Shows',   href : 'shows'},
-            { id : 4, icono : '',                   alt: 'icon', title : 'Go to Apps',    texto : 'Apps',    href : 'apps'},
-            { id : 5, icono : '',                   alt: 'icon', title : 'Go to Library', texto : 'Library', href : 'library'}
+            { id : 0, icono : '/assets/search.svg', alt: 'icon', title : 'Go to Search',  texto : 'Search',  href : 'template/search'},
+            { id : 1, icono : '',                   alt: 'icon', title : 'Go to For you', texto : 'For you', href : 'template/foryou'},
+            { id : 2, icono : '',                   alt: 'icon', title : 'Go to Movies',  texto : 'Movies',  href : 'template/movies'},
+            { id : 3, icono : '',                   alt: 'icon', title : 'Go to Shows',   texto : 'Shows',   href : 'template/shows'},
+            { id : 4, icono : '',                   alt: 'icon', title : 'Go to Apps',    texto : 'Apps',    href : 'template/apps'},
+            { id : 5, icono : '',                   alt: 'icon', title : 'Go to Library', texto : 'Library', href : 'template/library'}
         ],
         avatar : {
             id : 0, img : '/assets/imgs/user@2x.jpg', alt : 'Avatar', title : 'Go to Profile', href : 'profile'

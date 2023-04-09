@@ -18,8 +18,8 @@ export const Header = () => {
             <button
                 className={ isMobile ? 'Nav-responsive-button' : 'Nav-responsive-button-close'} 
                 onClick={ () => {setIsMobile( !isMobile ) } } > 
-                <img className='Nav-responsive-img' src="assets/icons/menu.svg" alt="" />
-                <img className='Nav-responsive-img-close' src="assets/icons/close.svg" alt="" />
+                <img className='Nav-responsive-img' src="/assets/icons/menu.svg" alt="" />
+                <img className='Nav-responsive-img-close' src="/assets/icons/close.svg" alt="" />
             </button>
 
             <h1 className="Header-h1">

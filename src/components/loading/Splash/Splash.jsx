@@ -4,7 +4,7 @@ export const Splash = () => {
   return(
     <div className="Splash">
       <div className="Splash-main">
-        <img src="assets/clone-logo.svg" alt="Logo Clone TV" />
+        <img src="/assets/clone-logo.svg" alt="Logo Clone TV" />
         <div className='Loading-bar'>
           <span className='Loaded'></span>
         </div>

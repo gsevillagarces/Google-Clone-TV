@@ -7,7 +7,6 @@ import { CarouselApps } from '../../components/CarouselApps/CarouselApps'
 export const ForYou = () => {
     return(
         <div className='ForYou'>
-
           < Slider />
           <h2 className='CloneTV-h2'>Top picks</h2>
             < CarouselMovies />
@@ -19,7 +18,6 @@ export const ForYou = () => {
             < CarouselMovies />
           <h2 className='CloneTV-h2'>Suggested</h2>
             < CarouselMovies />
-
         </div>
     )
 }

@@ -5,7 +5,7 @@ export const Template = () => {
     return (
         <>
             < Header />
-                < Outlet />
+            < Outlet />
         </>
     )
 }
