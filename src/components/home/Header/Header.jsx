@@ -64,6 +64,19 @@ export const Header = () => {
             )}
             </ul>
         </nav>
+        
+
+
+
+        <button className='Profile-icon-button Profile-icon-button'>
+            <div className='ProfileInfo-icon ProfileInfo-logout'>
+                <img src="/assets/icons/logout.svg" alt="Logout" />
+            </div>
+        </button>
+
+
+
+        
 
         <NavLink to={ `/${avatar.href}` } className="Nav-avatar">
             <img
@@ -71,6 +84,7 @@ export const Header = () => {
             title={ avatar.title }
             className= "Nav-avatar--img" />
         </NavLink>
+
 
     </div>
     )
