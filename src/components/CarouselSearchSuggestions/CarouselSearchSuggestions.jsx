@@ -1,5 +1,5 @@
 import './CarouselSearchSuggestions.css';
-import { SearchSuggestions } from '../home/main/SearchSuggestions/SearchSuggestions';
+import { SearchSuggestions } from '../home/cards/SearchSuggestions/SearchSuggestions';
 import { googleClone } from '../../bbdd'
 
 const {main} = googleClone

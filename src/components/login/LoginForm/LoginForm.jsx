@@ -8,7 +8,7 @@ export const LoginForm = () => {
     return(
         <div className='LoginForm'>
             <div className='LoginForm-container LoginForm-username'>
-                <h2 className='LoginForm-h2'>To begin we need your username...</h2>
+                <h2 className='LoginForm-h2'>To begin we need your username and password:</h2>
                 <div className='LoginForm-form'>
                     < TextField />
                     < PasswordField />

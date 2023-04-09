@@ -1,5 +1,5 @@
 import './CarouselApps.css'
-import { AppCard } from '../home/main/AppCard/AppCard'
+import { AppCard } from '../home/cards/AppCard/AppCard'
 import { googleClone } from '../../bbdd'
 
 const {main} = googleClone

@@ -1,9 +1,7 @@
-import { BrowserRouter, Routes, Route  } from 'react-router-dom'
 import './App.css'
+import { BrowserRouter, Routes, Route  } from 'react-router-dom'
 
 import { Splash } from './components/loading/Splash/Splash'
-
-import { Header } from './components/home/Header/Header'
 
 import { LoginForm } from './components/login/LoginForm/LoginForm'
 import { SelectProfile } from './components/login/SelectProfile/SelectProfile'
@@ -20,7 +18,7 @@ import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
 import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
 
-import { Template } from './components/Template/Template'
+import { Main } from './components/Main/Main'
 
 function App() {
   return (
@@ -35,18 +33,23 @@ function App() {
           <div className='CloneTV'>
 
             < Routes >
+
               < Route path='/' element={ < LoginForm /> } />
-                < Route path='/template' element={ < Template /> } >
+                < Route path='/main' element={ < Main /> } >
                     < Route path='foryou'  element={ < ForYou /> } />
                     < Route path='search'  element={ < Search />  } />
                     < Route path='movies'  element={ < Movies />  } />
                     < Route path='shows'   element={ < Shows />   } />
                     < Route path='apps'    element={ < Apps />    } />
                     < Route path='library' element={ < Library /> } />
-                    < Route path='profile' element={ < Profile /> } />
                 </ Route >
-              < Route path='/app-details'   element={ < AppDetails />   } />
-              < Route path='/movie-details' element={ < MovieDetails /> } />
+              < Route path='login/SelectProfile'   element={ < SelectProfile />} />
+
+              < Route path='profile'               element={ < Profile />      } />
+              
+              < Route path='details/app-details'   element={ < AppDetails />   } />
+              < Route path='details/movie-details' element={ < MovieDetails /> } />
+              < Route path='details/serie-details' element={ < SerieDetails /> } />
             </ Routes >
             
           </div>

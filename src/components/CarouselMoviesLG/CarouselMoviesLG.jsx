@@ -1,5 +1,5 @@
 import './CarouselMoviesLG.css'
-import { MovieCardLG } from '../home/main/MovieCardLG/MovieCardLG'
+import { MovieCardLG } from '../home/cards/MovieCardLG/MovieCardLG'
 import { googleClone } from '../../bbdd'
 
 const {main} = googleClone

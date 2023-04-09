@@ -1,5 +1,5 @@
 import './CarouselAppsLG.css'
-import { AppCardLG } from '../home/main/AppCardLG/AppCardLG'
+import { AppCardLG } from '../home/cards/AppCardLG/AppCardLG'
 import { useEffect, useState } from 'react'
 // import { googleClone } from '../../bbdd'
 

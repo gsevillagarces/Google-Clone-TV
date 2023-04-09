@@ -19,9 +19,17 @@ export const Library = () => {
                         <img className='Library-Manage-img' src="/assets/imgs/manageMovies.svg" alt="Manage movies and apps" />
                     </div>
                 </div>
+                
             </div>
             <h2 className='CloneTV-h2'>On your watchlist</h2>
             < CarouselMovies />
+            <div className='Library-Disclaimer'>
+                <div className='Library-Disclaimer-container'>
+                    <h3 className='Library-Disclaimer-h3'>
+                        Rotten Tomatoes scores are not verified
+                    </h3>
+                </div>
+            </div>
         </div>
     )
 }
