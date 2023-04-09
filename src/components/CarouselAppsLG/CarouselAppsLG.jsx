@@ -15,7 +15,6 @@ export const CarouselAppsLG = ( { apps, filter } ) => {
         setFiltrar(filterType)
     }, [apps] )
 
-    console.log(filtrar)
     return(
         <div className='CarouselAppsLG-container'>
             <div className='CarouselAppsLG'>
