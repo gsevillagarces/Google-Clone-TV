@@ -26,7 +26,7 @@ export const SerieDetails = () => {
                         </span>
                     </button>
                     <button className='SerieDetails-buton'>
-                        Seasons
+                        3 seasons
                     </button>
                     <button className='SerieDetails-buton'>
                         <span className='Inverted-icon'> 

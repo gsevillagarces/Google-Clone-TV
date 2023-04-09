@@ -4,7 +4,7 @@
     min-height: 100vh;
     display: flex;
     align-items: flex-end;
-    padding: 5.5rem 6rem 2rem;
+    padding: 5.5rem 5vw 2rem;
     position: relative;
 }
 
@@ -20,6 +20,7 @@
 }
 
 .MovieDetails-container{
+    width: 100%;
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -34,13 +35,23 @@
     line-height: 1.2;
 }
 
+.MovieDetails-h4{
+    flex: 0 0 auto;
+}
+
 .MovieDetails-rating{
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 2rem;
     font-size: 2rem;
+    line-height: 1.2;
     color: #fff;
+}
+
+.MovieDetails-Restriction{
+    margin-bottom: .5rem;
 }
 
 .MovieDetails-Restriction span{
@@ -62,10 +73,16 @@
 }
 
 .MovieDetails-buttons{
+    width: 100%;
+    overflow-x: scroll;
     display: flex;
     flex-flow: row nowrap;
     gap: 1.5rem;
     padding: 2.2em 0;
+}
+
+.MovieDetails-buttons::-webkit-scrollbar{
+    display: none;
 }
 
 .MovieDetails-buton{
@@ -88,12 +105,8 @@
     transition: all 500ms;
 }
 
-.Inverted-icon .Button-span-img{
-    filter: invert();
-}
-
 .Button-span-provider{
-    width: 3em;
+    min-width: 3em;
 }
 
 .MovieDetails-buton:hover{
@@ -102,10 +115,58 @@
     transform: scale(1.025);
 }
 
+.Inverted-icon .Button-span-img{
+    filter: invert();
+}
+
 .MovieDetails-buton:hover .Button-span-img{
     filter: invert();
 }
 
 .MovieDetails-buton:hover .Inverted-icon .Button-span-img{
     filter: none;
+}
+
+@media screen and (max-width: 1480px){
+    .MovieDetails-description {
+        max-width: 100%;
+    }
+
+    .MovieDetails-buttons {
+        width: calc(100% + 5vw);
+    }
+
+    .MovieDetails-buton:nth-last-child(1) {
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .MovieDetails{
+        background-position: 30% top;
+    }
+
+    .MovieDetails-container{
+        gap: 1em;
+    }
+
+    .MovieDetails-h1{
+        font-size: 6rem;
+    }
+
+    .MovieDetails-h4{
+        font-size: 1.5rem;
+    }
+    .MovieDetails-Restriction{
+        margin-bottom: 0;
+    }
+    
+
+    .MovieDetails-description-p{
+        font-size: 1.2rem;
+    }
+    
+    .MovieDetails-rating{
+        gap: 0.5em;
+    }
 }

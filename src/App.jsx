@@ -18,10 +18,9 @@ import { Profile } from './pages/Profile/Profile'
 
 import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
-
-import { Template } from './components/Template/Template'
 import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
 
+import { Template } from './components/Template/Template'
 
 function App() {
   return (
@@ -37,10 +36,10 @@ function App() {
             < Header />
 
             {/* < LoginForm /> */}
-            {/* < SelectProfile /> */}
+            {/* < SelectProfile />   */}
 
             {/* < Search /> */}
-            < ForYou />
+            {/* < ForYou /> */}
             {/* < Movies /> */}
             {/* < Shows /> */}
             {/* < Apps /> */}
@@ -48,8 +47,8 @@ function App() {
           < Profile />
 
             {/* < MovieDetails /> */}
-            {/* < SerieDetails /> */}
             {/* < AppDetails /> */}
+            {/* < SerieDetails /> */}
 
             {/* < Routes >
               < Route path='/' element={ < ForYou /> } >

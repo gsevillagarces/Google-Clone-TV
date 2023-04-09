@@ -4,18 +4,19 @@
 }
 
 .Library-Manage{
-    padding: 2em 6em;
+    padding: 2em 5vw;
     color: #fff;
 }
 
 .Library-Manage-container{
-    padding: 2em 4em;
+    padding: 3em 4vw;
     border: 2pt solid #ffffff50;
     border-radius: 1em;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    gap: 4em;
 }
 
 .Library-Manage-left{
@@ -26,6 +27,10 @@
     gap: 2em;
 }
 
+.Library-Manage-right{
+    flex: 0 0 auto;
+}
+
 .Library-Manage-h2{
     font-size: 2.75rem;
     line-height: 1;
@@ -33,10 +38,20 @@
 
 .Library-Manage-h3{
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.2;
     opacity: 0.5;
 }
 
 .Library-Manage-img{
     width: 30rem;
+}
+
+
+@media screen and (max-width: 1200px){
+    .Library-Manage-container{
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 4em;
+    }
 }

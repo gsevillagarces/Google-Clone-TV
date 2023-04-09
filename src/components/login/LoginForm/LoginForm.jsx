@@ -8,14 +8,14 @@ export const LoginForm = () => {
     return(
         <div className='LoginForm'>
             <div className='LoginForm-container LoginForm-username'>
-                <h2 className='LoginForm-h2'>Ingresa tu usuario para iniciar…</h2>
+                <h2 className='LoginForm-h2'>To begin we need your username...</h2>
                 <div className='LoginForm-form'>
                     < TextField />
                 </div>
             </div>
 
             <div className='LoginForm-container LoginForm-password'>
-                <h2 className='LoginForm-h2'>Ahora ingresa tu contraseña para continuar:</h2>
+                <h2 className='LoginForm-h2'>Now enter your password to continue:</h2>
                 <div className='LoginForm-form'>
                     < PasswordField />
                 </div>

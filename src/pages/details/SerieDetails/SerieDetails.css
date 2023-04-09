@@ -4,7 +4,7 @@
     min-height: 100vh;
     display: flex;
     align-items: flex-end;
-    padding: 5.5rem 6rem 2rem;
+    padding: 5.5rem 5vw 2rem;
     position: relative;
 }
 
@@ -20,6 +20,7 @@
 }
 
 .SerieDetails-container{
+    width: 100%;
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -34,13 +35,23 @@
     line-height: 1.2;
 }
 
+.SerieDetails-h4{
+    flex: 0 0 auto;
+}
+
 .SerieDetails-rating{
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 2rem;
     font-size: 2rem;
+    line-height: 1.2;
     color: #fff;
+}
+
+.SerieDetails-Restriction{
+    margin-bottom: .5rem;
 }
 
 .SerieDetails-Restriction span{
@@ -62,10 +73,16 @@
 }
 
 .SerieDetails-buttons{
+    width: 100%;
+    overflow-x: scroll;
     display: flex;
     flex-flow: row nowrap;
     gap: 1.5rem;
     padding: 2.2em 0;
+}
+
+.SerieDetails-buttons::-webkit-scrollbar{
+    display: none;
 }
 
 .SerieDetails-buton{
@@ -76,6 +93,7 @@
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
+    white-space: nowrap;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -84,12 +102,12 @@
 }
 
 .Button-span-img {
-    width: 2.5rem;
+    min-width: 2.5rem;
     transition: all 500ms;
 }
 
 .Button-span-provider{
-    width: 3em;
+    min-width: 3em;
 }
 
 .SerieDetails-buton:hover{
@@ -104,4 +122,48 @@
 
 .SerieDetails-buton:hover .Inverted-icon .Button-span-img{
     filter: none;
+}
+
+@media screen and (max-width: 1480px){
+    .SerieDetails-description {
+        max-width: 100%;
+    }
+
+    .SerieDetails-buttons {
+        width: calc(100% + 5vw);
+    }
+
+    .SerieDetails-buton:nth-last-child(1) {
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .SerieDetails{
+        background-position: 30% top;
+    }
+
+    .SerieDetails-container{
+        gap: 1em;
+    }
+
+    .SerieDetails-h1{
+        font-size: 6rem;
+    }
+
+    .SerieDetails-h4{
+        font-size: 1.5rem;
+    }
+    .SerieDetails-Restriction{
+        margin-bottom: 0;
+    }
+    
+
+    .SerieDetails-description-p{
+        font-size: 1.2rem;
+    }
+    
+    .SerieDetails-rating{
+        gap: 0.5em;
+    }
 }

@@ -1,7 +1,8 @@
 .LoginForm{
     width: 100%;
     height: 100vh;
-    padding: 20vh 6rem 2rem;
+    color: #fff;
+    padding: 20vh 5vw 2rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -15,7 +16,7 @@
     align-items: center;
 }
 
-.LoginForm-container:nth-child(1){
+.LoginForm-container:nth-child(){
     display: none;
 }
 
@@ -37,4 +38,14 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 920px){
+    .LoginForm{
+        padding-top: 15vh;
+    }
+
+    .LoginForm-container{
+        gap: 3em;
+    }
 }

@@ -1,7 +1,8 @@
 .SelectProfile{
     width: 100%;
     height: 100vh;
-    padding: 12em 6rem 6rem;
+    color: #fff;
+    padding: 20vh 5vw 2rem;
     display: flex;
     gap: 0.5em;
     flex-flow: column nowrap;
@@ -90,5 +91,20 @@
 .SelectProfile-footer{
     position: absolute;
     bottom: 2rem;
-    left: 6rem;
+    left: 5vw;
+}
+
+@media screen and (max-width: 920px){
+    .SelectProfile{
+        padding-top: 15vh;
+    }
+
+    .SelectProfile-profiles{
+        gap: 1em;
+    }
+
+    .SelectProfile-profile{
+        width: 8rem;
+        height: 8rem;
+    }
 }
