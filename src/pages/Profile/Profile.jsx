@@ -17,10 +17,17 @@ export const Profile = () => {
                         </h2>
                     </div>
 
-                    <div className='ProfileInfo-icon'>
-                        <a href="/">
-                            <img src="/assets/icons/logout.svg" alt="Logout" />
-                        </a>
+                    <div className='ProfileInfo-icon-buttons'>
+                        <button className='Profile-icon-button'>
+                            <div className='ProfileInfo-icon ProfileInfo-trash'>
+                                    <img src="/assets/icons/delete.svg" alt="Delete" />
+                            </div>
+                        </button>
+                        <button className='Profile-icon-button'>
+                            <div className='ProfileInfo-icon ProfileInfo-logout'>
+                                    <img src="/assets/icons/logout.svg" alt="Logout" />
+                            </div>
+                        </button>
                     </div>
                 </div>
 

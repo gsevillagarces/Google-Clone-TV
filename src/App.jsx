@@ -43,7 +43,7 @@ function App() {
                     < Route path='apps'    element={ < Apps />    } />
                     < Route path='library' element={ < Library /> } />
                 </ Route >
-              < Route path='login/SelectProfile'   element={ < SelectProfile />} />
+              < Route path='login/select-profile'   element={ < SelectProfile />} />
 
               < Route path='profile'               element={ < Profile />      } />
               

@@ -30,22 +30,36 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .ProfileInfo-avatar{
-    width: 7.75rem;
-    height: 7.75em;
+    width: 6rem;
+    height: 6em;
     border-radius: 50%;
     overflow: hidden;
     flex: 0 0 auto; 
 }
 
 .ProfileInfo-h2{
-    font-size: 3.375rem;
+    font-size: 2.6rem;
     line-height: 1;
     color: #fff;
     text-align: left;
+}
+
+.ProfileInfo-icon-buttons{
+    display: flex;
+    gap: 1em;
+}
+
+.Profile-icon-button{
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+.Profile-icon-button:hover{
+    transform: scale(1.1);
 }
 
 .ProfileInfo-icon{
@@ -57,11 +71,14 @@
     flex: 0 0 auto; 
 }
 
+.ProfileInfo-trash{
+    background-color: #ff000052;
+}
 
 .ProfileEdit{
     width: 100%;
-    margin-bottom: 2em;
-    padding: 0 0 2em;
+    margin-bottom: 1em;
+    padding: 0 0 0.5em;
     border-bottom: 1pt solid #707070;
 }
 
@@ -123,7 +140,7 @@
         text-align: center;
     }
 
-    .ProfileInfo-icon{
+    .ProfileInfo-icon-buttons{
         margin-left: auto
     }
 
