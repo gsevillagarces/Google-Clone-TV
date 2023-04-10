@@ -11,7 +11,7 @@ export const CarouselAppsLG = ( { apps, filter } ) => {
     const [ filtrar, setFiltrar ] = useState( [] )
 
     useEffect (() => {
-        const filterType = apps.filter (eachApp => eachApp.type === filter)
+        const filterType = apps.filter (eachApp => eachApp.type === filter).sort(() => Math.random() - 0.5)
         setFiltrar(filterType)
     }, [apps] )
 

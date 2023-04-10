@@ -5,22 +5,22 @@ import { Splash } from './components/loading/Splash/Splash'
 
 import { LoginForm } from './components/login/LoginForm/LoginForm'
 import { SelectProfile } from './components/login/SelectProfile/SelectProfile'
+import { ManageProfile } from './components/login/ManageProfile/ManageProfile'
+import { EditProfile } from './components/login/EditProfile/EditProfile'
+import { AddProfile } from './components/login/AddProfile/AddProfile'
 
-import { Search } from './pages/Search/Search'
 import { ForYou } from './pages/ForYou/ForYou'
+import { Search } from './pages/Search/Search'
 import { Movies } from './pages/Movies/Movies'
 import { Shows } from './pages/Shows/Shows'
 import { Apps } from './pages/Apps/Apps'
 import { Library } from './pages/Library/Library'
-import { EditProfile } from './components/login/EditProfile/EditProfile'
 
-import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
+import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
 import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
 
 import { Main } from './components/Main/Main'
-import { ManageProfile } from './components/login/ManageProfile/ManageProfile'
-import { AddProfile } from './components/login/AddProfile/AddProfile'
 
 function App() {
   return (

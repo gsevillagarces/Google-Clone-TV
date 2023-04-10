@@ -9,7 +9,27 @@ const {movies} = main
 
 export const Slider = () => {
 
-    const contador = useState(0)
+    const [ activeSlide, setActiveSlide ] = useState(0)
+
+    const updateSlide = (newIndex) => {
+        if ( newIndex < 0 ) {
+            newIndex = movies.length - 1;
+        } else if ( newIndex > 2 ) {
+            newIndex = 0;
+        }
+
+        setActiveSlide(newIndex)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            updateSlide(activeSlide + 1)
+        }, 6000)
+
+        return () => clearInterval(interval)
+    })
+
+
 
     return(
         <div className='Slider-container'>
@@ -19,7 +39,9 @@ export const Slider = () => {
                     <div className='Slide'
                          key={eachMovie.id}
                          style = {{ backgroundImage: `url(${ eachMovie.bgSlide })`,
-                                    transform: `translateX(-${ 0 * 100}%)`}}
+                                    opacity: `${ activeSlide === eachMovie.id ? '1' : '0' }`,
+                                    scale: `${ activeSlide === eachMovie.id ? '1.1' : '1' }`,
+                                }}
                     >
                     </div>
                     )}
@@ -28,7 +50,11 @@ export const Slider = () => {
                     <div className='Slider-left'>
                     {movies.slice(0,3).map( eachMovie =>
                         <div className="Slider-info Slider-link"
-                             key={eachMovie.id}>
+                            key={eachMovie.id}
+                            style = {{ transform: ` translateY(${ activeSlide === eachMovie.id ? '0' : '50%' })`,
+                                       opacity: `${ activeSlide === eachMovie.id ? '1' : '0' }`,
+                                    }} 
+                            >
                             <img className='Slider-img-provider'
                                  src={`${eachMovie.logoProvider}`}
                                  alt={`${eachMovie.alt}`} />
@@ -47,9 +73,15 @@ export const Slider = () => {
 
                     <div className="Slider-right">
                         <div className='Slider-indicators'>
-                            <div className={`${ contador === 0 ? 'Slider-indicators--ellipse' : 'Slider-indicators--ellipse active' }`}></div>
-                            <div className='Slider-indicators--ellipse'></div>
-                            <div className='Slider-indicators--ellipse'></div>
+                            
+                            {movies.slice(0,3).map( (eachMovie, index) =>
+                                <div className={`${ activeSlide === index ? 'Slider-indicators--ellipse active' : 'Slider-indicators--ellipse' }`}
+                                        key={eachMovie.id}
+                                        onClick={() => updateSlide(index)}
+                                >
+                                </div>
+
+                            )}
                         </div>
                     </div>
                 </div>
