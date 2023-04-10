@@ -15,7 +15,7 @@ export const Slider = () => {
         if ( newIndex < 0 ) {
             newIndex = movies.length - 1;
         } else if ( newIndex > 2 ) {
-            newIndex = 0;
+            newIndex = 1;
         }
 
         setActiveSlide(newIndex)
@@ -28,8 +28,6 @@ export const Slider = () => {
 
         return () => clearInterval(interval)
     })
-
-
 
     return(
         <div className='Slider-container'>

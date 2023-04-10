@@ -206,3 +206,19 @@
         height: 0.5em;
     }
 }
+
+@media screen and (max-width: 600px){
+    .Slider-container{
+        height: 50vh;
+    }
+    .Slider-h1{
+        font-size: 2em;
+    }
+    .Slider-p{
+        font-size: 0.9em;
+    }
+    .Slider-button{
+        font-size: 1.25em;
+        padding: 0.75rem 2.5rem;
+    }
+}
