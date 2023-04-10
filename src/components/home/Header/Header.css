@@ -93,6 +93,33 @@
     gap: 1em;
 }
 
+.ProfileInfo-icon{
+    background-color: #ffffff35;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.65em;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+.ProfileInfo-icon img{
+    filter : invert();
+}
+
+.ProfileInfo-icon:hover{
+    transform: scale(1.025);
+}
+
+.ProfileInfo-icon:hover{
+    background-color: #fff;
+}
+
+.ProfileInfo-icon:hover img {
+    filter: none;
+}
+
 .Nav-responsive{
     display: none;
 }
