@@ -2,13 +2,20 @@
     width: 100%;
     height: 100vh;
     color: #fff;
-    padding: 20vh 5vw 2rem;
+    padding: 16vh 5vw 2rem;
     display: flex;
     gap: 0.5em;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
     position: relative;
+}
+
+.SelectProfile-info{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .SelectProfile-logo{
@@ -32,8 +39,6 @@
 }
 
 .SelectProfile-profiles{
-    padding: 0.5em;
-    /* overflow-x: scroll; */
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -109,7 +114,7 @@
 .SelectProfile-manage-button:hover{
     background-color: #ffffff;
     color: #000;
-    scale: 1.1;
+    scale: 1.025;
 }
 
 @media screen and (max-width: 920px){
@@ -117,11 +122,20 @@
         padding-top: 15vh;
     }
 
-    .SelectProfile-profiles{
+    .SelectProfile-profiles,
+    .SelectProfile-container{
         gap: 1em;
     }
 
-    .SelectProfile-profile{
+    .SelectProfile-profiles{
+        overflow-x: scroll;
+    }
+
+    .SelectProfile-profiles::-webkit-scrollbar{
+        display: none;
+    }
+
+    .SelectProfile-profilrofile-img{
         width: 8rem;
         height: 8rem;
     }

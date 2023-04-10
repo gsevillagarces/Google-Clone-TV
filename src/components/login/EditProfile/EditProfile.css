@@ -1,4 +1,4 @@
-.Profile{
+.EditProfile{
     min-height: 100vh;
     padding: 2em 5vw 2rem;
     display: flex;
@@ -7,7 +7,7 @@
     justify-content: space-between;
 }
 
-.ProfileInfo{
+.EditProfileInfo{
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -16,7 +16,7 @@
     gap: 2em;
 }
 
-.ProfileInfo-upper{
+.EditProfileInfo-upper{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -25,7 +25,7 @@
     gap: 2em;
 }
 
-.ProfileInfo-user{
+.EditProfileInfo-user{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -33,7 +33,7 @@
     gap: 1.5em;
 }
 
-.ProfileInfo-avatar{
+.EditProfileInfo-avatar{
     width: 6rem;
     height: 6em;
     border-radius: 50%;
@@ -41,28 +41,28 @@
     flex: 0 0 auto; 
 }
 
-.ProfileInfo-h2{
+.EditProfileInfo-h2{
     font-size: 2.6rem;
     line-height: 1;
     color: #fff;
     text-align: left;
 }
 
-.ProfileInfo-icon-buttons{
+.EditProfileInfo-icon-buttons{
     display: flex;
     gap: 1em;
 }
 
-.Profile-icon-button{
+.EditProfile-icon-button{
     transition: all 500ms;
     cursor: pointer;
 }
 
-.Profile-icon-button:hover{
+.EditProfile-icon-button:hover{
     transform: scale(1.1);
 }
 
-.ProfileInfo-icon{
+.EditProfileInfo-icon{
     background-color: #fff;
     width: 4rem;
     height: 4rem;
@@ -71,24 +71,24 @@
     flex: 0 0 auto; 
 }
 
-.ProfileInfo-trash{
+.EditProfileInfo-trash{
     background-color: #ff000052;
 }
 
-.ProfileEdit{
+.EditProfile-divider{
     width: 100%;
     margin-bottom: 1em;
     padding: 0 0 0.5em;
     border-bottom: 1pt solid #707070;
 }
 
-.ProfileEdit-h4{
+.EditProfile-divider-h4{
     font-size: 1.5em;
     line-height: 1.5;
     color: #fff;
 }
 
-.ProfileForm{
+.EditProfileForm{
     width: 100%;
     color: #fff;
     display: flex;
@@ -98,7 +98,7 @@
     gap: 3em;
 }
 
-.ProfileInfo-butons{
+.EditProfileInfo-butons{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -108,16 +108,16 @@
 }
 
 @media screen and (max-width: 920px){
-    .Profile{
+    .EditProfile{
         padding-top: 1em;
     }
 
-    .ProfileInfo-user{
+    .EditProfileInfo-user{
         flex-direction: column;
         gap: 1em;
     }
 
-    .ProfileInfo-upper{
+    .EditProfileInfo-upper{
         width: 100%;
         flex-flow: column-reverse nowrap;
         align-items: stretch;
@@ -125,35 +125,35 @@
         gap: 0;
     }
 
-    .ProfileInfo-user{
+    .EditProfileInfo-user{
         justify-content: stretch;
     }
 
-    .ProfileInfo-avatar{
+    .EditProfileInfo-avatar{
         width: 5.75rem;
         height: 5.75em;
     }
 
-    .ProfileInfo-h2{
+    .EditProfileInfo-h2{
         font-size: 2.375rem;
         line-height: 1.2;
         text-align: center;
     }
 
-    .ProfileInfo-icon-buttons{
+    .EditProfileInfo-icon-buttons{
         margin-left: auto
     }
 
-    .ProfileEdit{
+    .EditProfileEdit{
         padding-bottom: 1em;
         margin-bottom: 0;
     }
     
-    .ProfileEdit-h4{
+    .EditProfileEdit-h4{
         font-size: 1.2em;
     }
 
-    .ProfileForm{
+    .EditProfileForm{
         gap: 2em;
     }
 }

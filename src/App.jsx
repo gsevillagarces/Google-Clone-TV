@@ -48,7 +48,7 @@ function App() {
               < Route path='login/select-profile'   element={ < SelectProfile />} />
               < Route path='login/manage-profile'   element={ < ManageProfile />} />
               < Route path='login/edit-profile'     element={ < EditProfile /> } />
-              < Route path='login/add-profile'     element={ < AddProfile /> } />
+              < Route path='login/add-profile'      element={ < AddProfile /> } />
               
               < Route path='details/app-details'   element={ < AppDetails />   } />
               < Route path='details/movie-details' element={ < MovieDetails /> } />

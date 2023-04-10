@@ -64,28 +64,21 @@ export const Header = () => {
             )}
             </ul>
         </nav>
-        
 
+        <div className='Nav-button-container'>
+            <button className='Profile-icon-button Profile-icon-button'>
+                <div className='ProfileInfo-icon ProfileInfo-logout'>
+                    <img src="/assets/icons/logout.svg" alt="Logout" />
+                </div>
+            </button>
 
-
-        <button className='Profile-icon-button Profile-icon-button'>
-            <div className='ProfileInfo-icon ProfileInfo-logout'>
-                <img src="/assets/icons/logout.svg" alt="Logout" />
-            </div>
-        </button>
-
-
-
-        
-
-        <NavLink to={ `/${avatar.href}` } className="Nav-avatar">
-            <img
-            src={ avatar.img }
-            title={ avatar.title }
-            className= "Nav-avatar--img" />
-        </NavLink>
-
-
+            <NavLink to={ `/${avatar.href}` } className="Nav-avatar">
+                <img
+                src={ avatar.img }
+                title={ avatar.title }
+                className= "Nav-avatar--img" />
+            </NavLink>
+        </div>
     </div>
     )
 }

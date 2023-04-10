@@ -85,6 +85,14 @@
     transform: scale(1.025);
 }
 
+.Nav-button-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
 .Nav-responsive{
     display: none;
 }
@@ -114,7 +122,7 @@
 }
 
 .Nav-responsive-button:hover .Nav-responsive-img{
-    transform: scale(1.1);
+    transform: scale(1.025);
 }
 
 @media screen and (max-width: 1480px){

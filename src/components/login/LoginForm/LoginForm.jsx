@@ -10,13 +10,16 @@ export const LoginForm = () => {
             <div className='LoginForm-container LoginForm-username'>
                 <h2 className='LoginForm-h2'>To begin we need your username and password:</h2>
                 <div className='LoginForm-form'>
-                    < TextField />
-                    < PasswordField />
+                    < TextField
+                        label = "Username:"
+                        placeholder  = "Your username..." />
+                    < PasswordField 
+                        label = "Password:"
+                        placeholder = "Your password..." />
                 </div>
             </div>
 
             <div className='LoginForm-btnContainer'>
-                < CancelBtn />
                 < OkBtn />
             </div>
         </div>

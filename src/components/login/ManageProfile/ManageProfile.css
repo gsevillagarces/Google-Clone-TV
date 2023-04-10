@@ -2,13 +2,19 @@
     width: 100%;
     height: 100vh;
     color: #fff;
-    padding: 20vh 5vw 2rem;
+    padding: 16vh 5vw 2rem;
     display: flex;
-    gap: 0.5em;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.ManageProfile-info{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .ManageProfile-logo{
@@ -32,8 +38,6 @@
 }
 
 .ManageProfile-profiles{
-    padding: 0.5em;
-    /* overflow-x: scroll; */
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -51,6 +55,7 @@
     cursor: pointer;
     transition: all 200ms;
 }
+
 .ManageProfile-profile-img,
 .ManageProfile-addProfile-img{
     width: 10rem;
@@ -88,12 +93,21 @@
     transform: scale(1.025);
 }
 
+.ManageProfileInfo-butons{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 920px){
     .ManageProfile{
         padding-top: 15vh;
     }
 
-    .ManageProfile-profiles{
+    .ManageProfile-profiles,
+    .ManageProfile-container{
         gap: 1em;
     }
 
