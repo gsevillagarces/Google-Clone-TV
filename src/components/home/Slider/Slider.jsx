@@ -1,6 +1,7 @@
 import './Slider.css'
 import { useEffect, useState } from 'react'
 import { googleClone } from '../../../bbdd'
+import { useSwipeable } from 'react-swipeable'
 
 const {main}   = googleClone
 const {movies} = main
@@ -14,8 +15,8 @@ export const Slider = () => {
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
             newIndex = movies.length - 1;
-        } else if ( newIndex > 2 ) {
-            newIndex = 1;
+        } else if ( newIndex > movies.length - 1 ) {
+            newIndex = 0;
         }
 
         setActiveSlide(newIndex)
@@ -24,16 +25,25 @@ export const Slider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
-        }, 6000)
+        }, 5000)
 
         return () => clearInterval(interval)
     })
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => updateSlide(activeSlide + 1),
+        onSwipedRight: () => updateSlide(activeSlide - 1),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    })
+
+    console.log(activeSlide)
+
     return(
-        <div className='Slider-container'>
+        <div {...handlers} className='Slider-container'>
             <div className='Slider'>
                 <div className='Slides-container'>
-                    {movies.slice(0,3).map( eachMovie =>
+                    {movies.slice(0,5).map( eachMovie =>
                     <div className='Slide'
                          key={eachMovie.id}
                          style = {{ backgroundImage: `url(${ eachMovie.bgSlide })`,
@@ -46,7 +56,7 @@ export const Slider = () => {
                 </div>
                 <div className="Slide-content">
                     <div className='Slider-left'>
-                    {movies.slice(0,3).map( eachMovie =>
+                    {movies.slice(0,5).map( eachMovie =>
                         <div className="Slider-info Slider-link"
                             key={eachMovie.id}
                             style = {{ transform: ` translateY(${ activeSlide === eachMovie.id ? '0' : '50%' })`,
@@ -72,7 +82,7 @@ export const Slider = () => {
                     <div className="Slider-right">
                         <div className='Slider-indicators'>
                             
-                            {movies.slice(0,3).map( (eachMovie, index) =>
+                            {movies.slice(0,5).map( (eachMovie, index) =>
                                 <div className={`${ activeSlide === index ? 'Slider-indicators--ellipse active' : 'Slider-indicators--ellipse' }`}
                                         key={eachMovie.id}
                                         onClick={() => updateSlide(index)}
