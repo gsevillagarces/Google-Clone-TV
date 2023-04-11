@@ -10,7 +10,7 @@ export const CarouselApps = () => {
         <div className='CarouselApps-container'>
                 <div className='CarouselApps'>
                     { apps.map( eachApp =>
-                        < AppCard key = { eachApp.id} {...eachApp} appColor = "appColor" />
+                        < AppCard key = { eachApp.id} {...eachApp} />
                     )}
                 </div>
         </div>
