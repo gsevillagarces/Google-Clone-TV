@@ -348,61 +348,61 @@ export const googleClone = {
                 appName     : 'YouTube',
                 logoApp     : '/assets/providers/youtube.svg',
                 appColor    : '#FF0000',
-                href        : 'AppDetails'
+                href        : 'youtube'
             },
             {   id          : 1,
                 appName     : 'Spotify',
                 logoApp     : '/assets/providers/spotify.svg',
                 appColor    : '#2EBD59',
-                href        : 'AppDetails'
+                href        : 'spotify'
             },
             { id            : 2,
                 appName     : 'Prime Video',
                 logoApp     : '/assets/providers/primevideo.svg',
                 appColor    : '#00A8E1',
-                href        : 'AppDetails'
+                href        : 'prime-video'
             },
             {   id          : 3,
                 appName     : 'Plex',
                 logoApp     : '/assets/providers/plex.svg',
                 appColor    : '#272A2D',
-                href        : 'AppDetails'
+                href        : 'plex'
             },
             {   id          : 4,
                 appName     : 'Netflix',
                 logoApp     : '/assets/providers/netflix.svg',
                 appColor    : '#E50914',
-                href        : 'AppDetails'
+                href        : 'netflix'
             },
             {   id          : 5,
                 appName     : 'Twitch',
                 logoApp     : '/assets/providers/twitch.svg',
                 appColor    : '#65459B',
-                href        : 'AppDetails'
+                href        : 'twitch'
             },
             {   id          : 6,
                 appName     : 'Hulu',
                 logoApp     : '/assets/providers/hulu.svg',
                 appColor    : '#1CE783',
-                href        : 'AppDetails'
+                href        : 'hulu'
             },
             {   id          : 7,
                 appName     : 'HBO max',
                 logoApp     : '/assets/providers/hbomax.svg',
                 appColor    : '#991EEB',
-                href        : 'AppDetails'
+                href        : 'hbo-max'
             },
             {   id          : 8,
                 appName     : 'Disney+',
                 logoApp     : '/assets/providers/disneyplus.svg',
                 appColor    : '#1A1D29',
-                href        : 'AppDetails'
+                href        : 'disneyplus'
             },
             {   id          : 9,
                 appName     : 'Star+',
                 logoApp     : '/assets/providers/starplus.svg',
                 appColor    : '#271F44',
-                href        : 'AppDetails'
+                href        : 'starplus'
             }
         ],
         searchSuggestions : [

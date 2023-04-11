@@ -8,11 +8,11 @@ const {apps} = main
 export const CarouselApps = () => {
     return(
         <div className='CarouselApps-container'>
-            <div className='CarouselApps'>
-                { apps.map( eachApp => 
-                    < AppCard key = { eachApp.id} {...eachApp} />
-                )}
-            </div>
+                <div className='CarouselApps'>
+                    { apps.map( eachApp =>
+                        < AppCard key = { eachApp.id} {...eachApp} appColor = "appColor" />
+                    )}
+                </div>
         </div>
     )
 }
