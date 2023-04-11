@@ -1,5 +1,5 @@
 .AppDetails{
-    background-color: #00A8E1;
+    /* background-color: #00A8E1; */
     width: 100%;
     height: 100vh;
     padding: 5.5rem 5vw 2rem;
@@ -12,10 +12,14 @@
 
 .AppDetails-provider-img{
     width: 30em;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 500ms 1 forwards;
 }
 
 .AppDetails-footer{
     position: absolute;
     bottom: 2rem;
     left: 5vw;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 1s 1 forwards;
 }

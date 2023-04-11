@@ -1,11 +1,14 @@
 import { CancelBtn } from "../../../components/CancelBtn/CancelBtn"
 import './AppDetails.css'
 
-export const AppDetails = () => {
+export const AppDetails = ({ id, appName, logoApp, appColor, href }) => {
     return(
-        <div className='AppDetails'>
+
+        <div className='AppDetails' style={{ backgroundColor: appColor }}>
             <div className='AppDetails-provider'>
-                <img className='AppDetails-provider-img' src="/assets/providers/primevideo.svg" alt="Provider" />
+
+                < img className='AppDetails-provider-img' src={`${logoApp}`} alt="Provider" />
+                
             </div>
                 
             <div className='AppDetails-footer'>
