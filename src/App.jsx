@@ -37,6 +37,7 @@ function App() {
             < Routes >
 
               < Route path='/' element={ < LoginForm /> } />
+
                 < Route path='/main' element={ < Main /> } >
                     < Route path='foryou'  element={ < ForYou /> } />
                     < Route path='search'  element={ < Search />  } />
