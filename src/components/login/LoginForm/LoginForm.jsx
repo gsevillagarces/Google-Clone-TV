@@ -37,51 +37,50 @@ export const LoginForm = () => {
     return(
         <div className='LoginForm'>
             
-            <div className='LoginForm-container LoginForm-username'>
-                <h2 className='LoginForm-h2'>To begin we need your username and password:</h2>
-                <div className='LoginForm-form'>
-                    < TextField
-                        label = "Username:"
-                        placeholder  = "Your username..." />
-                    < PasswordField 
-                        label = "Password:"
-                        placeholder = "Your password..." />
-                </div>
+            <div className='LoginForm-container'>
+                <h2 className='LoginForm-h2'>To begin, please enter your username and password:</h2>
+                
+                <form className='Login-Form-form' onSubmit={handleSubmit}>
+
+                    <div className='PasswordField'>
+                        <label className='TextField-label' htmlFor='input'>Username:</label>
+                        <input
+                            className='TextField-input'
+                            type="text"
+                            placeholder="Your username..."
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            />
+                    </div>
+
+                    <div className='PasswordField'>
+                        <label className='PasswordField-label' htmlFor='password'>Password:</label>
+                        <input
+                            className='PasswordField-input'
+                            type="password"
+                            placeholder="Your password..."
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            />
+                    </div>
+
+                    <div className='Error-container'>
+                        {errorMessage && <div style={{ color: 'red' }}><p>{errorMessage}</p></div>}
+                    </div>
+
+                    <div className='LoginForm-btnContainer'>
+                        <button
+                            className='OkBtn-button'
+                            type="submit" disabled={isLoading}>
+                            {isLoading ? 'Logging in...' : 'Continue'}
+                                <span className='Button-span'>
+                                    <img className='Button-span-img-arrow' src="/assets/icons/arrow_forward.svg" alt="" />
+                                </span>
+                        </button>
+                    </div>
+
+                </form>
             </div>
-
-            <div className='LoginForm-btnContainer'>
-                < OkBtn />
-            </div>
-
-
-<form onSubmit={handleSubmit}>
-    <label>
-        Username:
-        <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        />
-    </label>
-    <br />
-    <label>
-        Password:
-        <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        />
-    </label>
-    <br />
-    <button type="submit" disabled={isLoading}>
-        {isLoading ? 'Logging in...' : 'Login'}
-        
-    </button>
-    {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
-</form>
-
-
-
         </div>
     )
 }

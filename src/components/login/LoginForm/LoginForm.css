@@ -16,17 +16,13 @@
     align-items: center;
 }
 
-.LoginForm-container:nth-child(){
-    display: none;
-}
-
 .LoginForm-h2{
     font-size: 2.5em;
     line-height: 1.2;
     text-align: center;
 }
 
-.LoginForm-form{
+.Login-Form-form{
     display: flex;
     flex-flow: column nowrap;
     gap: 3em
@@ -38,7 +34,101 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5vh 5vw;
 }
+
+
+
+
+
+
+
+
+.TextField-label{
+    margin-left: 1.25em;
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.TextField-input{
+    background-color: #2F2F2F;
+    color: #fff;
+    padding: 1em 1.25em;
+    border-radius: 5em;
+    min-width: 20em;
+    font-size: 1.5em;
+}
+
+.PasswordField-label{
+    margin-left: 1.25em;
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.PasswordField-input{
+    background-color: #2F2F2F;
+    color: #fff;
+    padding: 1em 1.25em;
+    border-radius: 5em;
+    min-width: 20em;
+    font-size: 1.5em;
+}
+
+
+
+
+.OkBtn-button{
+    border: 1pt solid transparent;
+    border-radius: 2em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.Button-span{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.8em;
+}
+
+.Button-span-img-arrow{
+    width: 1.5em;
+}
+
+.OkBtn-button:hover{
+    transform: scale(1.025);
+}
+
+
+.Error-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 920px){
     .LoginForm{
@@ -47,5 +137,10 @@
 
     .LoginForm-container{
         gap: 3em;
+    }
+
+    .TextField-input,
+    .PasswordField-input{
+        width: 100%;
     }
 }
