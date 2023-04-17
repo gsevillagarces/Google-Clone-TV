@@ -6,8 +6,6 @@ import { useSwipeable } from 'react-swipeable'
 const {main}   = googleClone
 const {movies} = main
 
-
-
 export const Slider = () => {
 
     const [ activeSlide, setActiveSlide ] = useState(0)
