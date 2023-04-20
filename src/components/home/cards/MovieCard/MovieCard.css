@@ -48,3 +48,10 @@
     transform: translateY(0);
     opacity: 0.5;
 }
+
+@media not all and (hover:hover) { 
+    .MovieCard-h4,
+    .MovieCard-h3{
+        opacity: 1;
+    }
+}

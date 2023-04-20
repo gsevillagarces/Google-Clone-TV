@@ -19,7 +19,6 @@
     flex-flow: row nowrap;
     position: relative;
     overflow: hidden;
-    cursor: grab;
 }
 
 .Slides-container::after{

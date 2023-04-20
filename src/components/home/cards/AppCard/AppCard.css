@@ -44,3 +44,9 @@
     transform: translateY(0.15em);
     opacity: 1;
 }
+
+@media not all and (hover:hover) { 
+    .AppCard-h4{
+        opacity: 1;
+    }
+}
