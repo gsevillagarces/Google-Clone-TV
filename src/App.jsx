@@ -56,6 +56,7 @@ function App() {
               {/* < Route path='details/app-details'   element={ < AppDetails appColor = "#00A8E1" logoApp = "/assets/providers/primevideo.svg" /> } /> */}
               < Route path='details/movie-details' element={ < MovieDetails /> } />
               < Route path='details/serie-details' element={ < SerieDetails /> } />
+              < Route path='details/app-details' element={ < AppDetails /> } />
             </ Routes >
             
           </div>

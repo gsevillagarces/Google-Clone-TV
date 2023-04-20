@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react'
 import { googleClone } from '../../../bbdd'
 
 const {main}   = googleClone
-const {movies} = main
+const {movies, series} = main
 
 export const Slider = () => {
 
     const [ activeSlide, setActiveSlide ] = useState(0)
 
-    const moviesToUse = movies.slice(0,5)
+    //make a const of movies and series
+    const moviesToUse = [...movies].slice(0,10)
 
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
