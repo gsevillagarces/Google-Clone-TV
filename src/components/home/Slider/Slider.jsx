@@ -10,7 +10,7 @@ export const Slider = () => {
     const [ activeSlide, setActiveSlide ] = useState(0)
 
     //make a const of movies and series
-    const moviesToUse = [...movies].slice(0,10)
+    const moviesToUse = [...series].slice(0,10)
 
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
@@ -29,8 +29,6 @@ export const Slider = () => {
 
         return () => clearInterval(interval)
     })
-
-    console.log(activeSlide)
 
     return(
         <div className='Slider-container'>

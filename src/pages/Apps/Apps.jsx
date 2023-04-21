@@ -36,7 +36,7 @@ export const Apps = ( filter ) => {
         <div className='Apps'>
             < CarouselAppsLG apps = { apps } filter = "Featured" />
             <h2 className='CloneTV-h2'>Your apps</h2>
-            < CarouselApps apps = { apps } filter ="Installed" />
+            < CarouselApps apps = { apps } filter = "Installed" />
             < SearchBar />
         </div>
     )

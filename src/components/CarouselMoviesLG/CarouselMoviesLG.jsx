@@ -3,13 +3,13 @@ import { MovieCardLG } from '../home/cards/MovieCardLG/MovieCardLG'
 import { googleClone } from '../../bbdd'
 
 const {main} = googleClone
-const {movies} = main
+const {series} = main
 
 export const CarouselMoviesLG = () => {
     return(
         <div className='CarouselMoviesLG-container'>
             <div className='CarouselMoviesLG'>
-                { movies.map( eachMovie => 
+                { series.map( eachMovie => 
                     < MovieCardLG key = { eachMovie.id} {...eachMovie} />
                 )}
             </div>
