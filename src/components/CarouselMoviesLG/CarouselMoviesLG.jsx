@@ -2,8 +2,8 @@ import './CarouselMoviesLG.css'
 import { MovieCardLG } from '../home/cards/MovieCardLG/MovieCardLG'
 import { googleClone } from '../../bbdd'
 
-const {main} = googleClone
-const {series} = main
+const {content} = googleClone
+const {series} = content
 
 export const CarouselMoviesLG = () => {
     return(

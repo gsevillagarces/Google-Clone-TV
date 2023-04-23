@@ -34,9 +34,9 @@ export const Apps = ( filter ) => {
 
     return(
         <div className='Apps'>
-            < CarouselAppsLG apps = { apps } filter = "Featured" />
+            < CarouselAppsLG apps = { apps } filter = "y" />
             <h2 className='CloneTV-h2'>Your apps</h2>
-            < CarouselApps apps = { apps } filter = "Installed" />
+            < CarouselApps apps = { apps } filter = "y" />
             < SearchBar />
         </div>
     )

@@ -49,7 +49,8 @@ export const Header = () => {
                     className ='Nav-li' >
                     < NavLink to={ `/${eachMenu.href}` }
                               className='Nav-a'
-                              title={eachMenu.title} >
+                              title={eachMenu.title}
+                              onClick={ () => {setIsMobile( !isMobile ) } } >
                     
                         { eachMenu.icono && <img
                             src= { eachMenu.icono }

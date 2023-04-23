@@ -23,6 +23,7 @@ export const LoginForm = () => {
           { username: 'admin2', password: 'pass2' },
           { username: 'admin3', password: 'pass3' },
         ];
+        
         const user = allowedUsers.find((u) => u.username === username && u.password === password);
     
         if (user) {

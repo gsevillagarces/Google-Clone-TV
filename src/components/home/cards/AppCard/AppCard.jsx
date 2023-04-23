@@ -3,7 +3,6 @@ import './AppCard.css'
 export const AppCard = ({id, appName, logoApp, appColor, href}) => {
     return (
         <div className='AppCard-container' key={id}>
-
             <a href={`${href}`}>
                 <div className='AppCard'
                     style = {{ backgroundColor: `${ appColor }`}} >

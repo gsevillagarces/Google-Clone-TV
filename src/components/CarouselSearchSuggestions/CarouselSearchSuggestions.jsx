@@ -2,8 +2,8 @@ import './CarouselSearchSuggestions.css';
 import { SearchSuggestions } from '../home/cards/SearchSuggestions/SearchSuggestions';
 import { googleClone } from '../../bbdd'
 
-const {main} = googleClone
-const {searchSuggestions} = main
+const {content} = googleClone
+const {searchSuggestions} = content
 
 export const CarouselSearchSuggestions = () => {
     return(

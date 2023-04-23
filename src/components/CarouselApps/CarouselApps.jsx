@@ -1,15 +1,24 @@
 import './CarouselApps.css'
 import { AppCard } from '../home/cards/AppCard/AppCard'
-import { googleClone } from '../../bbdd'
+import { useEffect, useState } from 'react'
+// import { googleClone } from '../../bbdd'
 
-const {main} = googleClone
-const {apps} = main
+// const {content} = googleClone
+// const {apps} = content
 
-export const CarouselApps = () => {
+export const CarouselApps = ({ apps, filter }) => {
+    
+    const [ filtrar, setFiltrar ] = useState( [] )
+
+    useEffect (() => {
+        const filterType = apps.filter (eachApp => eachApp.installed === filter)
+        setFiltrar(filterType)
+    }, [apps] )
+        
     return(
         <div className='CarouselApps-container'>
                 <div className='CarouselApps'>
-                    { apps.map( eachApp =>
+                    { filtrar && filtrar.map( eachApp =>
                         < AppCard key = { eachApp.id} {...eachApp} />
                     )}
                 </div>

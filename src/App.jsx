@@ -39,7 +39,7 @@ function App() {
               < Route path='/' element={ < LoginForm /> } />
 
                 < Route path='/main' element={ < Main /> } >
-                    < Route path='foryou'  element={ < ForYou /> } />
+                    < Route path='foryou'  element={ < ForYou />  } />
                     < Route path='search'  element={ < Search />  } />
                     < Route path='movies'  element={ < Movies />  } />
                     < Route path='shows'   element={ < Shows />   } />

@@ -2,15 +2,15 @@ import './Slider.css'
 import { useEffect, useState } from 'react'
 import { googleClone } from '../../../bbdd'
 
-const {main}   = googleClone
-const {movies, series} = main
+const {content}   = googleClone
+const {movies, series} = content
 
 export const Slider = () => {
 
     const [ activeSlide, setActiveSlide ] = useState(0)
 
-    //make a const of movies and series
-    const moviesToUse = [...series].slice(0,10)
+    //Crear una cosntante que contenga las 5 primeras series
+    const moviesToUse = [...movies].slice(0,3)
 
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
@@ -25,7 +25,7 @@ export const Slider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
-        }, 3000)
+        }, 5000)
 
         return () => clearInterval(interval)
     })
