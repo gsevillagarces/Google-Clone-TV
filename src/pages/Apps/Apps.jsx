@@ -5,7 +5,7 @@ import { CarouselApps } from '../../components/CarouselApps/CarouselApps'
 import { CarouselAppsLG } from '../../components/CarouselAppsLG/CarouselAppsLG'
 import { SearchBar } from '../../components/SearchBar/SearchBar'
 
-export const Apps = ( filter ) => {
+export const Apps = () => {
 
     const [ apps, setApps ] = useState([])
 
@@ -25,7 +25,7 @@ export const Apps = ( filter ) => {
         fetch( 'http://localhost:4002/apps', options )
         .then( res => res.json() )
         .then( data => setApps(data) )
-        .catch( err => setApps(err) )
+        .catch( err => console.log(err) )
         .finally( () => controller.abort() )
         
     }, [])

@@ -7,6 +7,8 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    animation: fadeInAnimation 300ms ease-in 1 forwards;
 }
 
 .LoginForm-container{
@@ -39,9 +41,6 @@
     left: 0;
     padding: 5vh 5vw;
 }
-
-
-
 
 
 

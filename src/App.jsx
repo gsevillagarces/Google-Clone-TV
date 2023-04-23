@@ -51,9 +51,6 @@ function App() {
               < Route path='login/edit-profile'     element={ < EditProfile /> } />
               < Route path='login/add-profile'      element={ < AddProfile /> } />
               
-              < Route  path="main/:appHref"   element={ < AppDetails appColor = "red" logoApp = "/assets/providers/primevideo.svg" /> } />
-
-              {/* < Route path='details/app-details'   element={ < AppDetails appColor = "#00A8E1" logoApp = "/assets/providers/primevideo.svg" /> } /> */}
               < Route path='details/movie-details' element={ < MovieDetails /> } />
               < Route path='details/serie-details' element={ < SerieDetails /> } />
               < Route path='details/app-details'   element={ < AppDetails /> } />

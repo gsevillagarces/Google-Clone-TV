@@ -5,7 +5,7 @@ export const AppDetails = () => {
     return(
         <div className='AppDetails'>
             <div className='AppDetails-provider'>
-                <img className='AppDetails-provider-img' src="/assets/providers/appletv.svg"     alt="Provider" />
+                {/* <img className='AppDetails-provider-img' src="/assets/providers/appletv.svg"     alt="Provider" /> */}
                 {/* <img className='AppDetails-provider-img' src="/assets/providers/atresplayer.svg" alt="Provider" /> */}
                 {/* <img className='AppDetails-provider-img' src="/assets/providers/crunchyroll.svg" alt="Provider" /> */}
                 {/* <img className='AppDetails-provider-img' src="/assets/providers/disneyplus.svg"  alt="Provider" /> */}

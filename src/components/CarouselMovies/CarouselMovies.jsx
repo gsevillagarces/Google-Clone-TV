@@ -13,7 +13,6 @@ export const CarouselMovies = ( { filter } ) => {
     useEffect ( () => {
 
         let controller = new AbortController()
-        console.log( controller )
 
         let options = {
             method: "get",

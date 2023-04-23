@@ -2,14 +2,15 @@ export const googleClone = {
     header : {
         h1 : { 
             src : '/assets/clone-logo-header.svg', 
-            alt : 'Clone TV'
+            alt : 'Clone TV',
+            title : 'Google Clone TV'
         },
         menu : [
             {   id : 0, 
                 icono : '/assets/search.svg',
                 alt   : 'icon',
                 title : 'Go to Search',
-                texto : 'Search', 
+                texto : 'SearchBBDD', 
                 href  : 'main/search'
                 },
             {   id    : 1, 
@@ -65,7 +66,7 @@ export const googleClone = {
                 logoProvider: '/assets/providers/netflix.svg',
                 bgSlide     : '/assets/movies/slider/bgSlide.jpg',
                 bgSmall     : '/assets/movies/cards/bgCard.jpg',
-                title       : 'Power Rangers: Once & Always',
+                title       : 'Power Rangers: Once & AlwaysBBDD',
                 summary     : 'Special celebrating the 30th anniversary of the “Mighty Morphin Power Rangers” franchise.',
                 btnText     : 'Watch on',
                 rating      : '🍅 91%',
@@ -248,7 +249,7 @@ export const googleClone = {
                 logoProvider: '/assets/providers/hbomax.svg',
                 bgSlide     : '/assets/series/slider/bgSlide.jpg',
                 bgSmall     : '/assets/series/cards/bgCard.jpg',
-                title       : 'Friends',
+                title       : 'FriendsBBDD',
                 summary     : 'Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.',
                 btnText     : 'Watch on',
                 rating      : '🍅 92%',
@@ -424,7 +425,7 @@ export const googleClone = {
         ],
         apps : [
             {   id          : 0,
-                appName     : 'YouTube',
+                appName     : 'YouTubeBBDD',
                 logoApp     : '/assets/providers/youtube.svg',
                 appColor    : '#FF0000',
                 installed   : 'y',
@@ -553,7 +554,7 @@ export const googleClone = {
         ],
         searchSuggestions : [
             {   id          : 0,
-                txt         : 'Show me meat recipes',
+                txt         : 'Show me meat recipesBBDD',
                 image       : '/assets/suggestions/meat.svg',
                 alt         : 'Show me meat recipes img',
                 href        : '#'
