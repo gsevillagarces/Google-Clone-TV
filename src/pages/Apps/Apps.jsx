@@ -27,8 +27,6 @@ export const Apps = ( filter ) => {
         .then( data => setApps(data) )
         .catch( err => setApps(err) )
         .finally( () => controller.abort() )
-
-        console.log(apps)
         
     }, [])
 

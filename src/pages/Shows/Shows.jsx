@@ -1,17 +1,19 @@
-import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
-import { CarouselMoviesLG } from '../../components/CarouselMoviesLG/CarouselMoviesLG'
 import './Shows.css'
 
-export const Shows = () => {
+import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
+import { CarouselMoviesLG } from '../../components/CarouselMoviesLG/CarouselMoviesLG'
+
+export const Shows = ( ) => {
+    
     return(
         <div className='Shows'>
-            < CarouselMoviesLG />
+            < CarouselMoviesLG category = "category" filter = "Comedy-drama series" />
             <h2 className='CloneTV-h2'>Popular shows</h2>
-            < CarouselMovies />
+            < CarouselMovies filter = "Drama" />
             <h2 className='CloneTV-h2'>Mistery</h2>
-            < CarouselMovies />
+            < CarouselMovies filter = "Sci-Fi" />
             <h2 className='CloneTV-h2'>Thriller</h2>
-            < CarouselMovies />
+            < CarouselMovies filter = "serie" />
         </div>
     )
 }
