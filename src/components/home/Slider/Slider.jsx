@@ -1,16 +1,19 @@
 import './Slider.css'
 import { useEffect, useState } from 'react'
-import { googleClone } from '../../../bbdd'
+// import { googleClone } from '../../../bbdd'
 
-const {content}   = googleClone
-const {movies, series} = content
+// const {content}   = googleClone
+// const {movies, series} = content
 
 export const Slider = () => {
 
+    const [content, setContent] = useState([])
     const [ activeSlide, setActiveSlide ] = useState(0)
 
+    const movies = content ? content : []
+
     //Crear una cosntante que contenga las 5 primeras series
-    const moviesToUse = [...movies].slice(0,3)
+    const moviesToUse = [...movies].slice(0,5)
 
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
@@ -22,13 +25,44 @@ export const Slider = () => {
         setActiveSlide(newIndex)
     }
 
-    useEffect(() => {
+
+    useEffect ( () => {
+
+        let controller = new AbortController()
+  
+        let options = {
+            method: "get",
+            signal : controller.signal,
+            headers : {
+                "Content-type" : "application/json"
+            } 
+        }
+  
+        fetch("http://localhost:4002/content", options)
+        .then((res) => res.json())
+        .then((data) => {
+            const moviesWithIndex = data.map((movie, index) => ({
+                ...movie,
+                index: index,
+            }));
+            setContent(moviesWithIndex);
+        })
+        .catch((err) => {
+            console.log(err);
+            controller.abort();
+        });
+
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
-        }, 5000)
+        }, 3000)
 
         return () => clearInterval(interval)
-    })
+        
+    }, [activeSlide])
+
+
+    console.log(activeSlide)
+  
 
     return(
         <div className='Slider-container'>
@@ -36,10 +70,10 @@ export const Slider = () => {
                 <div className='Slides-container'>
                     {moviesToUse.map( eachMovie =>
                     <div className='Slide'
-                         key={eachMovie.id}
+                         key={eachMovie.index}
                          style = {{ backgroundImage: `url(${ eachMovie.bgSlide })`,
-                                    opacity: `${ activeSlide === eachMovie.id ? '1' : '0' }`,
-                                    scale: `${ activeSlide === eachMovie.id ? '1.1' : '1' }`,
+                                    opacity: `${ activeSlide === eachMovie.index ? '1' : '0' }`,
+                                    scale: `${ activeSlide === eachMovie.index ? '1.1' : '1' }`,
                                 }}
                     >
                     </div>
@@ -49,9 +83,9 @@ export const Slider = () => {
                     <div className='Slider-left'>
                     {moviesToUse.map( eachMovie =>
                         <div className="Slider-info Slider-link"
-                            key={eachMovie.id}
-                            style = {{ transform: ` translateY(${ activeSlide === eachMovie.id ? '0' : '50%' })`,
-                                       opacity: `${ activeSlide === eachMovie.id ? '1' : '0' }`,
+                            key={eachMovie.index}
+                            style = {{ transform: ` translateY(${ activeSlide === eachMovie.index ? '0' : '50%' })`,
+                                       opacity: `${ activeSlide === eachMovie.index ? '1' : '0' }`,
                                     }} 
                             >
                             <img className='Slider-img-provider'
@@ -75,7 +109,7 @@ export const Slider = () => {
                             
                             {moviesToUse.map( (eachMovie, index) =>
                                 <div className={`${ activeSlide === index ? 'Slider-indicators--ellipse active' : 'Slider-indicators--ellipse' }`}
-                                        key={eachMovie.id}
+                                        key={eachMovie.index}
                                         onClick={() => updateSlide(index)}
                                 >
                                 </div>

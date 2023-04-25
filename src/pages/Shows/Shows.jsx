@@ -13,7 +13,7 @@ export const Shows = ( ) => {
             <h2 className='CloneTV-h2'>Mistery</h2>
             < CarouselMovies filter = "Sci-Fi" />
             <h2 className='CloneTV-h2'>Thriller</h2>
-            < CarouselMovies filter = "serie" />
+            < CarouselMovies filter = "Serie" />
         </div>
     )
 }

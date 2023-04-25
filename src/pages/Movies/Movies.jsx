@@ -7,11 +7,11 @@ export const Movies = () => {
         <div className='Movies'>
             < CarouselMoviesLG />
             <h2 className='CloneTV-h2'>Popular movies</h2>
-            < CarouselMovies />
+            < CarouselMovies filter= "Popular" />
             <h2 className='CloneTV-h2'>Dramas</h2>
-            < CarouselMovies />
+            < CarouselMovies filter= "Drama" />
             <h2 className='CloneTV-h2'>Comedy</h2>
-            < CarouselMovies />
+            < CarouselMovies filter= "Comedy" />
         </div>
     )
 }
