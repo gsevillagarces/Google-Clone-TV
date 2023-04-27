@@ -19,7 +19,7 @@ export const CarouselAppsLG = ( { apps, filter } ) => {
         <div className='CarouselAppsLG-container'>
             <div className='CarouselAppsLG'>
                 { filtrar && filtrar.map( eachApp =>
-                    < AppCardLG key = {eachApp.id} {...eachApp} />    
+                    < AppCardLG key = {eachApp._id} {...eachApp} />    
                 )}
             </div>
         </div>

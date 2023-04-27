@@ -51,7 +51,7 @@ const SearchSuggestionsC = ( { content , filter , category } ) => {
         <div className='CarouselSearchSuggestions-container'>
             <div className='CarouselSearchSuggestions'>
                 { filtrar && filtrar.map( eachSearchSuggestion =>
-                    < SearchSuggestions key = { eachSearchSuggestion.id} {...eachSearchSuggestion} />
+                    < SearchSuggestions key = { eachSearchSuggestion._id} {...eachSearchSuggestion} />
                 )}
             </div>
         </div>
