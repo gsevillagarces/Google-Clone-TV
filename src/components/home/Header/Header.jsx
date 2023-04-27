@@ -101,7 +101,7 @@ export const Header = () => {
                 </div>
             </button>
 
-            <NavLink to={ `/${avatar.href}` } className="Nav-avatar">
+            <NavLink to='/login/select-profile' className="Nav-avatar">
                 <img
                 src={ avatar.img }
                 title={ avatar.title }

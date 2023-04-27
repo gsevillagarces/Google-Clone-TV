@@ -1,4 +1,5 @@
 import './SelectProfile.css'
+import { NavLink }     from 'react-router-dom'
 
 export const SelectProfile = () => {
     return(
@@ -30,7 +31,9 @@ export const SelectProfile = () => {
 
             <div className='SelectProfile-manage'>
                 <button className='SelectProfile-manage-button'>
+                <NavLink to='/login/manage-profile' className="SelectProfile-manage-link">
                     Manage profiles
+                </NavLink>
                 </button>
             </div>
         </div>

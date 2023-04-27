@@ -1,9 +1,24 @@
-import { CancelBtn } from "../../../components/CancelBtn/CancelBtn"
 import './AppDetails.css'
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { CancelBtn } from "../../../components/CancelBtn/CancelBtn"
 
 export const AppDetails = () => {
+
+    const { _id } = useParams();
+    const [app, setApp] = useState(null);
+  
+    useEffect(() => {
+      fetch(`http://localhost:4002/apps/${_id}`)
+        .then((res) => res.json())
+        .then((data) => setApp(data))
+        .catch((err) => console.log(err));
+    }, [_id]);
+
     return(
-        <div className='AppDetails'>
+        <div className='AppDetails'
+        style = {{ backgroundImage: `url(${ app.appColor })`}}
+        >
             <div className='AppDetails-provider'>
                 {/* <img className='AppDetails-provider-img' src="/assets/providers/appletv.svg"     alt="Provider" /> */}
                 {/* <img className='AppDetails-provider-img' src="/assets/providers/atresplayer.svg" alt="Provider" /> */}

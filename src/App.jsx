@@ -45,15 +45,16 @@ function App() {
                     < Route path='shows'   element={ < Shows />   } />
                     < Route path='apps'    element={ < Apps />    } />
                     < Route path='library' element={ < Library /> } />
-                </ Route >
-              < Route path='login/select-profile'   element={ < SelectProfile />} />
-              < Route path='login/manage-profile'   element={ < ManageProfile />} />
-              < Route path='login/edit-profile'     element={ < EditProfile /> } />
-              < Route path='login/add-profile'      element={ < AddProfile /> } />
+              </ Route >
               
-              < Route path='details/movie-details' element={ < MovieDetails /> } />
-              < Route path='details/serie-details' element={ < SerieDetails /> } />
-              < Route path='details/app-details'   element={ < AppDetails /> } />
+              < Route path='/login/select-profile'   element={ < SelectProfile />} />
+              < Route path='/login/manage-profile'   element={ < ManageProfile />} />
+              < Route path='/login/edit-profile'     element={ < EditProfile /> } />
+              < Route path='/login/add-profile'      element={ < AddProfile /> } />
+              
+              < Route path='/details/movie-details/:_id' element={ < MovieDetails /> } />           
+              < Route path='/details/serie-details' element={ < SerieDetails /> } />
+              < Route path='/details/app-details/:_id'   element={ < AppDetails /> } />
             </ Routes >
             
           </div>

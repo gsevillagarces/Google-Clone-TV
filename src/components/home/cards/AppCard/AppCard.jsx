@@ -1,14 +1,16 @@
 import './AppCard.css'
+import { NavLink } from 'react-router-dom'
 
-export const AppCard = ({id, appName, logoApp, appColor, href}) => {
+export const AppCard = ({_id, appName, logoApp, appColor, href}) => {
     return (
-        <div className='AppCard-container' key={id}>
-            <a href={`${href}`}>
+        <div className='AppCard-container' key={_id}>
+            < NavLink to={`/details/app-details/${_id}`} className='MovieCard-a'>
                 <div className='AppCard'
                     style = {{ backgroundColor: `${ appColor }`}} >
                     <img className="AppCard-img" alt={`${appName}`} src={`${ logoApp }`} />
                 </div>
-            </a>
+            </ NavLink >
+
             <h4 className='AppCard-h4'>
                 {appName}
             </h4>

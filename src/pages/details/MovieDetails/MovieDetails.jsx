@@ -1,9 +1,23 @@
-import { CancelBtn } from '../../../components/CancelBtn/CancelBtn'
 import './MovieDetails.css'
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { CancelBtn } from '../../../components/CancelBtn/CancelBtn'
 
 export const MovieDetails = () => {
+
+        const { _id } = useParams();
+        const [movie, setMovie] = useState(null);
+      
+        useEffect(() => {
+          fetch(`http://localhost:4002/content/${_id}`)
+            .then((res) => res.json())
+            .then((data) => setMovie(data))
+            .catch((err) => console.log(err));
+        }, [_id]);
+
     return(
         <div className='MovieDetails'>
+            
             <div className="MovieDetails-container">
                 <h1 className='MovieDetails-h1'> Undone </h1>
                 <div className='MovieDetails-rating'>

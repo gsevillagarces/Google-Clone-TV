@@ -17,11 +17,11 @@ export const CarouselApps = ({ apps, filter }) => {
         
     return(
         <div className='CarouselApps-container'>
-                <div className='CarouselApps'>
-                    { filtrar && filtrar.map( eachApp =>
-                        < AppCard key = { eachApp._id} {...eachApp} />
-                    )}
-                </div>
+            <div className='CarouselApps'>
+                { filtrar && filtrar.map( eachApp =>
+                    < AppCard key = { eachApp._id} {...eachApp} />
+                )}
+            </div>
         </div>
     )
 }
