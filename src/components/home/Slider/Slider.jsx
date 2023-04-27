@@ -25,7 +25,6 @@ export const Slider = () => {
         setActiveSlide(newIndex)
     }
 
-
     useEffect ( () => {
 
         let controller = new AbortController()
@@ -59,10 +58,6 @@ export const Slider = () => {
         return () => clearInterval(interval)
         
     }, [activeSlide])
-
-
-    console.log(activeSlide)
-  
 
     return(
         <div className='Slider-container'>
@@ -103,17 +98,14 @@ export const Slider = () => {
                         </div>
                     )}
                     </div>
-
                     <div className="Slider-right">
                         <div className='Slider-indicators'>
-                            
                             {moviesToUse.map( (eachMovie, index) =>
                                 <div className={`${ activeSlide === index ? 'Slider-indicators--ellipse active' : 'Slider-indicators--ellipse' }`}
                                         key={eachMovie.index}
                                         onClick={() => updateSlide(index)}
                                 >
                                 </div>
-
                             )}
                         </div>
                     </div>
