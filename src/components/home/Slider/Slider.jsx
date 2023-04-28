@@ -7,12 +7,12 @@ import { useEffect, useState } from 'react'
 
 export const Slider = () => {
 
-    const [content, setContent] = useState([])
+    const [ content, setContent ] = useState([])
     const [ activeSlide, setActiveSlide ] = useState(0)
 
     const movies = content ? content : []
 
-    //Crear una cosntante que contenga las 5 primeras series
+    //Crear una constante que contenga las 5 primeras series
     const moviesToUse = [...movies].slice(0,5)
 
     const updateSlide = (newIndex) => {

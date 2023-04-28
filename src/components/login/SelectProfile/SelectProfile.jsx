@@ -1,7 +1,31 @@
 import './SelectProfile.css'
 import { NavLink }     from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
 
 export const SelectProfile = () => {
+    const [users, setUsers] = useState([]);
+  
+    useEffect ( () => {
+
+        let controller = new AbortController()
+        console.log( controller )
+
+        let options = {
+            method: "get",
+            signal : controller.signal,
+            headers : {
+                "Content-type" : "application/json"
+            } 
+        }
+
+        fetch( 'http://localhost:4002/users', options )
+        .then( res => res.json() )
+        .then( data => setUsers(data) )
+        .catch( err => console.log(err) )
+        .finally( () => controller.abort() )
+        
+    }, [])
+
     return(
         <div className='SelectProfile'>
 
@@ -12,14 +36,9 @@ export const SelectProfile = () => {
         
                 <div className='SelectProfile-container'>
                     <div className='SelectProfile-profiles'>
-                        <div className='SelectProfile-profile'>
-                            <img className='SelectProfile-profile-img' src="/assets/imgs/user@2x.jpg" alt="Google Clone Profile" />
-                            <h3 className='SelectProfile-profile-name'>Dad</h3>
-                        </div>
-                        <div className='SelectProfile-profile'>
-                            <img className='SelectProfile-profile-img' src="/assets/imgs/user@2x.jpg" alt="Google Clone Profile" />
-                            <h3 className='SelectProfile-profile-name'>Mom</h3>
-                        </div>
+                        {users.map((user) => (
+                            < SelectProfileP key={user._id} {...user} />
+                        ))}
                     </div>
                     <div className='SelectProfile-profile SelectProfile-addProfile'>
                         <img className='SelectProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
@@ -36,6 +55,20 @@ export const SelectProfile = () => {
                 </NavLink>
                 </button>
             </div>
+        </div>
+    )
+}
+
+export const SelectProfileP = ({id, name, username, password}) => {
+    return(
+        <div className='SelectProfile-profile'>
+            <img
+            className='SelectProfile-profile-img'
+            src="/assets/imgs/user@2x.jpg"
+            alt="Google Clone Profile" />
+            <h3 className='SelectProfile-profile-name'>
+                {name}
+            </h3>
         </div>
     )
 }
