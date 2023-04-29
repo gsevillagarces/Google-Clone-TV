@@ -64,6 +64,23 @@ export const EditProfile = () => {
         gotoProfiles()
     }
 
+    const deleteUser = () => {
+        let options = {
+            method : 'delete' ,
+            headers : {
+                "Content-type" : "application/json"
+            }
+        }
+        
+        fetch( `http://localhost:4002/users/${user}`, options )
+        .then( res => res.json())
+        .then( data => setUsers (data))
+        .catch( err => console.log( err ) )
+        .finally( () => controller.abort() )
+
+        gotoProfiles()
+    }
+
     return(
         <div className='EditProfile'>
             <div className='EditProfileInfo'>
@@ -78,7 +95,7 @@ export const EditProfile = () => {
                     </div>
 
                     <div className='EditProfileInfo-icon-buttons'>
-                        <button className='EditProfile-icon-button'>
+                        <button className='EditProfile-icon-button' onPointerDown={deleteUser} >
                             <div className='EditProfileInfo-icon EditProfileInfo-trash'>
                                 <img src="/assets/icons/delete.svg" alt="Delete" />
                             </div>

@@ -1,7 +1,7 @@
 import './ManageProfile.css'
-import { CancelBtn } from '../../CancelBtn/CancelBtn'
 import { NavLink } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
+import { CancelBtn2 } from '../../CancelBtn/CancelBtn2'
 
 export const ManageProfile = () => {
     const [users, setUsers] = useState([])
@@ -53,7 +53,7 @@ export const ManageProfile = () => {
             </div>
 
             <div className='ManageProfileInfo-butons'>
-                < CancelBtn />
+                < CancelBtn2 />
             </div>
 
         </div>
