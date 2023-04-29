@@ -38,7 +38,7 @@ export const SelectProfile = () => {
                     <div className='SelectProfile-profiles'>
                         {users.map((user) => (
                             <NavLink to='/' className="ManageProfile-open-profile">
-                                < SelectProfileP key={user._id} {...user} />    
+                                < SelectProfileP key={user._id} {...user} />
                             </NavLink>
                         ))}
                     </div>

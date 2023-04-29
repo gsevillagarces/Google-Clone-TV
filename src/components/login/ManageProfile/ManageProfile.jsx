@@ -38,8 +38,8 @@ export const ManageProfile = () => {
                 <div className='ManageProfile-container'>
                     <div className='ManageProfile-profiles'>
                         {users.map((user) => (
-                            <NavLink to='/login/edit-profile' className="ManageProfile-edit-profile">
-                                < ManageProfileP key={user._id} {...user} /> 
+                            <NavLink to={`/login/edit-profile/${user._id}`} className="ManageProfile-edit-profile">
+                                < ManageProfileP key={user._id} {...user} />
                             </NavLink>
                         ))}
                     </div>

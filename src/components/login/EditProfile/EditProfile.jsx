@@ -2,12 +2,41 @@ import './EditProfile.css'
 import { CancelBtn } from '../../CancelBtn/CancelBtn'
 
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const EditProfile = () => {
 
     const navigate = useNavigate()
+
+    const { user } = useParams()
+
+    const [ users, setUsers ] = useState ([])
+
+    const gotoProfiles = () => {
+        navigate("/login/manage-profile")
+    }
+
+    useEffect ( () => {
+
+        let controller = new AbortController()
+        let options = {
+            method : 'get' ,
+            signal : controller.signal,
+            headers: {
+                "Content-type" : "application/json"
+            }
+        }   
+
+        fetch( `http://localhost:4002/users/${user}`, options )
+        .then( res => res.json())
+        .then( data => setLogin (data[0] ))
+        .catch( err => console.log( err ) )
+        .finally( () => controller.abort() )
+
+    }, [])
+
     const [ login , setLogin ] = useState ({
+        name : '',
         username : '' ,
         password : '' 
     })
@@ -18,21 +47,22 @@ export const EditProfile = () => {
     }
 
     const formHandler = (e) => {
-        e.preventDefault()
-
-        let controller = new AbortController()
-
         let options = {
-            method : 'post' ,
-            signal : controller.signal,
-            body : JSON.stringify (login),
-            headers: {
-                "Content-type" : "application/json"
-            }
+        method : 'put' ,
+        body    : JSON.stringify( login ),
+        headers : {
+            "Content-type" : "application/json"
         }
-
     }
+        e.preventDefault()
+        fetch( `http://localhost:4002/users/`, options )
+        .then( res => res.json())
+        .then( data => setUsers (data))
+        .catch( err => console.log( err ) )
+        .finally( () => controller.abort() )
 
+        gotoProfiles()
+    }
 
     return(
         <div className='EditProfile'>
@@ -43,7 +73,7 @@ export const EditProfile = () => {
                             <img className='EditProfileInfo-img' src='/assets/imgs/user@2x.jpg' alt='avatar' />
                         </div>
                         <h2 className='EditProfileInfo-h2'>
-                            test123
+                            {login && login.name}
                         </h2>
                     </div>
 
@@ -69,9 +99,9 @@ export const EditProfile = () => {
                         <input
                             className='TextField-input'
                             type="text"
-                            name="username"
+                            name="name"
                             placeholder="Your name..."
-                            value={login.name || ''}
+                            value={login.name}
                             onChange={ e => inputHandler(e)}
                             />
                     </div>
@@ -83,7 +113,7 @@ export const EditProfile = () => {
                             type="text"
                             name="username"
                             placeholder="Your username..."
-                            value={login.username || ''}
+                            value={login.username}
                             onChange={ e => inputHandler(e)}
                             />
                     </div>
@@ -95,7 +125,7 @@ export const EditProfile = () => {
                             type="password"
                             name="password"
                             placeholder="Your password..."
-                            value={login.password || ''}
+                            value={login.password}
                             onChange={ e => inputHandler(e)}
                             />
                     </div>

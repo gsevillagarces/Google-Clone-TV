@@ -8,20 +8,26 @@ export const AddProfile = () => {
 
     const navigate = useNavigate()
     const [ login , setLogin ] = useState ({
+        name : '' ,
         username : '' ,
         password : '' 
     })
+
+    const [ users, setUsers ] = useState ([])
 
     const inputHandler = ({ target }) => {
         const { name, value } = target
         setLogin ({ ...login, [ name ] : value })
     }
 
+    const gotoProfiles = () => {
+        navigate("/login/manage-profile")
+    }
+    
     const formHandler = (e) => {
-        e.preventDefault()
 
         let controller = new AbortController()
-
+        
         let options = {
             method : 'post' ,
             signal : controller.signal,
@@ -31,8 +37,16 @@ export const AddProfile = () => {
             }
         }
 
-    }
+        e.preventDefault()
+        fetch('http://localhost:4002/users', options)
+        .then(res => res.json)
+        .then( data => setUsers(data.buscar))
+        .catch( err => console.log(err) )
+        console.log ( login )
 
+        gotoProfiles()
+
+    }
 
     return(
         <div className='AddProfile'>
@@ -50,10 +64,10 @@ export const AddProfile = () => {
                         <input
                             className='TextField-input'
                             type="text"
-                            name="username"
+                            name="name"
                             placeholder="Your name..."
-                            value={login.name || ''}
-                            onChange={ e => inputHandler(e)}
+                            value={login.name}
+                            onChange={ inputHandler }
                             />
                     </div>
                     
@@ -64,8 +78,8 @@ export const AddProfile = () => {
                             type="text"
                             name="username"
                             placeholder="Your username..."
-                            value={login.username || ''}
-                            onChange={ e => inputHandler(e)}
+                            value={login.username}
+                            onChange={ inputHandler }
                             />
                     </div>
 
@@ -76,8 +90,8 @@ export const AddProfile = () => {
                             type="password"
                             name="password"
                             placeholder="Your password..."
-                            value={login.password || ''}
-                            onChange={ e => inputHandler(e)}
+                            value={login.password}
+                            onChange={ inputHandler }
                             />
                     </div>
 
