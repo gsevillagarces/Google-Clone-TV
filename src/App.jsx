@@ -49,7 +49,7 @@ function App() {
               
               < Route path='/login/select-profile'   element={ < SelectProfile />} />
               < Route path='/login/manage-profile'   element={ < ManageProfile />} />
-              < Route path='/login/edit-profile'     element={ < EditProfile /> } />
+              < Route path='/login/edit-profile/:user'     element={ < EditProfile /> } />
               < Route path='/login/add-profile'      element={ < AddProfile /> } />
               
               < Route path='/details/movie-details/:_id' element={ < MovieDetails /> } />           

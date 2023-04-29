@@ -1,7 +1,7 @@
 import './ManageProfile.css'
-import { CancelBtn } from '../../CancelBtn/CancelBtn'
 import { NavLink } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
+import { CancelBtn2 } from '../../CancelBtn/CancelBtn2'
 
 export const ManageProfile = () => {
     const [users, setUsers] = useState([])
@@ -38,8 +38,8 @@ export const ManageProfile = () => {
                 <div className='ManageProfile-container'>
                     <div className='ManageProfile-profiles'>
                         {users.map((user) => (
-                            <NavLink to='/login/edit-profile' className="ManageProfile-edit-profile">
-                                < ManageProfileP key={user._id} {...user} /> 
+                            <NavLink to={`/login/edit-profile/${user._id}`} className="ManageProfile-edit-profile">
+                                < ManageProfileP key={user._id} {...user} />
                             </NavLink>
                         ))}
                     </div>
@@ -53,7 +53,7 @@ export const ManageProfile = () => {
             </div>
 
             <div className='ManageProfileInfo-butons'>
-                < CancelBtn />
+                < CancelBtn2 />
             </div>
 
         </div>

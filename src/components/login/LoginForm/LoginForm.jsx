@@ -61,7 +61,7 @@ export const LoginForm = () => {
                 
                 <form className='Login-Form-form' onSubmit={formHandler}>
 
-                    <div className='PasswordField'>
+                    <div className='TextField'>
                         <label className='TextField-label' htmlFor='input'>Username:</label>
                         <input
                             className='TextField-input'
