@@ -53,7 +53,7 @@ export const ForYou = ( ) => {
 
           {/* //Pintar las series y peliculas con watchlisted */}
           <h2 className='CloneTV-h2'>On your watchlist</h2>
-            < CarouselMovies watchlisted = "n" />
+            < CarouselMovies watchlisted = "y" />
 
           {/* //Pintar las series y peliculas con sugested */}
           <h2 className='CloneTV-h2'>Suggested</h2>
