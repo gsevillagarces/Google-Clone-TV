@@ -8,6 +8,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.5em;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 1 forwards;
 }
 
 .ManageProfile-info{
@@ -43,6 +45,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 3em;
+    padding-top: 1em;
 }
 
 .ManageProfile-profile{

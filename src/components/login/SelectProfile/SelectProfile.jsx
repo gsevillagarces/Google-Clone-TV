@@ -1,9 +1,9 @@
 import './SelectProfile.css'
-import { NavLink }     from 'react-router-dom'
-import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 
 export const SelectProfile = () => {
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([])
   
     useEffect ( () => {
 
@@ -37,23 +37,27 @@ export const SelectProfile = () => {
                 <div className='SelectProfile-container'>
                     <div className='SelectProfile-profiles'>
                         {users.map((user) => (
-                            < SelectProfileP key={user._id} {...user} />
+                            <NavLink to='/' className="ManageProfile-open-profile">
+                                < SelectProfileP key={user._id} {...user} />    
+                            </NavLink>
                         ))}
                     </div>
-                    <div className='SelectProfile-profile SelectProfile-addProfile'>
-                        <img className='SelectProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
-                        <h3 className='SelectProfile-profile-name'>+ Add profile</h3>
-                    </div>
+                    <NavLink to='/login/add-profile' className="ManageProfile-add-link">
+                        <button className='SelectProfile-profile SelectProfile-addProfile'>
+                            <img className='SelectProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
+                            <h3 className='SelectProfile-profile-name'>+ Add profile</h3>
+                        </button>
+                    </NavLink>
                 </div>
 
             </div>
 
             <div className='SelectProfile-manage'>
-                <button className='SelectProfile-manage-button'>
                 <NavLink to='/login/manage-profile' className="SelectProfile-manage-link">
-                    Manage profiles
+                    <button className='SelectProfile-manage-button'>
+                        Manage profiles
+                    </button>
                 </NavLink>
-                </button>
             </div>
         </div>
     )

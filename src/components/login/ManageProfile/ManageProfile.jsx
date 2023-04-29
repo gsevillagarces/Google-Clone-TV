@@ -1,8 +1,33 @@
-import { CancelBtn } from '../../CancelBtn/CancelBtn'
-import { OkBtn } from '../../OkBtn/OkBtn'
 import './ManageProfile.css'
+import { CancelBtn } from '../../CancelBtn/CancelBtn'
+import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 
 export const ManageProfile = () => {
+    const [users, setUsers] = useState([])
+  
+    useEffect ( () => {
+
+        let controller = new AbortController()
+        console.log( controller )
+
+        let options = {
+            method: "get",
+            signal : controller.signal,
+            headers : {
+                "Content-type" : "application/json"
+            } 
+        }
+
+        fetch( 'http://localhost:4002/users', options )
+        .then( res => res.json() )
+        .then( data => setUsers(data) )
+        .catch( err => console.log(err) )
+        .finally( () => controller.abort() )
+        
+    }, [])
+
+
     return(
         <div className='ManageProfile'>
 
@@ -12,19 +37,18 @@ export const ManageProfile = () => {
 
                 <div className='ManageProfile-container'>
                     <div className='ManageProfile-profiles'>
-                        <div className='ManageProfile-profile'>
-                            <img className='ManageProfile-profile-img' src="/assets/imgs/user@2x.jpg" alt="Google Clone Profile" />
-                            <h3 className='ManageProfile-profile-name'>Dad</h3>
-                        </div>
-                        <div className='ManageProfile-profile'>
-                            <img className='ManageProfile-profile-img' src="/assets/imgs/user@2x.jpg" alt="Google Clone Profile" />
-                            <h3 className='ManageProfile-profile-name'>Mom</h3>
-                        </div>
+                        {users.map((user) => (
+                            <NavLink to='/login/edit-profile' className="ManageProfile-edit-profile">
+                                < ManageProfileP key={user._id} {...user} /> 
+                            </NavLink>
+                        ))}
                     </div>
-                    <div className='ManageProfile-profile ManageProfile-addProfile'>
-                        <img className='ManageProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
-                        <h3 className='ManageProfile-profile-name'>+ Add profile</h3>
-                    </div>
+                    <NavLink to='/login/add-profile' className="ManageProfile-add-link">
+                        <button className='ManageProfile-profile ManageProfile-addProfile'>
+                            <img className='ManageProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
+                            <h3 className='ManageProfile-profile-name'>+ Add profile</h3>
+                        </button>
+                    </NavLink>
                 </div>
             </div>
 
@@ -32,6 +56,20 @@ export const ManageProfile = () => {
                 < CancelBtn />
             </div>
 
+        </div>
+    )
+}
+
+export const ManageProfileP = ({id, name, username, password}) => {
+    return(
+        <div className='ManageProfile-profile'>
+            <img
+            className='ManageProfile-profile-img'
+            src="/assets/imgs/user@2x.jpg"
+            alt="Google Clone Profile" />
+            <h3 className='ManageProfile-profile-name'>
+                {name}
+            </h3>
         </div>
     )
 }
