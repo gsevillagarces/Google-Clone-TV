@@ -87,7 +87,6 @@ export const LoginForm = () => {
 
                     <div className='Error-container'>
                         {/* ERROR DEL FORM 
-                        
                         {data.mensaje && <div style={{ color: 'red' }}><p>data.mensaje</p></div>} */}
                     </div>
 
@@ -95,13 +94,11 @@ export const LoginForm = () => {
                         <button
                             className='OkBtn-button'
                             type="submit">
-                            
-                                <span className='Button-span'>
-                                    <img className='Button-span-img-arrow' src="/assets/icons/arrow_forward.svg" alt="" />
-                                </span>
+                            <span className='Button-span'>
+                                <img className='Button-span-img-arrow' src="/assets/icons/arrow_forward.svg" alt="" />
+                            </span>
                         </button>
                     </div>
-
                 </form>
             </div>
         </div>

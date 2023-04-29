@@ -22,7 +22,10 @@ export const Library = () => {
                 
             </div>
             <h2 className='CloneTV-h2'>On your watchlist</h2>
-            < CarouselMovies />
+
+            {/* Pintar el contenido de Watchlisted */}
+            < CarouselMovies watchlisted="y" />
+
             <div className='Library-Disclaimer'>
                 <div className='Library-Disclaimer-container'>
                     <h3 className='Library-Disclaimer-h3'>

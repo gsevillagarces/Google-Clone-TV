@@ -60,7 +60,7 @@ export const ManageProfile = () => {
     )
 }
 
-export const ManageProfileP = ({id, name, username, password}) => {
+export const ManageProfileP = ({_id, name, username, password}) => {
     return(
         <div className='ManageProfile-profile'>
             <img
