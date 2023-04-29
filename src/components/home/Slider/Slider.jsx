@@ -14,9 +14,9 @@ export const Slider = () => {
 
     const updateSlide = (newIndex) => {
         if ( newIndex < 0 ) {
-            newIndex = moviesToUse.length - 1;
+            newIndex = moviesToUse.length - 1
         } else if ( newIndex > moviesToUse.length - 1 ) {
-            newIndex = 0;
+            newIndex = 0
         }
 
         setActiveSlide(newIndex)
@@ -40,13 +40,13 @@ export const Slider = () => {
             const moviesWithIndex = data.map((movie, index) => ({
                 ...movie,
                 index: index,
-            }));
-            setContent(moviesWithIndex);
+            }))
+            setContent(moviesWithIndex)
         })
         .catch((err) => {
-            console.log(err);
-            controller.abort();
-        });
+            console.log(err)
+            controller.abort()
+        })
 
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
