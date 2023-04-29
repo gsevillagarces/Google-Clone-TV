@@ -1,57 +1,75 @@
 import './CarouselMoviesLG.css'
 import { MovieCardLG } from '../home/cards/MovieCardLG/MovieCardLG'
 import { useEffect, useState } from 'react'
-// import { googleClone } from '../../bbdd'
 
-// const {content} = googleClone
-// const {series} = content
+export const CarouselMoviesLG = ({ type, category, featured }) => {
 
-export const CarouselMoviesLG = ( { filter, category } ) => {
+    const [ content, setContent ] = useState([])
 
-    const [ content , setContent ] = useState([])
-
-    useEffect ( () => {
+    useEffect(() => {
 
         let controller = new AbortController()
-        console.log( controller )
 
         let options = {
             method: "get",
-            signal : controller.signal,
-            headers : {
-                "Content-type" : "application/json"
-            } 
+            signal: controller.signal,
+            headers: {
+                "Content-type": "application/json"
+            }
         }
 
-        fetch( 'http://localhost:4002/content', options )
-        .then( res => res.json() )
-        .then( data => setContent(data) )
-        .catch( err => console.log(err) )
-        .finally( () => controller.abort() )
-        
+        fetch('http://localhost:4002/content', options)
+            .then(res => res.json())
+            .then(data => setContent(data))
+            .catch(err => console.log(err))
+            .finally(() => controller.abort())
+
     }, [])
 
-    return(
+    return (
         <div className='ShowsCarousel'>
-            < CarouselMoviesLGC content = { content } category = { category } filter = { filter } />
+            < CarouselMoviesLGC content={content}
+                                type        = {type}
+                                category    = {category}
+                                featured    = {featured} />
         </div>
     )
 }
 
-const CarouselMoviesLGC = ( { content , filter , category } ) => {
+const CarouselMoviesLGC = ({ content, category, type, featured }) => {
 
-    const [ filtrar, setFiltrar ] = useState( [] )
+    const [ filtrar, setFiltrar ] = useState([])
 
-    useEffect (() => {
-        const filterType = content.filter (eachCard => eachCard[category] === filter)
-        setFiltrar(filterType)
-    }, [content] )
+    useEffect(() => {
+        const filteredContent = content.filter((eachCard) => {
+            // Filtrar por tipo. Película o serie
+            if (type && eachCard.type !== type) {
+            return false
+            }
 
-    return(
+            // Filtrar por categoría de película o serie
+            if (category && eachCard.category !== category) {
+            return false
+            }
+
+            return true
+        })
+        
+        // Filtrar si tiene o no featured
+        const filteredByFeatured = featured
+        ? filteredContent.filter((eachCard) => eachCard.featured === featured)
+        : filteredContent;
+
+        setFiltrar(filteredByFeatured);
+      }, [content, type, category, featured])
+      
+
+    // Devolver el componente MovieCardLG con los datos ya filtrados
+    return (
         <div className='CarouselMoviesLG-container'>
             <div className='CarouselMoviesLG'>
-                { filtrar && filtrar.map( eachCard =>
-                    < MovieCardLG key = { eachCard._id} {...eachCard} />
+                {filtrar && filtrar.map(eachCard =>
+                    < MovieCardLG key={eachCard._id} {...eachCard} />
                 )}
             </div>
         </div>

@@ -7,13 +7,13 @@ export const Shows = ( ) => {
     
     return(
         <div className='Shows'>
-            < CarouselMoviesLG category = "category" filter = "Comedy-drama series" />
+            < CarouselMoviesLG  type="serie" featured="y" />
             <h2 className='CloneTV-h2'>Popular shows</h2>
-            < CarouselMovies filter = "Drama" />
-            <h2 className='CloneTV-h2'>Mistery</h2>
-            < CarouselMovies filter = "Sci-Fi" />
-            <h2 className='CloneTV-h2'>Thriller</h2>
-            < CarouselMovies filter = "Serie" />
+            < CarouselMovies type="serie" />
+            <h2 className='CloneTV-h2'>Dramas</h2>
+            < CarouselMovies type="serie" category="Drama" />
+            <h2 className='CloneTV-h2'>Sci-Fi series</h2>
+            < CarouselMovies type="serie" category="Sci-Fi" />
         </div>
     )
 }

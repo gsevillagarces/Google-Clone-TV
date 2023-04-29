@@ -5,13 +5,13 @@ import './Movies.css'
 export const Movies = () => {
     return(
         <div className='Movies'>
-            < CarouselMoviesLG />
+            < CarouselMoviesLG type="movie" featured="y" />
             <h2 className='CloneTV-h2'>Popular movies</h2>
-            < CarouselMovies filter= "Popular" />
+            < CarouselMovies type="movie" />
             <h2 className='CloneTV-h2'>Dramas</h2>
-            < CarouselMovies filter= "Drama" />
+            < CarouselMovies type="movie" />
             <h2 className='CloneTV-h2'>Comedy</h2>
-            < CarouselMovies filter= "Comedy" />
+            < CarouselMovies type="movie" />
         </div>
     )
 }

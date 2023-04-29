@@ -1,9 +1,6 @@
 import './Slider.css'
-import { useEffect, useState } from 'react'
-// import { googleClone } from '../../../bbdd'
 
-// const {content}   = googleClone
-// const {movies, series} = content
+import { useEffect, useState } from 'react'
 
 export const Slider = () => {
 

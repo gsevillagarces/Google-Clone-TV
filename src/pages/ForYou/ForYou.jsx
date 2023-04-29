@@ -38,17 +38,26 @@ export const ForYou = ( ) => {
 
     return(
         <div className='ForYou'>
-          < Slider />
+          < Slider featured = "y" />
+          
           <h2 className='CloneTV-h2'>Top picks</h2>
-            < CarouselMovies filter = "Drama" />
+            < CarouselMovies featured = "y" />
+          
+          {/* //Pintar las apps */}
           <h2 className='CloneTV-h2'>Your apps</h2>
             < CarouselApps apps = { apps } filter = "y" />
+
+          {/* //Pintar las series y peliculas con watching */}
           <h2 className='CloneTV-h2'>Keep watching</h2>
-            < CarouselMovies filter = "Action Drama" />
+            < CarouselMovies watching = "y" />
+
+          {/* //Pintar las series y peliculas con watchlisted */}
           <h2 className='CloneTV-h2'>On your watchlist</h2>
-            < CarouselMovies filter = "Sci-Fi" />
+            < CarouselMovies watchlisted = "n" />
+
+          {/* //Pintar las series y peliculas con sugested */}
           <h2 className='CloneTV-h2'>Suggested</h2>
-            < CarouselMovies filter = "Action Comedy" />
+            < CarouselMovies suggested = "y" />
         </div>
     )
 }
