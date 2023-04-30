@@ -21,7 +21,7 @@ export const AddProfile = () => {
     }
 
     const gotoProfiles = () => {
-        navigate("/login/manage-profile")
+        navigate("/login/select-profile")
     }
     
     const formHandler = (e) => {
@@ -42,10 +42,8 @@ export const AddProfile = () => {
         .then(res => res.json)
         .then( data => setUsers(data.buscar))
         .catch( err => console.log(err) )
-        console.log ( login )
 
         gotoProfiles()
-
     }
 
     return(

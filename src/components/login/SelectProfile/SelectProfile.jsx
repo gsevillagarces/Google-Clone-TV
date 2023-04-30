@@ -62,7 +62,7 @@ export const SelectProfile = () => {
     )
 }
 
-export const SelectProfileP = ({_id, name, username, password}) => {
+export const SelectProfileP = ({ name }) => {
     return(
         <div className='SelectProfile-profile'>
             <img

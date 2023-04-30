@@ -27,10 +27,8 @@ export const ManageProfile = () => {
         
     }, [])
 
-
     return(
         <div className='ManageProfile'>
-
             <div className='ManageProfile-info'>
                 <img className='ManageProfile-logo' src="/assets/clone-logo-header.svg" alt="Clone TV Logo" />
                 <h2 className='ManageProfile-h2'>Manage your profiles</h2>
@@ -51,16 +49,14 @@ export const ManageProfile = () => {
                     </NavLink>
                 </div>
             </div>
-
             <div className='ManageProfileInfo-butons'>
                 < CancelBtn2 />
             </div>
-
         </div>
     )
 }
 
-export const ManageProfileP = ({_id, name, username, password}) => {
+export const ManageProfileP = ({ name }) => {
     return(
         <div className='ManageProfile-profile'>
             <img

@@ -16,7 +16,6 @@ export const EditProfile = () => {
     }
 
     useEffect ( () => {
-
         let controller = new AbortController()
         let options = {
             method : 'get' ,
@@ -25,7 +24,6 @@ export const EditProfile = () => {
                 "Content-type" : "application/json"
             }
         }   
-
         fetch( `http://localhost:4002/users/${user}`, options )
             .then( res => res.json())
             .then( data => setLogin (data[0] ))

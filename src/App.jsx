@@ -27,16 +27,15 @@ function App() {
 
       <div className='App'>
 
-        {/* <div className='Splash'>
+        <div className='Splash'>
           < Splash />
-        </div> */}
+        </div>
 
           <div className='CloneTV'>
 
             < Routes >
 
               < Route path='/' element={ < LoginForm /> } />
-
                 < Route path='/main' element={ < Main /> } >
                   < Route path='foryou'  element={ < ForYou />  } />
                   < Route path='search'  element={ < Search />  } />
