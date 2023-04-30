@@ -1,5 +1,6 @@
 import './OkBtn.css'
 
+// Botón que en principio se iba a usar con toda la App, y cambiar su texto de acuerdo al contexto
 export const OkBtn = ({text}) => {
     return(
         <div className='OkBtn'>

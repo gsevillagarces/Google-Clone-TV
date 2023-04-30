@@ -7,6 +7,8 @@ export const Shows = ( ) => {
     
     return(
         <div className='Shows'>
+
+            {/* Pintar el carousel de shows grandes, tipo serie y con el atributo featured */}
             < CarouselMoviesLG  type="serie" featured="y" />
             
             {/* Pintar los shows más populares */}

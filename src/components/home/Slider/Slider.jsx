@@ -1,6 +1,5 @@
 import './Slider.css'
 import { NavLink } from 'react-router-dom'
-
 import { useEffect, useState } from 'react'
 
 export const Slider = () => {
@@ -10,7 +9,7 @@ export const Slider = () => {
 
     const movies = content ? content : []
 
-    //Crear una constante que contenga las 5 primeras series
+    //Crear una constante que contenga las 5 primeras películas
     const moviesToUse = [...movies].slice(0,5)
 
     const updateSlide = (newIndex) => {
@@ -34,7 +33,8 @@ export const Slider = () => {
                 "Content-type" : "application/json"
             } 
         }
-  
+
+        // Traer películas para con su índice, pooder ponerlas en el slider
         fetch("http://localhost:4002/content", options)
         .then((res) => res.json())
         .then((data) => {
@@ -49,6 +49,7 @@ export const Slider = () => {
             controller.abort()
         })
 
+        // Hacer que el slider avance de manera automática
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
         }, 3000)
@@ -60,6 +61,8 @@ export const Slider = () => {
     return(
         <div className='Slider-container'>
             <div className='Slider'>
+
+                {/* Conteneder de slides, para poner el fondo de cada película */}
                 <div className='Slides-container'>
                     {moviesToUse.map( eachMovie =>
                     <div className='Slide'
@@ -72,6 +75,8 @@ export const Slider = () => {
                     </div>
                     )}
                 </div>
+
+                {/* Pintar el contenido por sobre la slide con su foto, para poder animarlos de manera intercalada */}
                 <div className="Slide-content">
                     <div className='Slider-left'>
                     {moviesToUse.map( eachMovie =>
@@ -101,6 +106,8 @@ export const Slider = () => {
                         </div>
                     )}
                     </div>
+
+                    {/* Indicadores del slider, que funcionan como navegación */}
                     <div className="Slider-right">
                         <div className='Slider-indicators'>
                             {moviesToUse.map( (eachMovie, index) =>

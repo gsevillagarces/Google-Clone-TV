@@ -1,6 +1,5 @@
 import './EditProfile.css'
 import { CancelBtn } from '../../CancelBtn/CancelBtn'
-
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
@@ -15,6 +14,7 @@ export const EditProfile = () => {
         navigate("/login/select-profile")
     }
 
+    // fetch para precargar el contenido del login en el form y poder editarlo
     useEffect ( () => {
         let controller = new AbortController()
         let options = {
@@ -60,6 +60,7 @@ export const EditProfile = () => {
         gotoProfiles()
     }
 
+    // fetch para saber qué usuario borrar y volver a perfiles
     const deleteUser = () => {
         let options = {
             method : 'delete' ,

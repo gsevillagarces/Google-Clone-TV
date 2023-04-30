@@ -5,6 +5,7 @@ export const Splash = () => {
     <div className="Splash">
       <div className="Splash-main">
         <img src="/assets/clone-logo.svg" alt="Logo Clone TV" />
+        {/* Loading para animar por css */}
         <div className='Loading-bar'>
           <span className='Loaded'></span>
         </div>

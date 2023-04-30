@@ -1,3 +1,5 @@
+/* Ajustes y fixes generales en css, para usar en toda la aplicación */
+
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +18,7 @@ body::-webkit-scrollbar{
     pointer-events: none;
 }
 
+/* Animaciones para simular procesos de carga */
 .CloneTV{
     opacity: 0;
     animation: fadeInAnimation 500ms ease-in 5000ms 1 forwards;
@@ -43,6 +46,7 @@ body::-webkit-scrollbar{
     font-size: 1.5em;
 }
 
+/* Fade ins para entrada y salida de elementos de contenido en la app */
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;

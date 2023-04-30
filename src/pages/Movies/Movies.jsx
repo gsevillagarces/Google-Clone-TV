@@ -1,6 +1,6 @@
+import './Movies.css'
 import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
 import { CarouselMoviesLG } from '../../components/CarouselMoviesLG/CarouselMoviesLG'
-import './Movies.css'
 
 export const Movies = () => {
     return(

@@ -1,6 +1,7 @@
 import './MovieCardLG.css'
 import { NavLink } from 'react-router-dom'
 
+// Pintar la ficha con todos los props traídos de contenido, películas
 export const MovieCardLG = ({_id, type, provider, alt, logoProvider, bgSlide, bgSmall, title, summary, btnText, rating, restriction, category, years, watchlisted, watched, featured, href}) => {
     return(
         <div className='MovieCardLG-container'>

@@ -1,15 +1,12 @@
 import './CarouselApps.css'
 import { AppCard } from '../home/cards/AppCard/AppCard'
 import { useEffect, useState } from 'react'
-// import { googleClone } from '../../bbdd'
-
-// const {content} = googleClone
-// const {apps} = content
 
 export const CarouselApps = ({ apps, filter }) => {
     
     const [ filtrar, setFiltrar ] = useState( [] )
 
+    // Solo traer las apps instaladas
     useEffect (() => {
         const filterType = apps.filter (eachApp => eachApp.installed === filter)
         setFiltrar(filterType)

@@ -19,6 +19,7 @@ export const AppDetails = () => {
             }
         }
 
+        // fetch de contenido de apps y sus varios props, como appName, color, etc.
         fetch( `http://localhost:4002/apps/${appId}`, options)
             .then( (res) => res.json() )
             .then( (data) => setApps(data[0]) )
@@ -35,7 +36,6 @@ export const AppDetails = () => {
                      src={`${apps.logoApp}`}
                      alt="{apps.appName}" />
             </div>
-
 
             <div className='Loading-bar'>
                 <span className='Loaded'></span>

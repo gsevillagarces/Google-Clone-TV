@@ -32,9 +32,14 @@ export const Apps = () => {
 
     return(
         <div className='Apps'>
+            {/* Carousel con las apps grandes que manejan otro estilo */}
             < CarouselAppsLG apps = { apps } filter = "y" />
+
+            {/* Carousel con las apps pequeñas que son solo las instaladas, según lo dice el filtro */}
             <h2 className='CloneTV-h2'>Your apps</h2>
             < CarouselApps apps = { apps } filter = "y" />
+
+            {/* Componente de barra de búsqueda no funcional */}
             < SearchBar />
         </div>
     )

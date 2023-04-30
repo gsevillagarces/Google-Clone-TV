@@ -1,10 +1,6 @@
 import './CarouselSearchSuggestions.css';
 import { SearchSuggestions } from '../home/cards/SearchSuggestions/SearchSuggestions'
 import { useEffect, useState } from 'react'
-// import { googleClone } from '../../bbdd'
-
-// const {content} = googleClone
-// const {searchSuggestions} = content
 
 export const CarouselSearchSuggestions = ( { filter, category } ) => {
 

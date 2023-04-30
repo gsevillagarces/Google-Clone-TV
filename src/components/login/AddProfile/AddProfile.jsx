@@ -5,8 +5,9 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const AddProfile = () => {
-
     const navigate = useNavigate()
+
+    // useState para recibir los datos del Login
     const [ login , setLogin ] = useState ({
         name : '' ,
         username : '' ,
@@ -15,11 +16,13 @@ export const AddProfile = () => {
 
     const [ users, setUsers ] = useState ([])
 
+    // Qué hacer con el form
     const inputHandler = ({ target }) => {
         const { name, value } = target
         setLogin ({ ...login, [ name ] : value })
     }
 
+    // Finalizando el formulario
     const gotoProfiles = () => {
         navigate("/login/select-profile")
     }
@@ -93,11 +96,6 @@ export const AddProfile = () => {
                             />
                     </div>
 
-                    <div className='Error-container'>
-                        {/* ERROR DEL FORM 
-                        {data.mensaje && <div style={{ color: 'red' }}><p>data.mensaje</p></div>} */}
-                    </div>
-
                     <div className='LoginForm-btnContainer AddProfileInfo-butons'>
                         < CancelBtn />
                         <button
@@ -110,7 +108,6 @@ export const AddProfile = () => {
                     </div>
                 </form>
             </div>
-
         </div>
     )
 }

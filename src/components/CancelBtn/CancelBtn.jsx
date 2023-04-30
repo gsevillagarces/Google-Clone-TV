@@ -7,7 +7,7 @@ export const CancelBtn = ({ text }) => {
   
     const goBack = () => {
         navigate(-1)
-    };
+    }
 
     return(
         <div className='CancelBtn'>

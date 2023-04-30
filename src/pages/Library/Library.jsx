@@ -1,9 +1,11 @@
-import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
 import './Library.css'
+import { CarouselMovies } from '../../components/CarouselMovies/CarouselMovies'
 
 export const Library = () => {
     return(
         <div className='Library'>
+
+            {/* Elelemtos fijos, que son parte de la estructura de la app */}
             <h2 className='CloneTV-h2'>Movies & shows</h2>
             <div className='Library-Manage'>
                 <div className='Library-Manage-container'>
@@ -19,13 +21,14 @@ export const Library = () => {
                         <img className='Library-Manage-img' src="/assets/imgs/manageMovies.svg" alt="Manage movies and apps" />
                     </div>
                 </div>
-                
             </div>
+
             <h2 className='CloneTV-h2'>On your watchlist</h2>
 
             {/* Pintar el contenido de Watchlisted */}
             < CarouselMovies watchlisted="y" />
 
+            {/* Elelemtos fijos, que son parte de la estructura de la app */}
             <div className='Library-Disclaimer'>
                 <div className='Library-Disclaimer-container'>
                     <h3 className='Library-Disclaimer-h3'>

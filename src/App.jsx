@@ -27,12 +27,14 @@ function App() {
 
       <div className='App'>
 
+        {/* Componente que carga una Splash Screen inicial */}
         <div className='SplashC'>
           < Splash />
         </div>
 
           <div className='CloneTV'>
 
+            {/* Rutas para incluir el header dentro de la app, a excepción de ciertos componentes */}
             < Routes >
 
               < Route path='/' element={ < LoginForm /> } />
@@ -44,12 +46,14 @@ function App() {
                   < Route path='apps'    element={ < Apps />    } />
                   < Route path='library' element={ < Library /> } />
               </ Route >
-              
+
+              {/* Pantallas para el CRUD de usuarios dentro de la app */}
               < Route path='/login/select-profile'      element={ < SelectProfile />} />
               < Route path='/login/manage-profile'      element={ < ManageProfile />} />
               < Route path='/login/edit-profile/:user'  element={ < EditProfile /> } />
               < Route path='/login/add-profile'         element={ < AddProfile /> } />
-              
+
+              {/* Detalles de movies/series, y de apps */}
               < Route path='/details/content-details/:movie'  element={ < ContentDetails /> } />
               < Route path='/details/app-details/:appId'   element={ < AppDetails /> } />
             </ Routes >

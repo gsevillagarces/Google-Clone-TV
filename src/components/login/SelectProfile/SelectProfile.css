@@ -72,6 +72,7 @@
     border: 3pt solid transparent;
 }
 
+/* Workaround para estilizar de manera distinta a los avatares cuando hay más de uno. Solución simplemente estética */
 .SelectProfile-profiles .SelectProfile-open-profile:nth-child(2){
     filter: hue-rotate(200deg);
 }
@@ -158,6 +159,8 @@
         height: 8rem;
     }
 }
+
+/* Ajustes para que de manera que crezca el num de usuarios el componente no pierda usabilidad */
 
 @media screen and (max-width: 675px) {
     .SelectProfile{

@@ -31,7 +31,8 @@ export const SelectProfile = () => {
             <div className='SelectProfile-info'>
                 <img className='SelectProfile-logo' src="/assets/clone-logo-header.svg" alt="Clone TV Logo" />
                 <h2 className='SelectProfile-h2'>Choose a profile</h2>
-        
+
+                {/* Seleccionar el perfil y tomar todos sus datos */}
                 <div className='SelectProfile-container'>
                     <div className='SelectProfile-profiles'>
                         {users.map((user) => (

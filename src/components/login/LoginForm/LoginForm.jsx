@@ -10,6 +10,7 @@ export const LoginForm = () => {
         password : '' 
     })
 
+    // Revisar si existe ya users en local y sino pasar por Login
     useEffect (() => {
         const  checkLocal = JSON.parse(localStorage.getItem( 'users' ))
         if(checkLocal){
@@ -19,11 +20,13 @@ export const LoginForm = () => {
 
     const [ logged, setLogged ] = useState ( '' )
 
+    // Poder usar los inputs
     const inputHandler = ({ target }) => {
         const { name, value } = target
         setLogin ({ ...login, [ name ] : value })
     }
 
+    // Qué hacer con el form al enviar
     const formHandler = (e) => {
         e.preventDefault()
 
@@ -38,6 +41,7 @@ export const LoginForm = () => {
             }
         }
 
+    // formulario de login con la validación de los usuarios dentro de la bbdd
     fetch( 'http://localhost:4002/login' , options)
         .then ( res => res.json ())
         .then ( data => {

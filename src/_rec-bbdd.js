@@ -1,3 +1,5 @@
+// Primera base de datos usada en la app. Después se optimizaron varios datos
+
 export const googleClone = {
     header : {
         h1 : { 

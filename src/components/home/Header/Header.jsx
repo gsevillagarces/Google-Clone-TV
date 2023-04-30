@@ -13,22 +13,26 @@ export const Header = () => {
 
     useEffect(() => {
 
+        // fetch de logo y título
         fetch('http://localhost:4002/h1')
             .then((response) => response.json())
             .then((data) => setH1(data[0]))
             .catch((error) => console.error(error));
         
+        // fetch de avatar para el menú
         fetch('http://localhost:4002/avatar')
             .then((response) => response.json())
             .then((data) => setAvatar(data[0]))
             .catch((error) => console.error(error));
 
+        // fetch de todo lo que compone el menú
         fetch('http://localhost:4002/menu')
             .then(response => response.json())
             .then(data => setMenu(data))
             .catch(error => console.log(error))
     }, [])
 
+    // para el logout de usuarios, eliminando users de localStorage
     const logout = () => {
         localStorage.removeItem('users')
         navigate("/")
@@ -36,7 +40,7 @@ export const Header = () => {
     
     return(
         <div className='Header'>
-                
+            {/* Difererrncias en menús desktop y respnsive */}
             <nav className="Nav-responsive">
                 <button
                     className={ isMobile ? 'Nav-responsive-button' : 'Nav-responsive-button-close'} 

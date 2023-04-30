@@ -1,5 +1,6 @@
 import './SearchSuggestions.css'
 
+// Pintar la ficha con todos los props traídos de suggestions
 export const SearchSuggestions = ({id, txt, image, alt, href }) => {
     return(
         <div className='SearchSuggestions-container'>

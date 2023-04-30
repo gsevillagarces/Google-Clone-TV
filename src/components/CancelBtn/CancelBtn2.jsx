@@ -5,14 +5,13 @@ import React from 'react'
 export const CancelBtn2 = ({ text }) => {
     const navigate = useNavigate()
   
-
     const gotoProfiles = () => {
         navigate("/login/select-profile")
     }
 
     const goBack = () => {
         gotoProfiles()
-    };
+    }
 
     return(
         <div className='CancelBtn'>

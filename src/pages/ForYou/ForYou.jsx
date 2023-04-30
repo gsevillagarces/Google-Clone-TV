@@ -22,6 +22,7 @@ export const ForYou = ( ) => {
           } 
       }
 
+      // fetch de contenido para filtrar por serie, película y sus varios props, como category, suggested, watche, etc.
       fetch( 'http://localhost:4002/content', options )
       .then( res => res.json() )
       .then( data => setContent(data) )

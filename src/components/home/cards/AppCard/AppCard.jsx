@@ -1,7 +1,8 @@
 import './AppCard.css'
 import { NavLink } from 'react-router-dom'
 
-export const AppCard = ({_id, appName, logoApp, appColor, href}) => {
+// Pintar la ficha con todos los props traídos de apps
+export const AppCard = ({_id, appName, logoApp, appColor}) => {
     return (
         <div className='AppCard-container' key={_id}>
             < NavLink to={`/details/app-details/${_id}`} className='MovieCard-a'>

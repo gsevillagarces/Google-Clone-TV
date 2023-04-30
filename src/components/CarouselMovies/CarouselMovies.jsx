@@ -26,9 +26,10 @@ export const CarouselMovies = ({ type, category, watchlisted, featured, watched,
 
     }, [])
 
+    // devolver contenido de acuerdo a varios filtros
     return (
         <div className='ShowsCarousel'>
-            < CarouselMoviesC content={content}
+            < CarouselMoviesC content     ={content}
                               type        = {type}
                               category    = {category}
                               watchlisted = {watchlisted}

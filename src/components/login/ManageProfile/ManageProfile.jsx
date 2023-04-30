@@ -18,7 +18,8 @@ export const ManageProfile = () => {
                 "Content-type" : "application/json"
             } 
         }
-
+        
+        // Traer los usuarios para poder pintarlos
         fetch( 'http://localhost:4002/users', options )
         .then( res => res.json() )
         .then( data => setUsers(data) )
@@ -49,6 +50,7 @@ export const ManageProfile = () => {
                     </NavLink>
                 </div>
             </div>
+            {/* Fue necesario otro botón, distinto al BACK para saltar a una pantalla en específico */}
             <div className='ManageProfileInfo-butons'>
                 < CancelBtn2 />
             </div>

@@ -5,6 +5,7 @@ import { CancelBtn } from '../../../components/CancelBtn/CancelBtn'
 
 export const ContentDetails = () => {
 
+        // useStates para hacer uso de características de cada contenido y poder pintarlos o no
         const { movie } = useParams()
         const [ movies, setMovies ] = useState([])
         const [ isWatchlisted, setIsWatchlisted] = useState(false)
@@ -21,6 +22,7 @@ export const ContentDetails = () => {
                 }
             }
             
+            // fetch de contenido de película y sus varios props, como title, years, restriction,etc.
             fetch(`http://localhost:4002/content/${movie}`, options)
                 .then((res) => res.json())
                 .then((data) => {

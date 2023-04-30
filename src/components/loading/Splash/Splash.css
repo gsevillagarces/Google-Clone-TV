@@ -58,6 +58,7 @@
     font-weight: 300;
 }
 
+/* Animaciones que se intercalan y simulan una carga de la app */
 @keyframes loadingBar {
     0% {
         width: 0;
