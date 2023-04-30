@@ -28,7 +28,7 @@
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    gap: 0.35vw;
+    gap: 0.2vw;
 }
 
 .Nav-a{
@@ -155,7 +155,7 @@
     transform: scale(1.025);
 }
 
-@media screen and (max-width: 1480px){
+@media screen and (max-width: 1495px){
     .Nav{
         padding: 0.5em 1em;
         display: flex;
