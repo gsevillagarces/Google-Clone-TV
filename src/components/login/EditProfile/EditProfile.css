@@ -159,3 +159,25 @@
     }
 }
 
+@media screen and (max-width: 675px) {
+    .EditProfile{
+        padding-bottom: 12vh;
+    }
+    .EditProfileInfo-h2{
+        font-size: 1.5rem;
+    }
+    .EditProfile-divider-h4{
+        font-size: 1.2em;
+    }
+    .TextField-label{
+        font-size: 1.2em;
+    }
+    .TextField-input,
+    .PasswordField-input{
+        font-size: 1.2em;
+    }
+    .EditProfileInfo-butons{
+        position: fixed;
+        bottom: 0;
+    }
+}

@@ -55,3 +55,17 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 576px){
+    .MovieCard{
+        width: 18em;
+        height: 10em;
+    }
+    .MovieCard-h4{
+        font-size: 1.1em;
+    }
+    .MovieCard-h3{
+        font-size: 1.2em;
+        opacity: 0.5;
+    }
+}

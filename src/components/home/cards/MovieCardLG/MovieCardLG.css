@@ -71,3 +71,29 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+@media screen and (max-width: 768px) {
+    .MovieCardLG{
+        width: 36rem;
+        height: 20rem;
+    }
+    .MovieCardLG-h3{
+        font-size: 3rem;
+    }
+    .MovieCardLG-h4{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .MovieCardLG{
+        width: 20rem;
+        height: 18rem;
+    }
+    .MovieCardLG-h3{
+        font-size: 2rem;
+    }
+    .MovieCardLG-h4{
+        font-size: 1rem;
+    }
+}

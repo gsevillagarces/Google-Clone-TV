@@ -27,7 +27,7 @@ function App() {
 
       <div className='App'>
 
-        <div className='Splash'>
+        <div className='SplashC'>
           < Splash />
         </div>
 

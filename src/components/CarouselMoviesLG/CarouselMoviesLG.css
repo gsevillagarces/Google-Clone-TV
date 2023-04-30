@@ -25,3 +25,11 @@
 .CarouselMoviesLG::-webkit-scrollbar{
     display: none;
 }
+
+@media screen and (max-width: 1480px){
+    .CarouselMoviesLG{
+        gap: 1.5em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }   
+}

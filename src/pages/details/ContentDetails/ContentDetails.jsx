@@ -63,29 +63,27 @@ export const ContentDetails = () => {
                 </div>
                 
                 <div className='ContentDetails-buttons'>
-                    < NavLink to={`/app/${movies.provider}`} className='ContentDetails-a'>
-                    <button className='ContentDetails-buton'>
+                    <button className='ContentDetails-button'>
                         <span> 
                             <img className='Button-span-img Button-span-provider' src={`${movies.logoProvider}`} alt="Provider" />
                         </span>
                     </button>
-                    </ NavLink >
                     {movies.seasons && (
-                    <button className='ContentDetails-buton seasons-button'>
+                    <button className='ContentDetails-button seasons-button'>
                         {movies.seasons} seasons
                     </button>
                     )}
-                    <button className={`ContentDetails-buton watchlisted-button ${ isWatchlisted ? 'active' : '' }`} onClick={handleToggleWatchlisted}>
+                    <button className={`ContentDetails-button watchlisted-button ${ isWatchlisted ? 'active' : '' }`} onPointerDown={handleToggleWatchlisted}>
                         <span className='Inverted-icon'> 
                             <img className='Button-span-img' src="/assets/icons/bookmark_border.svg" alt="Watchlisted" />
                         </span> Watchlisted
                     </button>
-                    <button className={`ContentDetails-buton watched-button ${ isWatched ? 'active' : '' }`} onClick={handleToggleWatched}>
+                    <button className={`ContentDetails-button watched-button ${ isWatched ? 'active' : '' }`} onPointerDown={handleToggleWatched}>
                         <span className='Inverted-icon'>
                             <img className='Button-span-img' src="/assets/icons/radio_button_uncheck.svg" alt="Watched" />
                         </span> Watched
                     </button>
-                    <button className='ContentDetails-buton thumbs-button'>
+                    <button className='ContentDetails-button thumbs-button'>
                         <span className='Inverted-icon'>
                             <img className='Button-span-img' src="/assets/icons/thumbs_up_down.svg" alt="Thumbs" />
                         </span>

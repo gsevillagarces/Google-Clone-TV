@@ -15,6 +15,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    pointer-events: none;
     top: 0;
     left: 0;
     background: rgb(0,0,0);
@@ -87,7 +88,8 @@
     display: none;
 }
 
-.ContentDetails-buton{
+
+.ContentDetails-button{
     background-color: #8C8C8C75;
     padding: 1.0625rem 2.625rem;
     border-radius: 2.5rem;
@@ -103,21 +105,26 @@
 }
 
 .Button-span-img{
-    width: 2.5rem;
+    max-width: 2.5rem;
+    width: 100%;
     transition: all 500ms;
+}
+
+.Inverted-icon{
+    min-width: 2.5rem;
 }
 
 .Button-span-provider{
     min-width: 3em;
 }
 
-.ContentDetails-buton:hover {
+.ContentDetails-button:hover {
     background-color: #fff;
     color: #000;
     transform: scale(1.025);
 }
 
-.ContentDetails-buton:active {
+.ContentDetails-button:active {
     transform: scale(1.125);
 }
 
@@ -136,11 +143,11 @@
     filter: invert();
 }
 
-.ContentDetails-buton:hover .Button-span-img{
+.ContentDetails-button:hover .Button-span-img{
     filter: invert();
 }
 
-.ContentDetails-buton:hover .Inverted-icon .Button-span-img{
+.ContentDetails-button:hover .Inverted-icon .Button-span-img{
     filter: none;
 }
 
@@ -153,8 +160,8 @@
         width: calc(100% + 5vw);
     }
 
-    .ContentDetails-buton:nth-last-child(1) {
-        margin-right: 5vw;
+    .ContentDetails-buttons {
+        padding-right: 2vw;
     }
 }
 
@@ -185,5 +192,36 @@
     
     .ContentDetails-rating{
         gap: 0.5em;
+    }
+}
+
+@media screen and (max-width: 576px ) {
+    .ContentDetails{
+        padding: 1rem 5vw 1rem;
+    }
+
+    .ContentDetails-h1{
+        font-size: 3.5rem;
+    }
+
+    .ContentDetails-h4{
+        font-size: 1.5rem;
+    }
+
+    .ContentDetails-description-p{
+        font-size: 1.3rem;
+    }
+
+    .ContentDetails-buttons{
+        padding: 1.5em .125em;
+        gap: 0.5rem;
+    }
+
+    .ContentDetails-button{
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+    .Button-span-img{
+        max-width: 2rem;
     }
 }

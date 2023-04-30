@@ -35,7 +35,7 @@
 
 .Library-Manage-h2{
     font-size: 2.75rem;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .Library-Manage-h3{
@@ -73,5 +73,21 @@
         align-items: center;
         justify-content: center;
         gap: 4em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Library-Manage-container{
+        padding: 1.5em 4vw;
+        gap: 2em;
+    }
+    .Library-Manage-h2{
+        font-size: 1.8rem;
+    }
+    .Library-Manage-h3{
+        font-size: 1.5rem;
+    }
+    .Library-Disclaimer-h3{
+        font-size: 0.8em;
     }
 }

@@ -20,3 +20,9 @@
 .CarouselApps::-webkit-scrollbar{
     display: none;
 }
+
+@media screen and (max-width: 576px) {
+    .CarouselApps{
+        gap: 1.5em;
+    }   
+}

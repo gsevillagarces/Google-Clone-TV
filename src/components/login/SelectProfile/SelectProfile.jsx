@@ -28,21 +28,19 @@ export const SelectProfile = () => {
 
     return(
         <div className='SelectProfile'>
-
             <div className='SelectProfile-info'>
-
                 <img className='SelectProfile-logo' src="/assets/clone-logo-header.svg" alt="Clone TV Logo" />
                 <h2 className='SelectProfile-h2'>Choose a profile</h2>
         
                 <div className='SelectProfile-container'>
                     <div className='SelectProfile-profiles'>
                         {users.map((user) => (
-                            <NavLink to='/' className="ManageProfile-open-profile">
+                            <NavLink to='/' className="SelectProfile-open-profile">
                                 < SelectProfileP key={user._id} {...user} />
                             </NavLink>
                         ))}
                     </div>
-                    <NavLink to='/login/add-profile' className="ManageProfile-add-link">
+                    <NavLink to='/login/add-profile' className="SelectProfile-add-link">
                         <button className='SelectProfile-profile SelectProfile-addProfile'>
                             <img className='SelectProfile-addProfile-img' src="/assets/icons/add.svg" alt="Add User" />
                             <h3 className='SelectProfile-profile-name'>+ Add profile</h3>

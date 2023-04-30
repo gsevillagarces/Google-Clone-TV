@@ -93,7 +93,7 @@ export const Slider = () => {
                                     <span className='Slider-meta-divider'></span>
                                     <p className='Slider-p'>{eachMovie.summary}</p>
                                 </span>
-                                < NavLink to={`/details/content-details/${eachMovie.provider}`} className='Slider-link'>
+                                < NavLink to={`/details/content-details/${eachMovie._id}`} className='Slider-link'>
                                     <button className='Slider-button'>
                                         Play on {eachMovie.provider}
                                     </button>

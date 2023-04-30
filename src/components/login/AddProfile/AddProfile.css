@@ -85,3 +85,25 @@
     }
 }
 
+@media screen and (max-width: 675px) {
+    .AddProfile{
+        padding-bottom: 12vh;
+    }
+    .AddProfileInfo-h2{
+        font-size: 1.5rem;
+    }
+    .AddProfile-divider-h4{
+        font-size: 1.2em;
+    }
+    .TextField-label{
+        font-size: 1.2em;
+    }
+    .TextField-input,
+    .PasswordField-input{
+        font-size: 1.2em;
+    }
+    .AddProfileInfo-butons{
+        position: fixed;
+        bottom: 0;
+    }
+}

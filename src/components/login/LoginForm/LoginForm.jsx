@@ -17,7 +17,7 @@ export const LoginForm = () => {
         } 
     },[])
 
-    const [ logged, setLogged ] = useState ( null )
+    const [ logged, setLogged ] = useState ( '' )
 
     const inputHandler = ({ target }) => {
         const { name, value } = target
@@ -52,15 +52,11 @@ export const LoginForm = () => {
         .catch ( err => console.log (err))
         .finally ( () => controller.abort ())
     }
-
     return(
         <div className='LoginForm'>
-            
             <div className='LoginForm-container'>
                 <h2 className='LoginForm-h2'>To begin, please enter your username and password:</h2>
-                
                 <form className='Login-Form-form' onSubmit={formHandler}>
-
                     <div className='TextField'>
                         <label className='TextField-label' htmlFor='input'>Username:</label>
                         <input
@@ -72,7 +68,6 @@ export const LoginForm = () => {
                             onChange={ e => inputHandler(e)}
                             />
                     </div>
-
                     <div className='PasswordField'>
                         <label className='PasswordField-label' htmlFor='password'>Password:</label>
                         <input
@@ -84,12 +79,6 @@ export const LoginForm = () => {
                             onChange={ e => inputHandler(e)}
                             />
                     </div>
-
-                    <div className='Error-container'>
-                        {/* ERROR DEL FORM 
-                        {data.mensaje && <div style={{ color: 'red' }}><p>data.mensaje</p></div>} */}
-                    </div>
-
                     <div className='LoginForm-btnContainer'>
                         <button
                             className='OkBtn-button'

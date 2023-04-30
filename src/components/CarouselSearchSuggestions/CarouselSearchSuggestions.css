@@ -16,3 +16,9 @@
 .CarouselSearchSuggestions::-webkit-scrollbar{
     display: none;
 }
+
+@media screen and (max-width: 576px) {
+    .CarouselSearchSuggestions{
+        gap: 1em;
+    }   
+}

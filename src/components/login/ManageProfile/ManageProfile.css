@@ -63,6 +63,10 @@
     height: 10rem;
 }
 
+.ManageProfile-edit-profile{
+    flex-shrink: 0;
+}
+
 .ManageProfile-profile-img{
     border-radius: 50%;
     border: 3pt solid transparent;
@@ -123,11 +127,46 @@
 
     .ManageProfile-profiles,
     .ManageProfile-container{
+        gap: 1em;
+    }
+
+    .ManageProfile-profiles{
+        overflow-x: scroll;
+    }
+
+    .ManageProfile-profiles::-webkit-scrollbar{
+        display: none;
+    }
+
+    .ManageProfile-profiles,
+    .ManageProfile-container{
         gap: 2em;
     }
 
     .ManageProfile-profile img{
         width: 8rem;
         height: 8rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .ManageProfile{
+        padding-top: 8vh;
+    }
+
+    .ManageProfile-h2{
+        font-size: 2em;
+    }
+
+    .ManageProfile-profiles,
+    .ManageProfile-container{
+        gap: 1em;
+    }
+    .ManageProfile-profile img{
+        width: 7rem;
+        height: 7rem;
+    }
+    .ManageProfile-manage-button{
+        font-size: 1.2em;
     }
 }

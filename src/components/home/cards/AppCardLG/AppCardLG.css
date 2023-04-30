@@ -36,3 +36,21 @@
         width: 80%;
     }
 }
+
+@media screen and (max-width: 768px){
+    .AppCardLG{
+        width: 20em;
+        height: 12rem;
+        padding: 2em 1.5em;
+    }
+    .AppCardLG-img{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .AppCardLG{
+        width: 20em;
+        height: 18rem;
+    }
+}

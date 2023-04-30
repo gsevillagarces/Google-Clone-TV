@@ -36,3 +36,13 @@
     -moz-box-shadow:    0 10px 1.8em 0 rgba(0,0,0,0.75);
     box-shadow:         0 10px 1.8em 0 rgba(0,0,0,0.75);
 }
+
+@media screen and (max-width: 576px) {
+    .SearchSuggestions{
+        width: 18rem;
+        height: 10rem;
+    }
+    .SearchSuggestions-h4{
+        font-size: 1.25em;
+    }
+}

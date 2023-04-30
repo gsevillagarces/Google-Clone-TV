@@ -171,7 +171,7 @@
     }
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 992px){
     .Slide-content {
         flex-direction: column;
         justify-content: space-between;
@@ -189,6 +189,7 @@
         flex-direction: column;
         font-size: 1.25em;
     }
+    .Slider-h2,
     .Slider-meta-divider{
         display: none;
     }
@@ -201,9 +202,12 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 576px){
+    .Slide{
+        background-position: 80%;
+    }
     .Slider-container{
-        height: 50vh;
+        min-height: 32rem;
     }
     .Slider-h1{
         font-size: 2em;

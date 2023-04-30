@@ -32,43 +32,18 @@
 
 .LoginForm-btnContainer{
     width: 100%;
+    padding: 5vh 5vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 5vh 5vw;
+    pointer-events: none;
 }
 
-
-
-
-
-.TextField-label{
-    margin-left: 1.25em;
-    margin-bottom: 0.75em;
-    font-size: 1.5em;
-    color: #fff;
-}
-
-.TextField-input{
-    background-color: #2F2F2F;
-    color: #fff;
-    padding: 1em 1.25em;
-    border-radius: 5em;
-    min-width: 20em;
-    font-size: 1.5em;
-}
-
-.PasswordField-label{
-    margin-left: 1.25em;
-    margin-bottom: 0.75em;
-    font-size: 1.5em;
-    color: #fff;
-}
-
+.TextField-input,
 .PasswordField-input{
     background-color: #2F2F2F;
     color: #fff;
@@ -78,8 +53,13 @@
     font-size: 1.5em;
 }
 
-
-
+.TextField-label,
+.PasswordField-label{
+    margin-left: 1.25em;
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+    color: #fff;
+}
 
 .OkBtn-button{
     border: 2pt solid transparent;
@@ -93,6 +73,7 @@
     align-items: center;
     gap: 1em;
     cursor: pointer;
+    pointer-events: auto;
     transition: all 500ms;
 }
 
@@ -110,26 +91,11 @@
     transform: scale(1.025);
 }
 
-
-.Error-container{
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    line-height: 1.2;
+.OkBtn-button:active{
+    transform: scale(0.975);
 }
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 920px){
+@media screen and (max-width: 768px){
     .LoginForm{
         padding-top: 15vh;
     }
@@ -141,5 +107,28 @@
     .TextField-input,
     .PasswordField-input{
         width: 100%;
+        min-width: 15em;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .LoginForm{
+        padding-top: 8vh;
+    }
+
+    .LoginForm-h2{
+        font-size: 2em;
+        line-height: 1.1;
+    }
+
+    .LoginForm-container{
+        gap: 2em;
+    }
+
+    .TextField-input,
+    .PasswordField-input{
+        width: 100%;
+        min-width: 10em;
+        padding: 0.75em 1.25em;
     }
 }

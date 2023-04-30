@@ -56,10 +56,15 @@
     cursor: pointer;
     transition: all 200ms;
 }
+
 .SelectProfile-profile-img,
 .SelectProfile-addProfile-img{
     width: 10rem;
     height: 10rem;
+}
+
+.SelectProfile-open-profile{
+    flex-shrink: 0;
 }
 
 .SelectProfile-profile-img{
@@ -67,19 +72,19 @@
     border: 3pt solid transparent;
 }
 
-.SelectProfile-profiles .ManageProfile-open-profile:nth-child(2){
+.SelectProfile-profiles .SelectProfile-open-profile:nth-child(2){
     filter: hue-rotate(200deg);
 }
 
-.SelectProfile-profiles .ManageProfile-open-profile:nth-child(3){
+.SelectProfile-profiles .SelectProfile-open-profile:nth-child(3){
     filter: hue-rotate(120deg);
 }
 
-.SelectProfile-profiles .ManageProfile-open-profile:nth-child(4){
+.SelectProfile-profiles .SelectProfile-open-profile:nth-child(4){
     filter: hue-rotate(30deg);
 }
 
-.SelectProfile-profiles .ManageProfile-open-profile:nth-child(5){
+.SelectProfile-profiles .SelectProfile-open-profile:nth-child(5){
     filter: hue-rotate(300deg);
 }
 
@@ -151,5 +156,27 @@
     .SelectProfile-profile img{
         width: 8rem;
         height: 8rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .SelectProfile{
+        padding-top: 8vh;
+    }
+
+    .SelectProfile-h2{
+        font-size: 2em;
+    }
+
+    .SelectProfile-profiles,
+    .SelectProfile-container{
+        gap: 1em;
+    }
+    .SelectProfile-profile img{
+        width: 7rem;
+        height: 7rem;
+    }
+    .SelectProfile-manage-button{
+        font-size: 1.2em;
     }
 }
