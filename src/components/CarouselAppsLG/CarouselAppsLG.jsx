@@ -1,10 +1,6 @@
 import './CarouselAppsLG.css'
 import { AppCardLG } from '../home/cards/AppCardLG/AppCardLG'
 import { useEffect, useState } from 'react'
-// import { googleClone } from '../../bbdd'
-
-// const {content} = googleClone
-// const {apps} = content
 
 export const CarouselAppsLG = ( { apps, filter } ) => {
 

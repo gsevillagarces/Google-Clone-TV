@@ -4,11 +4,9 @@
     color: #fff;
     padding: 16vh 5vw 2rem;
     display: flex;
-    gap: 0.5em;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: space-between;
     opacity: 0;
     animation: fadeInAnimation 500ms ease-in 1 forwards;
 }
@@ -46,7 +44,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 3em;
-    padding-top: 1em;
 }
 
 .SelectProfile-profile{
@@ -70,12 +67,26 @@
     border: 3pt solid transparent;
 }
 
-.SelectProfile-profile-name{
-    font-size: 1.2em;
-    line-height: 1;
+.SelectProfile-profiles .ManageProfile-open-profile:nth-child(2){
+    filter: hue-rotate(200deg);
+}
+
+.SelectProfile-profiles .ManageProfile-open-profile:nth-child(3){
+    filter: hue-rotate(120deg);
+}
+
+.SelectProfile-profiles .ManageProfile-open-profile:nth-child(4){
+    filter: hue-rotate(30deg);
+}
+
+.SelectProfile-profiles .ManageProfile-open-profile:nth-child(5){
+    filter: hue-rotate(300deg);
 }
 
 .SelectProfile-profile-name{
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.2;
     color: #fff;
 }
 
@@ -94,12 +105,6 @@
 .SelectProfile-profile:hover,
 .SelectProfile-profile:active{
     transform: scale(1.025);
-}
-
-.SelectProfile-footer{
-    position: absolute;
-    bottom: 2rem;
-    left: 5vw;
 }
 
 .SelectProfile-manage-button{
@@ -138,7 +143,12 @@
         display: none;
     }
 
-    .SelectProfile-profilrofile-img{
+    .SelectProfile-profiles,
+    .SelectProfile-container{
+        gap: 2em;
+    }
+
+    .SelectProfile-profile img{
         width: 8rem;
         height: 8rem;
     }

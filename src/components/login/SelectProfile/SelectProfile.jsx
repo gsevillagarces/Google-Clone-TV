@@ -50,14 +50,13 @@ export const SelectProfile = () => {
                     </NavLink>
                 </div>
 
-            </div>
-
-            <div className='SelectProfile-manage'>
-                <NavLink to='/login/manage-profile' className="SelectProfile-manage-link">
-                    <button className='SelectProfile-manage-button'>
-                        Manage profiles
-                    </button>
-                </NavLink>
+                <div className='SelectProfile-manage'>
+                    <NavLink to='/login/manage-profile' className="SelectProfile-manage-link">
+                        <button className='SelectProfile-manage-button'>
+                            Manage profiles
+                        </button>
+                    </NavLink>
+                </div>
             </div>
         </div>
     )

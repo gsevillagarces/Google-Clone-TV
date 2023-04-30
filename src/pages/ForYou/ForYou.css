@@ -1,3 +1,5 @@
 .ForYou{
     padding-bottom: 2vh;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 1 forwards;
 }

@@ -75,27 +75,29 @@ export const Slider = () => {
                 <div className="Slide-content">
                     <div className='Slider-left'>
                     {moviesToUse.map( eachMovie =>
-                        <div className="Slider-info Slider-link"
+                        <div className="Slider-info"
                             key={eachMovie.index}
                             style = {{ transform: ` translateY(${ activeSlide === eachMovie.index ? '0' : '50%' })`,
-                                       opacity: `${ activeSlide === eachMovie.index ? '1' : '0' }`,
-                                       pointerEvents: `${ activeSlide === eachMovie.index ? 'all' : 'none' }`
+                            opacity: `${ activeSlide === eachMovie.index ? '1' : '0' }`,
+                            pointerEvents: `${ activeSlide === eachMovie.index ? 'all' : 'none' }`
                                     }} 
                             >
-                            <img className='Slider-img-provider'
-                                 src={`${eachMovie.logoProvider}`}
-                                 alt={`${eachMovie.alt}`} />
-                            <h1 className='Slider-h1'>{eachMovie.title}</h1>
-                            <span className='Slider-meta'>
-                                <h2 className='Slider-h2'>{eachMovie.provider}</h2>
-                                <span className='Slider-meta-divider'></span>
-                                <p className='Slider-p'>{eachMovie.summary}</p>
-                            </span>
-                            < NavLink to={`/details/content-details/${eachMovie.provider}`} className='Slider-link'>
-                                <button className='Slider-button'>
-                                    Play on {eachMovie.provider}
-                                </button>
-                            </ NavLink >
+                                <img className='Slider-img-provider'
+                                     src={`${eachMovie.logoProvider}`}
+                                     alt={`${eachMovie.alt}`} />
+                                < NavLink to={`/details/content-details/${eachMovie._id}`} >
+                                    <h1 className='Slider-h1'>{eachMovie.title}</h1>
+                                </ NavLink >
+                                <span className='Slider-meta'>
+                                    <h2 className='Slider-h2'>{eachMovie.provider}</h2>
+                                    <span className='Slider-meta-divider'></span>
+                                    <p className='Slider-p'>{eachMovie.summary}</p>
+                                </span>
+                                < NavLink to={`/details/content-details/${eachMovie.provider}`} className='Slider-link'>
+                                    <button className='Slider-button'>
+                                        Play on {eachMovie.provider}
+                                    </button>
+                                </ NavLink >
                         </div>
                     )}
                     </div>

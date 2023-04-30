@@ -1,14 +1,6 @@
-.AppCardLG-container{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 1em;
-    cursor: pointer;
-}
-
 .AppCardLG{
-    width: 54rem;
-    height: 26rem;
+    width: 47rem;
+    height: 24rem;
     border-radius: 1em;
     padding: 6em 1.5em;
     display: flex;

@@ -1,41 +1,44 @@
 import './AppDetails.css'
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { CancelBtn } from "../../../components/CancelBtn/CancelBtn"
 
 export const AppDetails = () => {
 
-    const { _id } = useParams();
-    const [app, setApp] = useState(null);
+    const { appId } = useParams()
+    const [ apps, setApps ] = useState([])
   
     useEffect(() => {
-      fetch(`http://localhost:4002/apps/${_id}`)
-        .then((res) => res.json())
-        .then((data) => setApp(data))
-        .catch((err) => console.log(err));
-    }, [_id]);
+
+        let controller = new AbortController()
+        let options = {
+            method : 'get' ,
+            signal : controller.signal,
+            headers: {
+                "Content-type" : "application/json"
+            }
+        }
+
+        fetch( `http://localhost:4002/apps/${appId}`, options)
+            .then( (res) => res.json() )
+            .then( (data) => setApps(data[0]) )
+            .catch( (err) => console.log(err) )
+            .finally( () => controller.abort() )
+    }, [])
 
     return(
         <div className='AppDetails'
-        style = {{ backgroundImage: `url(${ app.appColor })`}}
+             style={{ backgroundColor: apps.appColor }}
         >
             <div className='AppDetails-provider'>
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/appletv.svg"     alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/atresplayer.svg" alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/crunchyroll.svg" alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/disneyplus.svg"  alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/hbomax.svg"      alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/hulu.svg"        alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/netflix.svg"     alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/paramount.svg"   alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/plex.svg"        alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/primevideo.svg"  alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/soundcloud.svg"  alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/spotify.svg"     alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/starplus.svg"    alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/tunein.svg"      alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/twitch.svg"      alt="Provider" /> */}
-                {/* <img className='AppDetails-provider-img' src="/assets/providers/youtube.svg"     alt="Provider" /> */}
+                <img className='AppDetails-provider-img'
+                     src={`${apps.logoApp}`}
+                     alt="{apps.appName}" />
+            </div>
+
+
+            <div className='Loading-bar'>
+                <span className='Loaded'></span>
             </div>
                 
             <div className='AppDetails-footer'>

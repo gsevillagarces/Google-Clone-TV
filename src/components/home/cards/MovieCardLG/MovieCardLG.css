@@ -8,8 +8,8 @@
 }
 
 .MovieCardLG{
-    width: 54rem;
-    height: 22rem;
+    width: 47rem;
+    height: 24rem;
     color: #fff;
     position: relative;
     background: center center no-repeat;
@@ -54,13 +54,16 @@
     filter: brightness(0) invert(1);
 }
 
+.MovieCardLG-movie-title{
+    width: 100%;
+}
+
 .MovieCardLG-h3{
     font-size: 3.5rem;
     line-height: 1;
 }
 
 .MovieCardLG-h4{
-    width: 49rem;
     margin-top: 1em;
     font-size: 1.5rem;
     line-height: 1.2;

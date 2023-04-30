@@ -20,7 +20,7 @@ export const ContentDetails = () => {
                     "Content-type" : "application/json"
                 }
             }
-
+            
             fetch(`http://localhost:4002/content/${movie}`, options)
                 .then((res) => res.json())
                 .then((data) => {

@@ -2,4 +2,6 @@
     min-height: 100vh;
     padding-top: 8vh;
     padding-bottom: 1vh;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 1 forwards;
 }

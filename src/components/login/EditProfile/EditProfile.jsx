@@ -9,7 +9,6 @@ export const EditProfile = () => {
     const navigate = useNavigate()
 
     const { user } = useParams()
-
     const [ users, setUsers ] = useState ([])
 
     const gotoProfiles = () => {
@@ -28,11 +27,10 @@ export const EditProfile = () => {
         }   
 
         fetch( `http://localhost:4002/users/${user}`, options )
-        .then( res => res.json())
-        .then( data => setLogin (data[0] ))
-        .catch( err => console.log( err ) )
-        .finally( () => controller.abort() )
-
+            .then( res => res.json())
+            .then( data => setLogin (data[0] ))
+            .catch( err => console.log( err ) )
+            .finally( () => controller.abort() )
     }, [])
 
     const [ login , setLogin ] = useState ({

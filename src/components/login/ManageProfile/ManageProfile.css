@@ -7,7 +7,6 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5em;
     opacity: 0;
     animation: fadeInAnimation 500ms ease-in 1 forwards;
 }
@@ -45,7 +44,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 3em;
-    padding-top: 1em;
 }
 
 .ManageProfile-profile{
@@ -70,12 +68,26 @@
     border: 3pt solid transparent;
 }
 
-.ManageProfile-profile-name{
-    font-size: 1.2em;
-    line-height: 1;
+.ManageProfile-info .ManageProfile-edit-profile:nth-child(2){
+    filter: hue-rotate(200deg);
+}
+
+.ManageProfile-info .ManageProfile-edit-profile:nth-child(3){
+    filter: hue-rotate(120deg);
+}
+
+.ManageProfile-info .ManageProfile-edit-profile:nth-child(4){
+    filter: hue-rotate(30deg);
+}
+
+.ManageProfile-info .ManageProfile-edit-profile:nth-child(5){
+    filter: hue-rotate(300deg);
 }
 
 .ManageProfile-profile-name{
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.2;
     color: #fff;
 }
 
@@ -111,10 +123,10 @@
 
     .ManageProfile-profiles,
     .ManageProfile-container{
-        gap: 1em;
+        gap: 2em;
     }
 
-    .ManageProfile-profile{
+    .ManageProfile-profile img{
         width: 8rem;
         height: 8rem;
     }

@@ -52,7 +52,7 @@ function App() {
               < Route path='/login/add-profile'         element={ < AddProfile /> } />
               
               < Route path='/details/content-details/:movie'  element={ < ContentDetails /> } />
-              < Route path='/details/app-details/:movie'   element={ < AppDetails /> } />
+              < Route path='/details/app-details/:appId'   element={ < AppDetails /> } />
             </ Routes >
             
           </div>
