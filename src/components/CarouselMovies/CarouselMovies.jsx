@@ -29,13 +29,13 @@ export const CarouselMovies = ({ type, category, watchlisted, featured, watched,
     return (
         <div className='ShowsCarousel'>
             < CarouselMoviesC content={content}
-                                type        = {type}
-                                category    = {category}
-                                watchlisted = {watchlisted}
-                                featured    = {featured} 
-                                watched     = {watched} 
-                                suggested   = {suggested}
-                                watching    = {watching}  />
+                              type        = {type}
+                              category    = {category}
+                              watchlisted = {watchlisted}
+                              featured    = {featured} 
+                              watched     = {watched} 
+                              suggested   = {suggested}
+                              watching    = {watching}  />
         </div>
     )
 }

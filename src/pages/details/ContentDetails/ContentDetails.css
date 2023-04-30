@@ -1,14 +1,16 @@
-.MovieDetails{
-    background: url(/public/assets/movies/slider/bgSlide.jpg) center top no-repeat;
+.ContentDetails{
+    background: black center center no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: flex-end;
     padding: 5.5rem 5vw 2rem;
     position: relative;
+    opacity: 0;
+    animation: fadeInAnimation 500ms ease-in 1 forwards;
 }
 
-.MovieDetails::after{
+.ContentDetails::after{
     content: '';
     height: 100%;
     width: 100%;
@@ -19,27 +21,27 @@
     background: linear-gradient(80deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.25) 100%);
 }
 
-.MovieDetails-container{
+.ContentDetails-container{
     width: 100%;
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-end;
-    gap: 2.5rem;
+    gap: 1.2rem;
 }
 
-.MovieDetails-h1{
+.ContentDetails-h1{
     color: #fff;
-    font-size: 9rem;
-    line-height: 1.2;
+    font-size: 8rem;
+    line-height: 1.1;
 }
 
-.MovieDetails-h4{
+.ContentDetails-h4{
     flex: 0 0 auto;
 }
 
-.MovieDetails-rating{
+.ContentDetails-rating{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -50,11 +52,11 @@
     color: #fff;
 }
 
-.MovieDetails-Restriction{
+.ContentDetails-Restriction{
     margin-bottom: .5rem;
 }
 
-.MovieDetails-Restriction span{
+.ContentDetails-Restriction span{
     padding: .1rem .6rem;
     border: 2pt solid #fff;
     border-radius: .625rem;
@@ -62,30 +64,30 @@
     line-height: 1;
 }
 
-.MovieDetails-description{
+.ContentDetails-description{
     max-width: 60%;
 }
 
-.MovieDetails-description-p{
+.ContentDetails-description-p{
     font-size: 1.5rem;
     line-height: 1.5;
     color: #ffffff50;
 }
 
-.MovieDetails-buttons{
+.ContentDetails-buttons{
     width: 100%;
     overflow-x: scroll;
     display: flex;
     flex-flow: row nowrap;
     gap: 1.5rem;
-    padding: 2.2em 0;
+    padding: 2.3em .125em;
 }
 
-.MovieDetails-buttons::-webkit-scrollbar{
+.ContentDetails-buttons::-webkit-scrollbar{
     display: none;
 }
 
-.MovieDetails-buton{
+.ContentDetails-buton{
     background-color: #8C8C8C75;
     padding: 1.0625rem 2.625rem;
     border-radius: 2.5rem;
@@ -109,64 +111,79 @@
     min-width: 3em;
 }
 
-.MovieDetails-buton:hover{
+.ContentDetails-buton:hover {
     background-color: #fff;
     color: #000;
     transform: scale(1.025);
+}
+
+.ContentDetails-buton:active {
+    transform: scale(1.125);
+}
+
+.watchlisted-button.active,
+.watched-button.active {
+    background-color: #fff;
+    color: #000;
+}
+
+.watchlisted-button.active .Inverted-icon .Button-span-img,
+.watched-button.active .Inverted-icon .Button-span-img {
+    filter: none;
 }
 
 .Inverted-icon .Button-span-img{
     filter: invert();
 }
 
-.MovieDetails-buton:hover .Button-span-img{
+.ContentDetails-buton:hover .Button-span-img{
     filter: invert();
 }
 
-.MovieDetails-buton:hover .Inverted-icon .Button-span-img{
+.ContentDetails-buton:hover .Inverted-icon .Button-span-img{
     filter: none;
 }
 
 @media screen and (max-width: 1480px){
-    .MovieDetails-description {
+    .ContentDetails-description {
         max-width: 100%;
     }
 
-    .MovieDetails-buttons {
+    .ContentDetails-buttons {
         width: calc(100% + 5vw);
     }
 
-    .MovieDetails-buton:nth-last-child(1) {
+    .ContentDetails-buton:nth-last-child(1) {
         margin-right: 5vw;
     }
 }
 
 @media screen and (max-width: 920px){
-    .MovieDetails{
+    .ContentDetails{
         background-position: 30% top;
     }
 
-    .MovieDetails-container{
+    .ContentDetails-container{
         gap: 1em;
     }
 
-    .MovieDetails-h1{
+    .ContentDetails-h1{
         font-size: 6rem;
     }
 
-    .MovieDetails-h4{
+    .ContentDetails-h4{
         font-size: 1.5rem;
     }
-    .MovieDetails-Restriction{
+    .ContentDetails-Restriction{
         margin-bottom: 0;
     }
     
 
-    .MovieDetails-description-p{
+    .ContentDetails-description-p{
         font-size: 1.2rem;
     }
     
-    .MovieDetails-rating{
+    .ContentDetails-rating{
         gap: 0.5em;
     }
 }

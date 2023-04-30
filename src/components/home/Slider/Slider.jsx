@@ -1,4 +1,5 @@
 import './Slider.css'
+import { NavLink } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
 
@@ -78,6 +79,7 @@ export const Slider = () => {
                             key={eachMovie.index}
                             style = {{ transform: ` translateY(${ activeSlide === eachMovie.index ? '0' : '50%' })`,
                                        opacity: `${ activeSlide === eachMovie.index ? '1' : '0' }`,
+                                       pointerEvents: `${ activeSlide === eachMovie.index ? 'all' : 'none' }`
                                     }} 
                             >
                             <img className='Slider-img-provider'
@@ -89,9 +91,11 @@ export const Slider = () => {
                                 <span className='Slider-meta-divider'></span>
                                 <p className='Slider-p'>{eachMovie.summary}</p>
                             </span>
-                            <button className='Slider-button'>
-                                Play on {eachMovie.provider}
-                            </button>
+                            < NavLink to={`/details/content-details/${eachMovie.provider}`} className='Slider-link'>
+                                <button className='Slider-button'>
+                                    Play on {eachMovie.provider}
+                                </button>
+                            </ NavLink >
                         </div>
                     )}
                     </div>

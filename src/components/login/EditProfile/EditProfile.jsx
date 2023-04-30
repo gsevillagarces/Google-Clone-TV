@@ -1,8 +1,8 @@
 import './EditProfile.css'
 import { CancelBtn } from '../../CancelBtn/CancelBtn'
 
-import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export const EditProfile = () => {
 
@@ -13,7 +13,7 @@ export const EditProfile = () => {
     const [ users, setUsers ] = useState ([])
 
     const gotoProfiles = () => {
-        navigate("/login/manage-profile")
+        navigate("/login/select-profile")
     }
 
     useEffect ( () => {

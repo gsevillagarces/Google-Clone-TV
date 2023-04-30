@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export const MovieCardLG = ({_id, type, provider, alt, logoProvider, bgSlide, bgSmall, title, summary, btnText, rating, restriction, category, years, watchlisted, watched, featured, href}) => {
     return(
         <div className='MovieCardLG-container'>
-            < NavLink to={`/details/movie-details/${_id}`} className='MovieCard-a'>
+            < NavLink to={`/details/content-details/${_id}`} className='MovieCard-a'>
                 <div className='MovieCardLG'
                 style = {{ backgroundImage: `url(${ bgSmall })`}} >
                     <div className='MovieCardLG-info'>

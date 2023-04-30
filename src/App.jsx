@@ -17,8 +17,7 @@ import { Apps } from './pages/Apps/Apps'
 import { Library } from './pages/Library/Library'
 
 import { AppDetails } from './pages/details/AppDetails/AppDetails'
-import { MovieDetails } from './pages/details/MovieDetails/MovieDetails'
-import { SerieDetails } from './pages/details/SerieDetails/SerieDetails'
+import { ContentDetails } from './pages/details/ContentDetails/ContentDetails'
 
 import { Main } from './components/Main/Main'
 
@@ -39,22 +38,21 @@ function App() {
               < Route path='/' element={ < LoginForm /> } />
 
                 < Route path='/main' element={ < Main /> } >
-                    < Route path='foryou'  element={ < ForYou />  } />
-                    < Route path='search'  element={ < Search />  } />
-                    < Route path='movies'  element={ < Movies />  } />
-                    < Route path='shows'   element={ < Shows />   } />
-                    < Route path='apps'    element={ < Apps />    } />
-                    < Route path='library' element={ < Library /> } />
+                  < Route path='foryou'  element={ < ForYou />  } />
+                  < Route path='search'  element={ < Search />  } />
+                  < Route path='movies'  element={ < Movies />  } />
+                  < Route path='shows'   element={ < Shows />   } />
+                  < Route path='apps'    element={ < Apps />    } />
+                  < Route path='library' element={ < Library /> } />
               </ Route >
               
-              < Route path='/login/select-profile'   element={ < SelectProfile />} />
-              < Route path='/login/manage-profile'   element={ < ManageProfile />} />
-              < Route path='/login/edit-profile/:user'     element={ < EditProfile /> } />
-              < Route path='/login/add-profile'      element={ < AddProfile /> } />
+              < Route path='/login/select-profile'      element={ < SelectProfile />} />
+              < Route path='/login/manage-profile'      element={ < ManageProfile />} />
+              < Route path='/login/edit-profile/:user'  element={ < EditProfile /> } />
+              < Route path='/login/add-profile'         element={ < AddProfile /> } />
               
-              < Route path='/details/movie-details/:_id' element={ < MovieDetails /> } />           
-              < Route path='/details/serie-details' element={ < SerieDetails /> } />
-              < Route path='/details/app-details/:_id'   element={ < AppDetails /> } />
+              < Route path='/details/content-details/:movie'  element={ < ContentDetails /> } />
+              < Route path='/details/app-details/:movie'   element={ < AppDetails /> } />
             </ Routes >
             
           </div>

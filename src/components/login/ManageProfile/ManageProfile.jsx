@@ -1,6 +1,6 @@
 import './ManageProfile.css'
 import { NavLink } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CancelBtn2 } from '../../CancelBtn/CancelBtn2'
 
 export const ManageProfile = () => {
