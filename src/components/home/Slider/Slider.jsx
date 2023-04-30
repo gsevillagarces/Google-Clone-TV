@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 export const Slider = () => {
 
     const [ content, setContent ] = useState([])
-    const [ activeSlide, setActiveSlide ] = useState(0)
+    const [ activeSlide, setActiveSlide ] = useState(1)
 
     const movies = content ? content : []
 
@@ -18,14 +18,13 @@ export const Slider = () => {
         } else if ( newIndex > moviesToUse.length - 1 ) {
             newIndex = 0
         }
-
         setActiveSlide(newIndex)
     }
 
     useEffect ( () => {
-
+        
         let controller = new AbortController()
-  
+        
         let options = {
             method: "get",
             signal : controller.signal,
@@ -33,7 +32,7 @@ export const Slider = () => {
                 "Content-type" : "application/json"
             } 
         }
-
+        
         // Traer películas para con su índice, pooder ponerlas en el slider
         fetch("http://localhost:4002/content", options)
         .then((res) => res.json())
@@ -48,12 +47,12 @@ export const Slider = () => {
             console.log(err)
             controller.abort()
         })
-
+        
         // Hacer que el slider avance de manera automática
         const interval = setInterval(() => {
             updateSlide(activeSlide + 1)
         }, 3000)
-
+    
         return () => clearInterval(interval)
         
     }, [activeSlide])

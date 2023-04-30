@@ -39,7 +39,7 @@ export const ForYou = ( ) => {
 
     return(
         <div className='ForYou'>
-          < Slider featured = "y" />
+          < Slider />
           
           <h2 className='CloneTV-h2'>Top picks</h2>
             < CarouselMovies featured = "y" />
