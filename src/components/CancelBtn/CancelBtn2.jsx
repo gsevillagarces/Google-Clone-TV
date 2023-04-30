@@ -7,7 +7,7 @@ export const CancelBtn2 = ({ text }) => {
   
 
     const gotoProfiles = () => {
-        navigate("/")
+        navigate("/login/select-profile")
     }
 
     const goBack = () => {

@@ -169,7 +169,8 @@
     .EditProfile-divider-h4{
         font-size: 1.2em;
     }
-    .TextField-label{
+    .TextField-label,
+    .Password-label{
         font-size: 1.2em;
     }
     .TextField-input,

@@ -10,6 +10,7 @@
     align-items: center;
     gap: 1em;
     cursor: pointer;
+    pointer-events: auto;
     transition: all 500ms;
 }
 

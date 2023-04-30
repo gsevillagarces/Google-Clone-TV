@@ -142,12 +142,6 @@ export const EditProfile = () => {
                             onChange={ e => inputHandler(e)}
                             />
                     </div>
-
-                    <div className='Error-container'>
-                        {/* ERROR DEL FORM 
-                        {data.mensaje && <div style={{ color: 'red' }}><p>data.mensaje</p></div>} */}
-                    </div>
-
                     <div className='LoginForm-btnContainer AddProfileInfo-butons'>
                         < CancelBtn />
                         <button
