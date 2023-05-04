@@ -18,7 +18,7 @@ export const CarouselMovies = ({ type, category, watchlisted, featured, watched,
             }
         }
 
-        fetch('http://localhost:4002/content', options)
+        fetch('mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/content', options)
             .then(res => res.json())
             .then(data => setContent(data))
             .catch(err => console.log(err))

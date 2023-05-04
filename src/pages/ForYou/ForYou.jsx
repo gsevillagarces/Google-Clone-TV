@@ -23,13 +23,13 @@ export const ForYou = ( ) => {
       }
 
       // fetch de contenido para filtrar por serie, película y sus varios props, como category, suggested, watche, etc.
-      fetch( 'http://localhost:4002/content', options )
+      fetch( 'mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/content', options )
       .then( res => res.json() )
       .then( data => setContent(data) )
       .catch( err => console.log(err) )
       .finally( () => controller.abort())
 
-      fetch( 'http://localhost:4002/apps', options )
+      fetch( 'mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/apps', options )
       .then( res => res.json() )
       .then( data => setApps(data) )
       .catch( err => console.log(err) )

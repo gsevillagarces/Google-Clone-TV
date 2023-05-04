@@ -19,7 +19,7 @@ export const CarouselSearchSuggestions = ( { filter, category } ) => {
             } 
         }
 
-        fetch( 'http://localhost:4002/suggestions', options )
+        fetch( 'mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/suggestions', options )
         .then( res => res.json() )
         .then( data => setContent(data) )
         .catch( err => console.log(err) )
