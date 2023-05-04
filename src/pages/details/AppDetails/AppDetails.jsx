@@ -20,7 +20,7 @@ export const AppDetails = () => {
         }
 
         // fetch de contenido de apps y sus varios props, como appName, color, etc.
-        fetch( `mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/apps/${appId}`, options)
+        fetch( `http://localhost:4002/apps/${appId}`, options)
             .then( (res) => res.json() )
             .then( (data) => setApps(data[0]) )
             .catch( (err) => console.log(err) )

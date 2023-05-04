@@ -23,7 +23,7 @@ export const ContentDetails = () => {
             }
             
             // fetch de contenido de película y sus varios props, como title, years, restriction,etc.
-            fetch(`mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/content/${movie}`, options)
+            fetch(`http://localhost:4002/content/${movie}`, options)
                 .then((res) => res.json())
                 .then((data) => {
                   setMovies(data[0])

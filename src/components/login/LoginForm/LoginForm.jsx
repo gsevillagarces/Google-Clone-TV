@@ -42,7 +42,7 @@ export const LoginForm = () => {
         }
 
     // formulario de login con la validación de los usuarios dentro de la bbdd
-    fetch( 'mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/login' , options)
+    fetch( 'http://localhost:4002/login' , options)
         .then ( res => res.json ())
         .then ( data => {
             console.log (data)

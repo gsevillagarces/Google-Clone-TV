@@ -22,7 +22,7 @@ export const Apps = () => {
             } 
         }
 
-        fetch( 'mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/apps', options )
+        fetch( 'http://localhost:4002/apps', options )
         .then( res => res.json() )
         .then( data => setApps(data) )
         .catch( err => console.log(err) )

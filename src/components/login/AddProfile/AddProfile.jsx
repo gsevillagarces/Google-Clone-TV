@@ -41,7 +41,7 @@ export const AddProfile = () => {
         }
 
         e.preventDefault()
-        fetch('mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/users', options)
+        fetch('http://localhost:4002/users', options)
         .then(res => res.json)
         .then( data => setUsers(data.buscar))
         .catch( err => console.log(err) )

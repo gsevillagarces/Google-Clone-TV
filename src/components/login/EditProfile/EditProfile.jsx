@@ -24,7 +24,7 @@ export const EditProfile = () => {
                 "Content-type" : "application/json"
             }
         }   
-        fetch( `mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/users/${user}`, options )
+        fetch( `http://localhost:4002/users/${user}`, options )
             .then( res => res.json())
             .then( data => setLogin (data[0] ))
             .catch( err => console.log( err ) )
@@ -51,7 +51,7 @@ export const EditProfile = () => {
         }
     }
         e.preventDefault()
-        fetch( `mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/users/`, options )
+        fetch( `http://localhost:4002/users/`, options )
         .then( res => res.json())
         .then( data => setUsers (data))
         .catch( err => console.log( err ) )
@@ -69,7 +69,7 @@ export const EditProfile = () => {
             }
         }
         
-        fetch( `mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/users/${user}`, options )
+        fetch( `http://localhost:4002/users/${user}`, options )
         .then( res => res.json())
         .then( data => setUsers (data))
         .catch( err => console.log( err ) )

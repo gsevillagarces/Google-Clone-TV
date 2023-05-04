@@ -14,19 +14,19 @@ export const Header = () => {
     useEffect(() => {
 
         // fetch de logo y título
-        fetch('mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/h1')
+        fetch('http://localhost:4002/h1')
             .then((response) => response.json())
             .then((data) => setH1(data[0]))
             .catch((error) => console.error(error));
         
         // fetch de avatar para el menú
-        fetch('mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/avatar')
+        fetch('http://localhost:4002/avatar')
             .then((response) => response.json())
             .then((data) => setAvatar(data[0]))
             .catch((error) => console.error(error));
 
         // fetch de todo lo que compone el menú
-        fetch('mongodb+srv://gsevillagarces:test123@cluster0.ty0etsd.mongodb.net/test/google-clone-tv/menu')
+        fetch('http://localhost:4002/menu')
             .then(response => response.json())
             .then(data => setMenu(data))
             .catch(error => console.log(error))
