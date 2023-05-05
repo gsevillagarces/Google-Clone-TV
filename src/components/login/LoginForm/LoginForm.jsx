@@ -42,15 +42,16 @@ export const LoginForm = () => {
         }
 
     // formulario de login con la validación de los usuarios dentro de la bbdd
-    fetch( 'http://localhost:4002/login' , options)
+    fetch( `http://localhost:4002/login` , options)
         .then ( res => res.json ())
         .then ( data => {
             console.log (data)
             if(data.entrar){
                 localStorage.setItem('users' , JSON.stringify(login))
-                navigate("main/foryou" ,{ replace: true} )
+                navigate("main/foryou" , { replace: true} )
             }else{
                 setLogged(data.mensaje)
+                console.log(data.mensaje)
             }
         })
         .catch ( err => console.log (err))

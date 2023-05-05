@@ -12,29 +12,44 @@ export const ForYou = ( ) => {
 
   useEffect ( () => {
 
-      let controller = new AbortController()
+    let controller = new AbortController()
 
-      let options = {
-          method: "get",
-          signal : controller.signal,
-          headers : {
-              "Content-type" : "application/json"
-          } 
+    let options = {
+      method: "get",
+      signal : controller.signal,
+      headers : {
+        "Content-type" : "application/json"
+      } 
+    }
+
+    // fetch de contenido para filtrar por serie, película y sus varios props, como category, suggested, watche, etc.
+    fetch( 'http://localhost:4002/content', options )
+    .then( res => res.json() )
+    .then( data => setContent(data) )
+    .catch( err => console.log(err) )
+    .finally( () => controller.abort())
+    
+  }, [])
+
+  useEffect ( () => {
+
+    let controller = new AbortController()
+
+    let options = {
+      method: "get",
+      signal : controller.signal,
+      headers : {
+          "Content-type" : "application/json"
       }
+    }
 
-      // fetch de contenido para filtrar por serie, película y sus varios props, como category, suggested, watche, etc.
-      fetch( 'http://localhost:4002/content', options )
-      .then( res => res.json() )
-      .then( data => setContent(data) )
-      .catch( err => console.log(err) )
-      .finally( () => controller.abort())
-
-      fetch( 'http://localhost:4002/apps', options )
-      .then( res => res.json() )
-      .then( data => setApps(data) )
-      .catch( err => console.log(err) )
-      .finally( () => controller.abort())
-      
+    // fetch de contenido para filtrar apps varios props, como category, suggested, watched, etc.
+    fetch( 'http://localhost:4002/apps', options )
+    .then( res => res.json() )
+    .then( data => setApps(data) )
+    .catch( err => console.log(err) )
+    .finally( () => controller.abort())
+    
   }, [])
 
     return(
