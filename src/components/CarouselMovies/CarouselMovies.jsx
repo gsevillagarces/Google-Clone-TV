@@ -45,6 +45,7 @@ const CarouselMoviesC = ({ content, category, type, watchlisted, featured, watch
 
     const [ filtrar, setFiltrar ] = useState([])
 
+    // Constantes para poder arrastrar el carousel y no solo hacer scroll
     const carouselRef = useRef(null)
     const [dragging, setDragging] = useState(false)
     const [startX, setStartX] = useState(0)
@@ -73,62 +74,62 @@ const CarouselMoviesC = ({ content, category, type, watchlisted, featured, watch
         // Filtrar si tiene o no watched
         const filteredByWatched = watched
         ? filteredByWatchlisted.filter((eachCard) => eachCard.watched === watched)
-        : filteredByWatchlisted;
+        : filteredByWatchlisted
 
         // Filtrar si tiene o no suggested
         const filteredBySuggested = suggested
         ? filteredByWatched.filter((eachCard) => eachCard.suggested === suggested)
-        : filteredByWatched;
+        : filteredByWatched
 
         // Filtrar si tiene o no watching
         const filteredByWatching = watching
         ? filteredBySuggested.filter((eachCard) => eachCard.watching === watching)
-        : filteredBySuggested;
+        : filteredBySuggested
 
         // Filtrar si tiene o no featured
         const filteredByFeatured = featured
         ? filteredByWatching.filter((eachCard) => eachCard.featured === featured)
-        : filteredByWatching;
+        : filteredByWatching
 
-        setFiltrar(filteredByFeatured);
-      }, [content, type, category, watchlisted, featured, watched, suggested, watching, watching])
-      
-      const handleMouseDown = (e) => {
-        setDragging(true);
-        setStartX(e.pageX - carouselRef.current.offsetLeft);
-        setScrollLeft(carouselRef.current.scrollLeft);
-      };
+        setFiltrar(filteredByFeatured)
+        }, [content, type, category, watchlisted, featured, watched, suggested, watching, watching])
+
+        const handleMouseDown = (e) => {
+          setDragging(true)
+          setStartX(e.pageX - carouselRef.current.offsetLeft)
+          setScrollLeft(carouselRef.current.scrollLeft)
+        }
     
-      const handleMouseMove = (e) => {
-        if (!dragging) return;
-        e.preventDefault();
-        const x = e.pageX - carouselRef.current.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust the scroll speed by multiplying a factor
-        carouselRef.current.scrollLeft = scrollLeft - walk;
-      };
-    
-      const handleMouseUp = () => {
-        setDragging(false);
-      };
-    
-      const handleMouseLeave = () => {
-        setDragging(false);
-      };
+        const handleMouseMove = (e) => {
+            if (!dragging) return
+            e.preventDefault()
+            const x = e.pageX - carouselRef.current.offsetLeft
+            const walk = (x - startX) * 2 // Adjust the scroll speed by multiplying a factor
+            carouselRef.current.scrollLeft = scrollLeft - walk
+        }
+        
+        const handleMouseUp = () => {
+            setDragging(false)
+        }
+        
+        const handleMouseLeave = () => {
+            setDragging(false)
+        }
 
     // Devolver el componente MovieCard con los datos ya filtrados
     return (
         <div className='CarouselMovies-container'>
             <div
-        className='CarouselMovies'
-        ref={carouselRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onTouchStart={handleMouseDown}
-        onTouchMove={handleMouseMove}
-        onTouchEnd={handleMouseUp}
-      >
+                className    = 'CarouselMovies'
+                ref          = {carouselRef}
+                onMouseDown  = {handleMouseDown}
+                onMouseMove  = {handleMouseMove}
+                onMouseUp    = {handleMouseUp}
+                onMouseLeave = {handleMouseLeave}
+                onTouchStart = {handleMouseDown}
+                onTouchMove  = {handleMouseMove}
+                onTouchEnd   = {handleMouseUp}
+            >
                 {filtrar && filtrar.map(eachCard =>
                     < MovieCard key={eachCard._id} {...eachCard} />
                 )}
