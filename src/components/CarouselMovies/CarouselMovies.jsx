@@ -1,6 +1,6 @@
 import './CarouselMovies.css'
 import { MovieCard } from '../home/cards/MovieCard/MovieCard'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export const CarouselMovies = ({ type, category, watchlisted, featured, watched, suggested, watching }) => {
 
@@ -45,6 +45,11 @@ const CarouselMoviesC = ({ content, category, type, watchlisted, featured, watch
 
     const [ filtrar, setFiltrar ] = useState([])
 
+    const carouselRef = useRef(null)
+    const [dragging, setDragging] = useState(false)
+    const [startX, setStartX] = useState(0)
+    const [scrollLeft, setScrollLeft] = useState(0)
+
     useEffect(() => {
         const filteredContent = content.filter((eachCard) => {
             // Filtrar por tipo. Película o serie
@@ -88,11 +93,42 @@ const CarouselMoviesC = ({ content, category, type, watchlisted, featured, watch
         setFiltrar(filteredByFeatured);
       }, [content, type, category, watchlisted, featured, watched, suggested, watching, watching])
       
+      const handleMouseDown = (e) => {
+        setDragging(true);
+        setStartX(e.pageX - carouselRef.current.offsetLeft);
+        setScrollLeft(carouselRef.current.scrollLeft);
+      };
+    
+      const handleMouseMove = (e) => {
+        if (!dragging) return;
+        e.preventDefault();
+        const x = e.pageX - carouselRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust the scroll speed by multiplying a factor
+        carouselRef.current.scrollLeft = scrollLeft - walk;
+      };
+    
+      const handleMouseUp = () => {
+        setDragging(false);
+      };
+    
+      const handleMouseLeave = () => {
+        setDragging(false);
+      };
 
     // Devolver el componente MovieCard con los datos ya filtrados
     return (
         <div className='CarouselMovies-container'>
-            <div className='CarouselMovies'>
+            <div
+        className='CarouselMovies'
+        ref={carouselRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleMouseDown}
+        onTouchMove={handleMouseMove}
+        onTouchEnd={handleMouseUp}
+      >
                 {filtrar && filtrar.map(eachCard =>
                     < MovieCard key={eachCard._id} {...eachCard} />
                 )}
